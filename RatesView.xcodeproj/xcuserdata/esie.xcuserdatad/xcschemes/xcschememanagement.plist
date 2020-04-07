@@ -24,21 +24,6 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>RatesView iOS Pro.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>RatesView iOS.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>RatesView watchOS WatchKit App.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>29</integer>
-		</dict>
 		<key>RatesViewLite.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -63,6 +48,16 @@
 			<true/>
 		</dict>
 		<key>645B7D0C23FC1E72007B7EC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64766326242BC37C00DE291B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64766329242BC37C00DE291B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

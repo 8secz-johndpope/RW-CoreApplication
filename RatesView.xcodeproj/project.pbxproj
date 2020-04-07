@@ -10,20 +10,7 @@
 		26CAFE4F21DF953D3FB05F2F /* libPods-Converter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4503696FCA6FBB11202EDA1C /* libPods-Converter.a */; };
 		34C5B3CDB64F2CF119F62FF6 /* libPods-CryptoView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C05C07695D3823D9F9442F6E /* libPods-CryptoView.a */; };
 		48B57219B017B8255CA13AB9 /* Pods_ARConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F429F5B3D8264245152DA00D /* Pods_ARConverter.framework */; };
-		6435B9D223EBD38C001363C0 /* WatchlistSection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D123EBD38C001363C0 /* WatchlistSection+Extension.swift */; };
 		64539219243C8939009CAACB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64539218243C8939009CAACB /* GoogleService-Info.plist */; };
-		6454FD3E243C4C4100179EC7 /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E21512415035700162443 /* Rates.swift */; };
-		6454FD3F243C4C4100179EC7 /* RatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E214D2415018200162443 /* RatesViewController.swift */; };
-		6454FD40243C4C4100179EC7 /* RatesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E214F241502A600162443 /* RatesPresenter.swift */; };
-		6454FD41243C4C4100179EC7 /* RatesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E21532415039300162443 /* RatesInteractor.swift */; };
-		6454FD42243C4C4100179EC7 /* RatesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E2155241503E900162443 /* RatesRouter.swift */; };
-		6454FD43243C4C4100179EC7 /* RatesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E21592415053100162443 /* RatesCellView.swift */; };
-		6454FD44243C4C4100179EC7 /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E21512415035700162443 /* Rates.swift */; };
-		6454FD45243C4C4100179EC7 /* RatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E214D2415018200162443 /* RatesViewController.swift */; };
-		6454FD46243C4C4100179EC7 /* RatesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E214F241502A600162443 /* RatesPresenter.swift */; };
-		6454FD47243C4C4100179EC7 /* RatesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E21532415039300162443 /* RatesInteractor.swift */; };
-		6454FD48243C4C4100179EC7 /* RatesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E2155241503E900162443 /* RatesRouter.swift */; };
-		6454FD49243C4C4100179EC7 /* RatesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E21592415053100162443 /* RatesCellView.swift */; };
 		6454FD4A243C4C4200179EC7 /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E21512415035700162443 /* Rates.swift */; };
 		6454FD4B243C4C4200179EC7 /* RatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E214D2415018200162443 /* RatesViewController.swift */; };
 		6454FD4C243C4C4200179EC7 /* RatesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E214F241502A600162443 /* RatesPresenter.swift */; };
@@ -51,26 +38,6 @@
 		6454FD62243C4C4B00179EC7 /* AssetSelectorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648924CF23991E5A00BC19D4 /* AssetSelectorPresenter.swift */; };
 		6454FD63243C4C4B00179EC7 /* AssetSelectorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648924CC23991E5A00BC19D4 /* AssetSelectorInteractor.swift */; };
 		6454FD64243C4C4B00179EC7 /* AssetSelectorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EB05AC2417EBE900A9946E /* AssetSelectorRouter.swift */; };
-		6454FD65243C4C4B00179EC7 /* AssetSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648924CE23991E5A00BC19D4 /* AssetSelector.swift */; };
-		6454FD66243C4C4B00179EC7 /* AssetSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648924CB23991E5A00BC19D4 /* AssetSelectorViewController.swift */; };
-		6454FD67243C4C4B00179EC7 /* AssetSelectorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648924CF23991E5A00BC19D4 /* AssetSelectorPresenter.swift */; };
-		6454FD68243C4C4B00179EC7 /* AssetSelectorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648924CC23991E5A00BC19D4 /* AssetSelectorInteractor.swift */; };
-		6454FD69243C4C4B00179EC7 /* AssetSelectorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EB05AC2417EBE900A9946E /* AssetSelectorRouter.swift */; };
-		6454FD6A243C4C4B00179EC7 /* AssetSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648924CE23991E5A00BC19D4 /* AssetSelector.swift */; };
-		6454FD6B243C4C4B00179EC7 /* AssetSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648924CB23991E5A00BC19D4 /* AssetSelectorViewController.swift */; };
-		6454FD6C243C4C4B00179EC7 /* AssetSelectorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648924CF23991E5A00BC19D4 /* AssetSelectorPresenter.swift */; };
-		6454FD6D243C4C4B00179EC7 /* AssetSelectorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648924CC23991E5A00BC19D4 /* AssetSelectorInteractor.swift */; };
-		6454FD6E243C4C4B00179EC7 /* AssetSelectorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EB05AC2417EBE900A9946E /* AssetSelectorRouter.swift */; };
-		6454FD6F243C4C4F00179EC7 /* QuickSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDF2421D3B300C138A9 /* QuickSearch.swift */; };
-		6454FD70243C4C4F00179EC7 /* QuickSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BE02421D3B300C138A9 /* QuickSearchViewController.swift */; };
-		6454FD71243C4C4F00179EC7 /* QuickSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDD2421D3B300C138A9 /* QuickSearchPresenter.swift */; };
-		6454FD72243C4C4F00179EC7 /* QuickSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDC2421D3B300C138A9 /* QuickSearchInteractor.swift */; };
-		6454FD73243C4C4F00179EC7 /* QuickSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDE2421D3B300C138A9 /* QuickSearchRouter.swift */; };
-		6454FD74243C4C5000179EC7 /* QuickSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDF2421D3B300C138A9 /* QuickSearch.swift */; };
-		6454FD75243C4C5000179EC7 /* QuickSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BE02421D3B300C138A9 /* QuickSearchViewController.swift */; };
-		6454FD76243C4C5000179EC7 /* QuickSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDD2421D3B300C138A9 /* QuickSearchPresenter.swift */; };
-		6454FD77243C4C5000179EC7 /* QuickSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDC2421D3B300C138A9 /* QuickSearchInteractor.swift */; };
-		6454FD78243C4C5000179EC7 /* QuickSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDE2421D3B300C138A9 /* QuickSearchRouter.swift */; };
 		6454FD79243C4C5000179EC7 /* QuickSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDF2421D3B300C138A9 /* QuickSearch.swift */; };
 		6454FD7A243C4C5000179EC7 /* QuickSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BE02421D3B300C138A9 /* QuickSearchViewController.swift */; };
 		6454FD7B243C4C5000179EC7 /* QuickSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDD2421D3B300C138A9 /* QuickSearchPresenter.swift */; };
@@ -86,30 +53,6 @@
 		6454FD85243C4C5100179EC7 /* QuickSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDD2421D3B300C138A9 /* QuickSearchPresenter.swift */; };
 		6454FD86243C4C5100179EC7 /* QuickSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDC2421D3B300C138A9 /* QuickSearchInteractor.swift */; };
 		6454FD87243C4C5100179EC7 /* QuickSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDE2421D3B300C138A9 /* QuickSearchRouter.swift */; };
-		6454FD88243C4C5B00179EC7 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BF23A11F0B0005E2E2 /* Chart.swift */; };
-		6454FD89243C4C5B00179EC7 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BC23A11F0B0005E2E2 /* ChartViewController.swift */; };
-		6454FD8A243C4C5B00179EC7 /* ChartIndicatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEAA3523FF0771006F7116 /* ChartIndicatorsViewController.swift */; };
-		6454FD8B243C4C5B00179EC7 /* ChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4C023A11F0B0005E2E2 /* ChartPresenter.swift */; };
-		6454FD8C243C4C5B00179EC7 /* ChartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BD23A11F0B0005E2E2 /* ChartInteractor.swift */; };
-		6454FD8D243C4C5B00179EC7 /* ChartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BE23A11F0B0005E2E2 /* ChartRouter.swift */; };
-		6454FD8E243C4C5C00179EC7 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BF23A11F0B0005E2E2 /* Chart.swift */; };
-		6454FD8F243C4C5C00179EC7 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BC23A11F0B0005E2E2 /* ChartViewController.swift */; };
-		6454FD90243C4C5C00179EC7 /* ChartIndicatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEAA3523FF0771006F7116 /* ChartIndicatorsViewController.swift */; };
-		6454FD91243C4C5C00179EC7 /* ChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4C023A11F0B0005E2E2 /* ChartPresenter.swift */; };
-		6454FD92243C4C5C00179EC7 /* ChartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BD23A11F0B0005E2E2 /* ChartInteractor.swift */; };
-		6454FD93243C4C5C00179EC7 /* ChartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BE23A11F0B0005E2E2 /* ChartRouter.swift */; };
-		6454FD94243C4C6000179EC7 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485394B23A2C0C200BD4C9F /* Converter.swift */; };
-		6454FD95243C4C6000179EC7 /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485394823A2C0C200BD4C9F /* ConverterViewController.swift */; };
-		6454FD96243C4C6000179EC7 /* ConverterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485394C23A2C0C200BD4C9F /* ConverterPresenter.swift */; };
-		6454FD97243C4C6000179EC7 /* ConverterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485394923A2C0C200BD4C9F /* ConverterInteractor.swift */; };
-		6454FD98243C4C6000179EC7 /* ConverterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485394A23A2C0C200BD4C9F /* ConverterRouter.swift */; };
-		6454FD99243C4C6000179EC7 /* ConverterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485395223A2D8B800BD4C9F /* ConverterCellView.swift */; };
-		6454FD9A243C4C6000179EC7 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485394B23A2C0C200BD4C9F /* Converter.swift */; };
-		6454FD9B243C4C6000179EC7 /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485394823A2C0C200BD4C9F /* ConverterViewController.swift */; };
-		6454FD9C243C4C6000179EC7 /* ConverterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485394C23A2C0C200BD4C9F /* ConverterPresenter.swift */; };
-		6454FD9D243C4C6000179EC7 /* ConverterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485394923A2C0C200BD4C9F /* ConverterInteractor.swift */; };
-		6454FD9E243C4C6000179EC7 /* ConverterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485394A23A2C0C200BD4C9F /* ConverterRouter.swift */; };
-		6454FD9F243C4C6000179EC7 /* ConverterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485395223A2D8B800BD4C9F /* ConverterCellView.swift */; };
 		6457011D243222F600254B99 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6457011F243222F600254B99 /* Localizable.strings */; };
 		645B7D1923FC1E72007B7EC1 /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645B7D1823FC1E72007B7EC1 /* Icon.xcassets */; };
 		645B7D4923FC1EE0007B7EC1 /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645B7D4823FC1EE0007B7EC1 /* Icon.xcassets */; };
@@ -172,12 +115,9 @@
 		645B7E5C23FC217F007B7EC1 /* WatchlistAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6469E71023EAA93500CE81BF /* WatchlistAsset+Extension.swift */; };
 		645B7E5D23FC217F007B7EC1 /* WatchlistSection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D123EBD38C001363C0 /* WatchlistSection+Extension.swift */; };
 		6468AB30243B85430081DD07 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E60999240BB839006C3C57 /* UIColor+Extension.swift */; };
-		6468AB31243B85430081DD07 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E60999240BB839006C3C57 /* UIColor+Extension.swift */; };
-		6468AB32243B85430081DD07 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E60999240BB839006C3C57 /* UIColor+Extension.swift */; };
 		6468AB33243B85440081DD07 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E60999240BB839006C3C57 /* UIColor+Extension.swift */; };
 		6468AB34243B85440081DD07 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E60999240BB839006C3C57 /* UIColor+Extension.swift */; };
 		6468AB35243B85450081DD07 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E60999240BB839006C3C57 /* UIColor+Extension.swift */; };
-		6469E71123EAA93500CE81BF /* WatchlistAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6469E71023EAA93500CE81BF /* WatchlistAsset+Extension.swift */; };
 		646BDADF241D1E8600513B69 /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646BDADD241D1E8600513B69 /* AnalyticsEvents.swift */; };
 		646BDB09241D9F1400513B69 /* AppDelegate+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6023944A8B00B15E11 /* AppDelegate+CoreData.swift */; };
 		646BDB0A241D9F1400513B69 /* AppDelegate+InitialSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6223944B2400B15E11 /* AppDelegate+InitialSettings.swift */; };
@@ -244,52 +184,18 @@
 		646E6AB424381C8D00D037C7 /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646BDADD241D1E8600513B69 /* AnalyticsEvents.swift */; };
 		646E6AB524381CAE00D037C7 /* MoreTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B23BC023E34E8600B06241 /* MoreTab.swift */; };
 		646E6AB624381CAF00D037C7 /* MoreTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B23BC023E34E8600B06241 /* MoreTab.swift */; };
-		646E6AB724381CF700D037C7 /* WebSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D423EC3D4D001363C0 /* WebSession.swift */; };
-		646E6AB824381CF700D037C7 /* MoreTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B23BC023E34E8600B06241 /* MoreTab.swift */; };
-		646E6AB924381CF800D037C7 /* WebSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D423EC3D4D001363C0 /* WebSession.swift */; };
-		646E6ABA24381CF800D037C7 /* MoreTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B23BC023E34E8600B06241 /* MoreTab.swift */; };
 		646E6ABB24381CF900D037C7 /* WebSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D423EC3D4D001363C0 /* WebSession.swift */; };
 		646E6ABC24381CF900D037C7 /* MoreTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B23BC023E34E8600B06241 /* MoreTab.swift */; };
 		646E6ABD24381CF900D037C7 /* WebSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D423EC3D4D001363C0 /* WebSession.swift */; };
 		646E6ABE24381CF900D037C7 /* MoreTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B23BC023E34E8600B06241 /* MoreTab.swift */; };
-		646E6AC124381D0300D037C7 /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646BDADD241D1E8600513B69 /* AnalyticsEvents.swift */; };
-		646E6AC224381D0300D037C7 /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646BDADD241D1E8600513B69 /* AnalyticsEvents.swift */; };
 		646E6AC324381D0400D037C7 /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646BDADD241D1E8600513B69 /* AnalyticsEvents.swift */; };
 		646E6AC424381D0400D037C7 /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646BDADD241D1E8600513B69 /* AnalyticsEvents.swift */; };
-		646E6AC524381D0900D037C7 /* AppDelegate+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6023944A8B00B15E11 /* AppDelegate+CoreData.swift */; };
-		646E6AC624381D0900D037C7 /* AppDelegate+InitialSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6223944B2400B15E11 /* AppDelegate+InitialSettings.swift */; };
-		646E6AC724381D0900D037C7 /* AppDelegate+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6023944A8B00B15E11 /* AppDelegate+CoreData.swift */; };
-		646E6AC824381D0900D037C7 /* AppDelegate+InitialSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6223944B2400B15E11 /* AppDelegate+InitialSettings.swift */; };
 		646E6AC924381D0900D037C7 /* AppDelegate+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6023944A8B00B15E11 /* AppDelegate+CoreData.swift */; };
 		646E6ACA24381D0900D037C7 /* AppDelegate+InitialSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6223944B2400B15E11 /* AppDelegate+InitialSettings.swift */; };
 		646E6ACB24381D0A00D037C7 /* AppDelegate+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6023944A8B00B15E11 /* AppDelegate+CoreData.swift */; };
 		646E6ACC24381D0A00D037C7 /* AppDelegate+InitialSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6223944B2400B15E11 /* AppDelegate+InitialSettings.swift */; };
-		647616B42402FBE300DA5BA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 647616B12402F73B00DA5BA1 /* GoogleService-Info.plist */; };
-		647617562403034700DA5BA1 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647617552403034700DA5BA1 /* AdSupport.framework */; };
-		6476632B242BC37C00DE291B /* RatesView watchOS WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6476632A242BC37C00DE291B /* RatesView watchOS WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		64766331242BC37C00DE291B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6476632F242BC37C00DE291B /* Interface.storyboard */; };
-		64766333242BC37D00DE291B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64766332242BC37D00DE291B /* Assets.xcassets */; };
-		6476633A242BC37D00DE291B /* RatesView watchOS WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 64766339242BC37D00DE291B /* RatesView watchOS WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		6476633F242BC37D00DE291B /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6476633E242BC37D00DE291B /* InterfaceController.swift */; };
-		64766341242BC37D00DE291B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64766340242BC37D00DE291B /* ExtensionDelegate.swift */; };
-		64766343242BC37E00DE291B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64766342242BC37E00DE291B /* Assets.xcassets */; };
 		6477096D243C400800843CA8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6477096C243C400800843CA8 /* GoogleService-Info.plist */; };
-		647DBB6C23DBDAF40065CC89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 647DBB6A23DBDAF40065CC89 /* LaunchScreen.storyboard */; };
-		647DBBA623DBDC550065CC89 /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64190F9723C7CC9600D4B081 /* Icon.xcassets */; };
-		647DBBCD23DBDD540065CC89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64DB5D3E238C9DEE006B3CD8 /* Assets.xcassets */; };
-		647DBBCE23DBDD540065CC89 /* CountryFlags.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6457EFCC23D39BAC0012A73C /* CountryFlags.xcassets */; };
-		647DBBCF23DBDD540065CC89 /* CryptoIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6457EFCF23D3A3260012A73C /* CryptoIcons.xcassets */; };
-		647DBBD123DBDD640065CC89 /* RatesView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64DB5CDA238C9830006B3CD8 /* RatesView.xcdatamodeld */; };
 		6487361F2417D4FD00E3FB92 /* libRWSession.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6487361E2417D4FD00E3FB92 /* libRWSession.a */; };
-		6495ACF323FC06E100BA00A3 /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6495ACF223FC06E100BA00A3 /* Icon.xcassets */; };
-		6495AD0323FC07A100BA00A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 647DBB6A23DBDAF40065CC89 /* LaunchScreen.storyboard */; };
-		6495AD2623FC07C300BA00A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64DB5D3E238C9DEE006B3CD8 /* Assets.xcassets */; };
-		6495AD2723FC07C300BA00A3 /* CountryFlags.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6457EFCC23D39BAC0012A73C /* CountryFlags.xcassets */; };
-		6495AD2823FC07C300BA00A3 /* CryptoIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6457EFCF23D3A3260012A73C /* CryptoIcons.xcassets */; };
-		6495AD2923FC07D100BA00A3 /* RatesView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64DB5CDA238C9830006B3CD8 /* RatesView.xcdatamodeld */; };
-		6495AD2A23FC07D400BA00A3 /* WatchlistAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6469E71023EAA93500CE81BF /* WatchlistAsset+Extension.swift */; };
-		6495AD2B23FC07D400BA00A3 /* WatchlistSection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D123EBD38C001363C0 /* WatchlistSection+Extension.swift */; };
-		6495AD3623FC086000BA00A3 /* libCoreModules.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EEA0DC23E99BB300B6FB28 /* libCoreModules.a */; };
 		64A3994D243C39A300750FAC /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E21512415035700162443 /* Rates.swift */; };
 		64A3994E243C39A300750FAC /* RatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E214D2415018200162443 /* RatesViewController.swift */; };
 		64A3994F243C39A300750FAC /* RatesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E214F241502A600162443 /* RatesPresenter.swift */; };
@@ -304,60 +210,11 @@
 		64DC5BE42421D3B300C138A9 /* QuickSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDF2421D3B300C138A9 /* QuickSearch.swift */; };
 		64DC5BE52421D3B300C138A9 /* QuickSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BE02421D3B300C138A9 /* QuickSearchViewController.swift */; };
 		64DEAA3A23FF0774006F7116 /* ChartIndicatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEAA3523FF0771006F7116 /* ChartIndicatorsViewController.swift */; };
-		64DEAA3E24003665006F7116 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DB5CD3238C9830006B3CD8 /* SceneDelegate.swift */; };
 		64E7CBF12417FD89006E7538 /* libRWExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E7CBF02417FD89006E7538 /* libRWExtensions.a */; };
 		64EB05B12417EBE900A9946E /* AssetSelectorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EB05AC2417EBE900A9946E /* AssetSelectorRouter.swift */; };
 		64EB05DC2417F8DE00A9946E /* libRWUserInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EB05DB2417F8DE00A9946E /* libRWUserInterface.a */; };
 		64EB05DD2417F8E800A9946E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647617552403034700DA5BA1 /* AdSupport.framework */; };
-		64EEA0DD23E99BB300B6FB28 /* libCoreModules.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EEA0DC23E99BB300B6FB28 /* libCoreModules.a */; };
-		80654BD7267D1FE24CB64F9D /* Pods_RatesView_watchOS_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1FADD12D7AB1BB7D382A0D /* Pods_RatesView_watchOS_WatchKit_App.framework */; };
-		9836B9616F6DB558B54C1BFA /* Pods_RatesView_watchOS_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2D2B378D07B439D98FB461 /* Pods_RatesView_watchOS_WatchKit_Extension.framework */; };
-		E3448EA5AEF9823BF6AD2C8B /* Pods_RatesView_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A651B6C1CA4321D54CE4E6E0 /* Pods_RatesView_iOS.framework */; };
-		E99E465ABDAD3C690DC12910 /* Pods_RatesView_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8B99ED1783027733463064 /* Pods_RatesView_watchOS.framework */; };
-		EC8A4D60B583B3315AF4D96A /* Pods_RatesView_iOS_Pro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD25A8125F5395BA80F16943 /* Pods_RatesView_iOS_Pro.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6476632C242BC37C00DE291B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 64DB5CC6238C9830006B3CD8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 64766329242BC37C00DE291B;
-			remoteInfo = "RatesView watchOS WatchKit App";
-		};
-		6476633B242BC37D00DE291B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 64DB5CC6238C9830006B3CD8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 64766338242BC37D00DE291B;
-			remoteInfo = "RatesView watchOS WatchKit Extension";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		64766348242BC37E00DE291B /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				6476633A242BC37D00DE291B /* RatesView watchOS WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6476634C242BC37E00DE291B /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				6476632B242BC37C00DE291B /* RatesView watchOS WatchKit App.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0705FE5CB0CBD16F288D0C55 /* Pods-CryptoView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoView.release.xcconfig"; path = "Target Support Files/Pods-CryptoView/Pods-CryptoView.release.xcconfig"; sourceTree = "<group>"; };
@@ -381,7 +238,6 @@
 		6405B4BE23A11F0B0005E2E2 /* ChartRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartRouter.swift; sourceTree = "<group>"; };
 		6405B4BF23A11F0B0005E2E2 /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		6405B4C023A11F0B0005E2E2 /* ChartPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartPresenter.swift; sourceTree = "<group>"; };
-		64190F9723C7CC9600D4B081 /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
 		642FE93F23DFE69000B78B4B /* libPizden.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libPizden.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		642FE95423DFE73500B78B4B /* libPizdaaaaa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libPizdaaaaa.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		642FE98623DFE79F00B78B4B /* libJopka.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libJopka.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -397,29 +253,17 @@
 		64426F9123E1EFCF0040CA8D /* UpdateLog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UpdateLog.txt; sourceTree = "<group>"; };
 		64539218243C8939009CAACB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64570101243220F300254B99 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		64570102243220F300254B99 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Interface.strings"; sourceTree = "<group>"; };
 		64570105243220FD00254B99 /* en-AU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-AU"; path = "en-AU.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		64570106243220FD00254B99 /* en-AU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-AU"; path = "en-AU.lproj/Interface.strings"; sourceTree = "<group>"; };
 		645701072432212200254B99 /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		645701082432212200254B99 /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/Interface.strings"; sourceTree = "<group>"; };
 		645701092432213D00254B99 /* en-NZ */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-NZ"; path = "en-NZ.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		6457010A2432213D00254B99 /* en-NZ */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-NZ"; path = "en-NZ.lproj/Interface.strings"; sourceTree = "<group>"; };
 		6457010B2432214A00254B99 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		6457010C2432214A00254B99 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Interface.strings"; sourceTree = "<group>"; };
 		6457010D2432226D00254B99 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		6457010E2432226D00254B99 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Interface.strings; sourceTree = "<group>"; };
 		6457010F2432227200254B99 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		645701102432227200254B99 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Interface.strings; sourceTree = "<group>"; };
 		645701112432227600254B99 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		645701122432227600254B99 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Interface.strings"; sourceTree = "<group>"; };
 		645701132432227A00254B99 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		645701142432227A00254B99 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Interface.strings; sourceTree = "<group>"; };
 		645701152432228100254B99 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		645701162432228100254B99 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Interface.strings; sourceTree = "<group>"; };
 		645701172432228600254B99 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		645701182432228600254B99 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Interface.strings; sourceTree = "<group>"; };
 		645701192432228C00254B99 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		6457011A2432228C00254B99 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Interface.strings; sourceTree = "<group>"; };
 		6457011E243222F600254B99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		64570125243223FF00254B99 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		645701262432240800254B99 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -446,13 +290,10 @@
 		6469E71023EAA93500CE81BF /* WatchlistAsset+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchlistAsset+Extension.swift"; sourceTree = "<group>"; };
 		646BDADD241D1E8600513B69 /* AnalyticsEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsEvents.swift; sourceTree = "<group>"; };
 		646D31DA243AC02100730639 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		646D31DB243AC02100730639 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Interface.strings; sourceTree = "<group>"; };
 		646D31DC243AC02100730639 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		646D31E0243AC07B00730639 /* de-AT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "de-AT"; path = "de-AT.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		646D31E1243AC07B00730639 /* de-AT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "de-AT"; path = "de-AT.lproj/Interface.strings"; sourceTree = "<group>"; };
 		646D31E2243AC07C00730639 /* de-AT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "de-AT"; path = "de-AT.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		646D31E3243AC09200730639 /* de-CH */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "de-CH"; path = "de-CH.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		646D31E4243AC09200730639 /* de-CH */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "de-CH"; path = "de-CH.lproj/Interface.strings"; sourceTree = "<group>"; };
 		646D31E5243AC09200730639 /* de-CH */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "de-CH"; path = "de-CH.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		646D31F8243AC43C00730639 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		646D31FA243AC43D00730639 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -472,23 +313,10 @@
 		6472A85B23DFDDCE00066F86 /* libCoreApplication.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCoreApplication.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6472A87823DFE3B700066F86 /* libTestCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTestCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6472A8BA23DFE55900066F86 /* libApplicationCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libApplicationCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		647616B12402F73B00DA5BA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		647617552403034700DA5BA1 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		64766327242BC37C00DE291B /* RatesView watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RatesView watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6476632A242BC37C00DE291B /* RatesView watchOS WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RatesView watchOS WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		64766330242BC37C00DE291B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		64766332242BC37D00DE291B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		64766334242BC37D00DE291B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		64766339242BC37D00DE291B /* RatesView watchOS WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "RatesView watchOS WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6476633E242BC37D00DE291B /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		64766340242BC37D00DE291B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		64766342242BC37E00DE291B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		64766344242BC37E00DE291B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6477096C243C400800843CA8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		647DBB3623DBD3DE0065CC89 /* libDaedalus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libDaedalus.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		647DBB5A23DBDAF30065CC89 /* RatesView 3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RatesView 3.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		647DBB6B23DBDAF40065CC89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		647DBB6D23DBDAF40065CC89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		647DBBFD23DBDE180065CC89 /* libCoreDaedalus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCoreDaedalus.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		648306B024019662006193FC /* PortfolioAssetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioAssetTableViewCell.swift; sourceTree = "<group>"; };
 		6485394823A2C0C200BD4C9F /* ConverterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
@@ -503,9 +331,6 @@
 		648924CC23991E5A00BC19D4 /* AssetSelectorInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetSelectorInteractor.swift; sourceTree = "<group>"; };
 		648924CE23991E5A00BC19D4 /* AssetSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetSelector.swift; sourceTree = "<group>"; };
 		648924CF23991E5A00BC19D4 /* AssetSelectorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetSelectorPresenter.swift; sourceTree = "<group>"; };
-		6495ACE723FC06E000BA00A3 /* RatesView Pro 3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RatesView Pro 3.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6495ACF223FC06E100BA00A3 /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
-		6495ACF723FC06E100BA00A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64A12C1C23C5E91100E97E51 /* ReusableTableViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReusableTableViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A12C3A23C65C0100E97E51 /* libWebDataSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libWebDataSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A12C6723C65D2A00E97E51 /* libReusableListViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReusableListViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -515,7 +340,6 @@
 		64B5C9CE240BC930007DCC14 /* libContextMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libContextMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		64BD120B23D6465800F628FA /* libReusableListViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReusableListViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		64DB5CD1238C9830006B3CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		64DB5CD3238C9830006B3CD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		64DB5CDB238C9830006B3CD8 /* RatesView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RatesView.xcdatamodel; sourceTree = "<group>"; };
 		64DB5CE7238C9832006B3CD8 /* RatesViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatesViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64DB5CEB238C9832006B3CD8 /* RatesViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesViewTests.swift; sourceTree = "<group>"; };
@@ -561,22 +385,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4665C5DDA3FFD9AAF17C2718 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E99E465ABDAD3C690DC12910 /* Pods_RatesView_watchOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		53C27564873B11FAC77E938A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				80654BD7267D1FE24CB64F9D /* Pods_RatesView_watchOS_WatchKit_App.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		645B7CF223FC1E3F007B7EC1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -607,33 +415,6 @@
 			files = (
 				645B7D5223FC205C007B7EC1 /* libCoreModules.a in Frameworks */,
 				48B57219B017B8255CA13AB9 /* Pods_ARConverter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		64766336242BC37D00DE291B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9836B9616F6DB558B54C1BFA /* Pods_RatesView_watchOS_WatchKit_Extension.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		647DBB5723DBDAF30065CC89 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				64EEA0DD23E99BB300B6FB28 /* libCoreModules.a in Frameworks */,
-				647617562403034700DA5BA1 /* AdSupport.framework in Frameworks */,
-				E3448EA5AEF9823BF6AD2C8B /* Pods_RatesView_iOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6495ACE423FC06E000BA00A3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6495AD3623FC086000BA00A3 /* libCoreModules.a in Frameworks */,
-				EC8A4D60B583B3315AF4D96A /* Pods_RatesView_iOS_Pro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -851,38 +632,6 @@
 			path = ColorPalettes;
 			sourceTree = "<group>";
 		};
-		6476632E242BC37C00DE291B /* RatesView watchOS WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				6476632F242BC37C00DE291B /* Interface.storyboard */,
-				64766332242BC37D00DE291B /* Assets.xcassets */,
-				64766334242BC37D00DE291B /* Info.plist */,
-			);
-			path = "RatesView watchOS WatchKit App";
-			sourceTree = "<group>";
-		};
-		6476633D242BC37D00DE291B /* RatesView watchOS WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				6476633E242BC37D00DE291B /* InterfaceController.swift */,
-				64766340242BC37D00DE291B /* ExtensionDelegate.swift */,
-				64766342242BC37E00DE291B /* Assets.xcassets */,
-				64766344242BC37E00DE291B /* Info.plist */,
-			);
-			path = "RatesView watchOS WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		647DBB5B23DBDAF30065CC89 /* RatesView iOS */ = {
-			isa = PBXGroup;
-			children = (
-				64DB5CD3238C9830006B3CD8 /* SceneDelegate.swift */,
-				647616B12402F73B00DA5BA1 /* GoogleService-Info.plist */,
-				64190F9723C7CC9600D4B081 /* Icon.xcassets */,
-				647DBB6D23DBDAF40065CC89 /* Info.plist */,
-			);
-			path = "RatesView iOS";
-			sourceTree = "<group>";
-		};
 		648306AF24019634006193FC /* Portfolio */ = {
 			isa = PBXGroup;
 			children = (
@@ -891,15 +640,6 @@
 				648306B024019662006193FC /* PortfolioAssetTableViewCell.swift */,
 			);
 			path = Portfolio;
-			sourceTree = "<group>";
-		};
-		6495ACE823FC06E000BA00A3 /* RatesView iOS Pro */ = {
-			isa = PBXGroup;
-			children = (
-				6495ACF223FC06E100BA00A3 /* Icon.xcassets */,
-				6495ACF723FC06E100BA00A3 /* Info.plist */,
-			);
-			path = "RatesView iOS Pro";
 			sourceTree = "<group>";
 		};
 		64A82BD32403D91100EE825C /* ColorPalettes */ = {
@@ -956,13 +696,9 @@
 				64DB5D05238C9C8A006B3CD8 /* Shared */,
 				64DB5CEA238C9832006B3CD8 /* RatesViewTests */,
 				64DB5CF5238C9832006B3CD8 /* RatesViewUITests */,
-				647DBB5B23DBDAF30065CC89 /* RatesView iOS */,
-				6495ACE823FC06E000BA00A3 /* RatesView iOS Pro */,
 				645B7CF623FC1E3F007B7EC1 /* CryptoView */,
 				645B7D0E23FC1E72007B7EC1 /* ESConverter */,
 				645B7D3E23FC1EDF007B7EC1 /* ARConverter */,
-				6476632E242BC37C00DE291B /* RatesView watchOS WatchKit App */,
-				6476633D242BC37D00DE291B /* RatesView watchOS WatchKit Extension */,
 				64DB5CCF238C9830006B3CD8 /* Products */,
 				5F178BDD91D0B3AABE6A4645 /* Pods */,
 				CC02B078E832E8C2C984DFCA /* Frameworks */,
@@ -974,14 +710,9 @@
 			children = (
 				64DB5CE7238C9832006B3CD8 /* RatesViewTests.xctest */,
 				64DB5CF2238C9832006B3CD8 /* RatesViewUITests.xctest */,
-				647DBB5A23DBDAF30065CC89 /* RatesView 3.0.app */,
-				6495ACE723FC06E000BA00A3 /* RatesView Pro 3.0.app */,
 				645B7CF523FC1E3F007B7EC1 /* CryptoView 1.0.app */,
 				645B7D0D23FC1E72007B7EC1 /* SmartConverter.app */,
 				645B7D3D23FC1EDF007B7EC1 /* ARConverter 3.0.app */,
-				64766327242BC37C00DE291B /* RatesView watchOS.app */,
-				6476632A242BC37C00DE291B /* RatesView watchOS WatchKit App.app */,
-				64766339242BC37D00DE291B /* RatesView watchOS WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1157,98 +888,6 @@
 			productReference = 645B7D3D23FC1EDF007B7EC1 /* ARConverter 3.0.app */;
 			productType = "com.apple.product-type.application";
 		};
-		64766326242BC37C00DE291B /* RatesView watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6476634D242BC37E00DE291B /* Build configuration list for PBXNativeTarget "RatesView watchOS" */;
-			buildPhases = (
-				629777A41B1F5DAB4A2C619B /* [CP] Check Pods Manifest.lock */,
-				64766325242BC37C00DE291B /* Resources */,
-				6476634C242BC37E00DE291B /* Embed Watch Content */,
-				4665C5DDA3FFD9AAF17C2718 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6476632D242BC37C00DE291B /* PBXTargetDependency */,
-			);
-			name = "RatesView watchOS";
-			productName = "RatesView watchOS";
-			productReference = 64766327242BC37C00DE291B /* RatesView watchOS.app */;
-			productType = "com.apple.product-type.application.watchapp2-container";
-		};
-		64766329242BC37C00DE291B /* RatesView watchOS WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 64766349242BC37E00DE291B /* Build configuration list for PBXNativeTarget "RatesView watchOS WatchKit App" */;
-			buildPhases = (
-				B5FEC2512D01F24F3CA3E23C /* [CP] Check Pods Manifest.lock */,
-				64766328242BC37C00DE291B /* Resources */,
-				64766348242BC37E00DE291B /* Embed App Extensions */,
-				53C27564873B11FAC77E938A /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6476633C242BC37D00DE291B /* PBXTargetDependency */,
-			);
-			name = "RatesView watchOS WatchKit App";
-			productName = "RatesView watchOS WatchKit App";
-			productReference = 6476632A242BC37C00DE291B /* RatesView watchOS WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		64766338242BC37D00DE291B /* RatesView watchOS WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 64766345242BC37E00DE291B /* Build configuration list for PBXNativeTarget "RatesView watchOS WatchKit Extension" */;
-			buildPhases = (
-				47A77BF1AA9037A0A6AC1957 /* [CP] Check Pods Manifest.lock */,
-				64766335242BC37D00DE291B /* Sources */,
-				64766336242BC37D00DE291B /* Frameworks */,
-				64766337242BC37D00DE291B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "RatesView watchOS WatchKit Extension";
-			productName = "RatesView watchOS WatchKit Extension";
-			productReference = 64766339242BC37D00DE291B /* RatesView watchOS WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
-		647DBB5923DBDAF30065CC89 /* RatesView iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 647DBB8423DBDAF40065CC89 /* Build configuration list for PBXNativeTarget "RatesView iOS" */;
-			buildPhases = (
-				13CD5164ABCDE40CB0816B37 /* [CP] Check Pods Manifest.lock */,
-				647DBB5623DBDAF30065CC89 /* Sources */,
-				647DBB5723DBDAF30065CC89 /* Frameworks */,
-				647DBB5823DBDAF30065CC89 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "RatesView iOS";
-			productName = "RatesView iOS";
-			productReference = 647DBB5A23DBDAF30065CC89 /* RatesView 3.0.app */;
-			productType = "com.apple.product-type.application";
-		};
-		6495ACE623FC06E000BA00A3 /* RatesView iOS Pro */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6495ACF823FC06E100BA00A3 /* Build configuration list for PBXNativeTarget "RatesView iOS Pro" */;
-			buildPhases = (
-				4939F8DD25CF6B16B39500D3 /* [CP] Check Pods Manifest.lock */,
-				6495ACE323FC06E000BA00A3 /* Sources */,
-				6495ACE423FC06E000BA00A3 /* Frameworks */,
-				6495ACE523FC06E000BA00A3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "RatesView iOS Pro";
-			productName = "RatesView iOS Pro";
-			productReference = 6495ACE723FC06E000BA00A3 /* RatesView Pro 3.0.app */;
-			productType = "com.apple.product-type.application";
-		};
 		64DB5CE6238C9832006B3CD8 /* RatesViewTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64DB5CFE238C9832006B3CD8 /* Build configuration list for PBXNativeTarget "RatesViewTests" */;
@@ -1302,21 +941,6 @@
 					645B7D3C23FC1EDF007B7EC1 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
-					64766326242BC37C00DE291B = {
-						CreatedOnToolsVersion = 11.3.1;
-					};
-					64766329242BC37C00DE291B = {
-						CreatedOnToolsVersion = 11.3.1;
-					};
-					64766338242BC37D00DE291B = {
-						CreatedOnToolsVersion = 11.3.1;
-					};
-					647DBB5923DBDAF30065CC89 = {
-						CreatedOnToolsVersion = 11.3.1;
-					};
-					6495ACE623FC06E000BA00A3 = {
-						CreatedOnToolsVersion = 11.3.1;
-					};
 					64DB5CE6238C9832006B3CD8 = {
 						CreatedOnToolsVersion = 11.1;
 						TestTargetID = 64DB5CCD238C9830006B3CD8;
@@ -1357,14 +981,9 @@
 			targets = (
 				645B7D0C23FC1E72007B7EC1 /* Converter */,
 				645B7CF423FC1E3F007B7EC1 /* CryptoView */,
-				647DBB5923DBDAF30065CC89 /* RatesView iOS */,
-				6495ACE623FC06E000BA00A3 /* RatesView iOS Pro */,
 				645B7D3C23FC1EDF007B7EC1 /* ARConverter */,
 				64DB5CE6238C9832006B3CD8 /* RatesViewTests */,
 				64DB5CF1238C9832006B3CD8 /* RatesViewUITests */,
-				64766326242BC37C00DE291B /* RatesView watchOS */,
-				64766329242BC37C00DE291B /* RatesView watchOS WatchKit App */,
-				64766338242BC37D00DE291B /* RatesView watchOS WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -1411,55 +1030,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		64766325242BC37C00DE291B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		64766328242BC37C00DE291B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				64766333242BC37D00DE291B /* Assets.xcassets in Resources */,
-				64766331242BC37C00DE291B /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		64766337242BC37D00DE291B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				64766343242BC37E00DE291B /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		647DBB5823DBDAF30065CC89 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				647DBBCF23DBDD540065CC89 /* CryptoIcons.xcassets in Resources */,
-				647DBBCE23DBDD540065CC89 /* CountryFlags.xcassets in Resources */,
-				647DBBA623DBDC550065CC89 /* Icon.xcassets in Resources */,
-				647DBB6C23DBDAF40065CC89 /* LaunchScreen.storyboard in Resources */,
-				647DBBCD23DBDD540065CC89 /* Assets.xcassets in Resources */,
-				647616B42402FBE300DA5BA1 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6495ACE523FC06E000BA00A3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6495AD2723FC07C300BA00A3 /* CountryFlags.xcassets in Resources */,
-				6495AD2823FC07C300BA00A3 /* CryptoIcons.xcassets in Resources */,
-				6495ACF323FC06E100BA00A3 /* Icon.xcassets in Resources */,
-				6495AD2623FC07C300BA00A3 /* Assets.xcassets in Resources */,
-				6495AD0323FC07A100BA00A3 /* LaunchScreen.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		64DB5CE5238C9832006B3CD8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1485,28 +1055,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13CD5164ABCDE40CB0816B37 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RatesView iOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		44ADA1BDF9508BD4A11FF4CA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1529,72 +1077,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		47A77BF1AA9037A0A6AC1957 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RatesView watchOS WatchKit Extension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4939F8DD25CF6B16B39500D3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RatesView iOS Pro-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		629777A41B1F5DAB4A2C619B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RatesView watchOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		79457D9F6E5631D35F50108C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1611,28 +1093,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ARConverter-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B5FEC2512D01F24F3CA3E23C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RatesView watchOS WatchKit App-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1800,104 +1260,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		64766335242BC37D00DE291B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				64766341242BC37D00DE291B /* ExtensionDelegate.swift in Sources */,
-				6476633F242BC37D00DE291B /* InterfaceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		647DBB5623DBDAF30065CC89 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6454FD70243C4C4F00179EC7 /* QuickSearchViewController.swift in Sources */,
-				6454FD95243C4C6000179EC7 /* ConverterViewController.swift in Sources */,
-				6454FD94243C4C6000179EC7 /* Converter.swift in Sources */,
-				6454FD8B243C4C5B00179EC7 /* ChartPresenter.swift in Sources */,
-				6454FD98243C4C6000179EC7 /* ConverterRouter.swift in Sources */,
-				6454FD89243C4C5B00179EC7 /* ChartViewController.swift in Sources */,
-				6435B9D223EBD38C001363C0 /* WatchlistSection+Extension.swift in Sources */,
-				6469E71123EAA93500CE81BF /* WatchlistAsset+Extension.swift in Sources */,
-				6454FD6E243C4C4B00179EC7 /* AssetSelectorRouter.swift in Sources */,
-				6454FD40243C4C4100179EC7 /* RatesPresenter.swift in Sources */,
-				6454FD6A243C4C4B00179EC7 /* AssetSelector.swift in Sources */,
-				6454FD6D243C4C4B00179EC7 /* AssetSelectorInteractor.swift in Sources */,
-				6454FD42243C4C4100179EC7 /* RatesRouter.swift in Sources */,
-				6454FD71243C4C4F00179EC7 /* QuickSearchPresenter.swift in Sources */,
-				6454FD72243C4C4F00179EC7 /* QuickSearchInteractor.swift in Sources */,
-				646E6AC124381D0300D037C7 /* AnalyticsEvents.swift in Sources */,
-				646E6AB824381CF700D037C7 /* MoreTab.swift in Sources */,
-				6454FD96243C4C6000179EC7 /* ConverterPresenter.swift in Sources */,
-				6454FD6C243C4C4B00179EC7 /* AssetSelectorPresenter.swift in Sources */,
-				6454FD99243C4C6000179EC7 /* ConverterCellView.swift in Sources */,
-				647DBBD123DBDD640065CC89 /* RatesView.xcdatamodeld in Sources */,
-				6454FD6B243C4C4B00179EC7 /* AssetSelectorViewController.swift in Sources */,
-				6454FD8C243C4C5B00179EC7 /* ChartInteractor.swift in Sources */,
-				646E6AB724381CF700D037C7 /* WebSession.swift in Sources */,
-				6454FD43243C4C4100179EC7 /* RatesCellView.swift in Sources */,
-				64DEAA3E24003665006F7116 /* SceneDelegate.swift in Sources */,
-				646E6AC824381D0900D037C7 /* AppDelegate+InitialSettings.swift in Sources */,
-				646E6AC724381D0900D037C7 /* AppDelegate+CoreData.swift in Sources */,
-				6454FD41243C4C4100179EC7 /* RatesInteractor.swift in Sources */,
-				6454FD3E243C4C4100179EC7 /* Rates.swift in Sources */,
-				6454FD3F243C4C4100179EC7 /* RatesViewController.swift in Sources */,
-				6454FD88243C4C5B00179EC7 /* Chart.swift in Sources */,
-				6468AB31243B85430081DD07 /* UIColor+Extension.swift in Sources */,
-				6454FD97243C4C6000179EC7 /* ConverterInteractor.swift in Sources */,
-				6454FD8A243C4C5B00179EC7 /* ChartIndicatorsViewController.swift in Sources */,
-				6454FD73243C4C4F00179EC7 /* QuickSearchRouter.swift in Sources */,
-				6454FD6F243C4C4F00179EC7 /* QuickSearch.swift in Sources */,
-				6454FD8D243C4C5B00179EC7 /* ChartRouter.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6495ACE323FC06E000BA00A3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6454FD49243C4C4100179EC7 /* RatesCellView.swift in Sources */,
-				6454FD9D243C4C6000179EC7 /* ConverterInteractor.swift in Sources */,
-				6495AD2A23FC07D400BA00A3 /* WatchlistAsset+Extension.swift in Sources */,
-				6454FD9A243C4C6000179EC7 /* Converter.swift in Sources */,
-				6454FD67243C4C4B00179EC7 /* AssetSelectorPresenter.swift in Sources */,
-				6454FD44243C4C4100179EC7 /* Rates.swift in Sources */,
-				6454FD77243C4C5000179EC7 /* QuickSearchInteractor.swift in Sources */,
-				6454FD8F243C4C5C00179EC7 /* ChartViewController.swift in Sources */,
-				6454FD75243C4C5000179EC7 /* QuickSearchViewController.swift in Sources */,
-				6454FD9B243C4C6000179EC7 /* ConverterViewController.swift in Sources */,
-				6454FD47243C4C4100179EC7 /* RatesInteractor.swift in Sources */,
-				646E6ABA24381CF800D037C7 /* MoreTab.swift in Sources */,
-				6454FD9C243C4C6000179EC7 /* ConverterPresenter.swift in Sources */,
-				6454FD68243C4C4B00179EC7 /* AssetSelectorInteractor.swift in Sources */,
-				646E6AC624381D0900D037C7 /* AppDelegate+InitialSettings.swift in Sources */,
-				6468AB32243B85430081DD07 /* UIColor+Extension.swift in Sources */,
-				6454FD74243C4C5000179EC7 /* QuickSearch.swift in Sources */,
-				6454FD9E243C4C6000179EC7 /* ConverterRouter.swift in Sources */,
-				6454FD9F243C4C6000179EC7 /* ConverterCellView.swift in Sources */,
-				6454FD45243C4C4100179EC7 /* RatesViewController.swift in Sources */,
-				6454FD69243C4C4B00179EC7 /* AssetSelectorRouter.swift in Sources */,
-				6454FD93243C4C5C00179EC7 /* ChartRouter.swift in Sources */,
-				6454FD76243C4C5000179EC7 /* QuickSearchPresenter.swift in Sources */,
-				646E6AB924381CF800D037C7 /* WebSession.swift in Sources */,
-				6454FD66243C4C4B00179EC7 /* AssetSelectorViewController.swift in Sources */,
-				6454FD78243C4C5000179EC7 /* QuickSearchRouter.swift in Sources */,
-				6454FD92243C4C5C00179EC7 /* ChartInteractor.swift in Sources */,
-				6495AD2923FC07D100BA00A3 /* RatesView.xcdatamodeld in Sources */,
-				6495AD2B23FC07D400BA00A3 /* WatchlistSection+Extension.swift in Sources */,
-				6454FD91243C4C5C00179EC7 /* ChartPresenter.swift in Sources */,
-				6454FD8E243C4C5C00179EC7 /* Chart.swift in Sources */,
-				646E6AC224381D0300D037C7 /* AnalyticsEvents.swift in Sources */,
-				6454FD90243C4C5C00179EC7 /* ChartIndicatorsViewController.swift in Sources */,
-				6454FD46243C4C4100179EC7 /* RatesPresenter.swift in Sources */,
-				6454FD48243C4C4100179EC7 /* RatesRouter.swift in Sources */,
-				646E6AC524381D0900D037C7 /* AppDelegate+CoreData.swift in Sources */,
-				6454FD65243C4C4B00179EC7 /* AssetSelector.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		64DB5CE3238C9832006B3CD8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1966,19 +1328,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		6476632D242BC37C00DE291B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 64766329242BC37C00DE291B /* RatesView watchOS WatchKit App */;
-			targetProxy = 6476632C242BC37C00DE291B /* PBXContainerItemProxy */;
-		};
-		6476633C242BC37D00DE291B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 64766338242BC37D00DE291B /* RatesView watchOS WatchKit Extension */;
-			targetProxy = 6476633B242BC37D00DE291B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		6457011F243222F600254B99 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -2001,29 +1350,6 @@
 				646D31E5243AC09200730639 /* de-CH */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		6476632F242BC37C00DE291B /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				64766330242BC37C00DE291B /* Base */,
-				64570102243220F300254B99 /* en-GB */,
-				64570106243220FD00254B99 /* en-AU */,
-				645701082432212200254B99 /* en-CA */,
-				6457010A2432213D00254B99 /* en-NZ */,
-				6457010C2432214A00254B99 /* en-US */,
-				6457010E2432226D00254B99 /* es */,
-				645701102432227200254B99 /* fr */,
-				645701122432227600254B99 /* fr-CA */,
-				645701142432227A00254B99 /* nl */,
-				645701162432228100254B99 /* de */,
-				645701182432228600254B99 /* ru */,
-				6457011A2432228C00254B99 /* uk */,
-				646D31DB243AC02100730639 /* it */,
-				646D31E1243AC07B00730639 /* de-AT */,
-				646D31E4243AC09200730639 /* de-CH */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 		647DBB6A23DBDAF40065CC89 /* LaunchScreen.storyboard */ = {
@@ -2072,7 +1398,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.cryptoview-1-0";
 				PRODUCT_NAME = "CryptoView 1.0";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG CRYPTOVIEW";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG TARGET_CW";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2096,7 +1422,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.cryptoview-1-0";
 				PRODUCT_NAME = "CryptoView 1.0";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = CRYPTOVIEW;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = TARGET_CW;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2121,7 +1447,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.esie.converter;
 				PRODUCT_NAME = SmartConverter;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG SECONVERTER";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG TARGET_SC";
 				SWIFT_DISABLE_SAFETY_CHECKS = YES;
 				SWIFT_ENFORCE_EXCLUSIVE_ACCESS = off;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2149,7 +1475,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.esie.converter;
 				PRODUCT_NAME = SmartConverter;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SECONVERTER;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = TARGET_SC;
 				SWIFT_DISABLE_SAFETY_CHECKS = YES;
 				SWIFT_ENFORCE_EXCLUSIVE_ACCESS = off;
 				SWIFT_REFLECTION_METADATA_LEVEL = none;
@@ -2177,7 +1503,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.arconverter-3-0";
 				PRODUCT_NAME = "ARConverter 3.0";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG ARCONVERTER";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG TARGET_AR";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2201,233 +1527,9 @@
 				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.arconverter-3-0";
 				PRODUCT_NAME = "ARConverter 3.0";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = ARCONVERTER;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = TARGET_AR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		64766346242BC37E00DE291B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B6850B9FA93FDF2D739C5C8 /* Pods-RatesView watchOS WatchKit Extension.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6M4XU22V82;
-				INFOPLIST_FILE = "RatesView watchOS WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.RatesView-watchOS.watchkitapp.watchkitextension";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
-			};
-			name = Debug;
-		};
-		64766347242BC37E00DE291B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74BD9324B5728251FF3A8722 /* Pods-RatesView watchOS WatchKit Extension.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6M4XU22V82;
-				INFOPLIST_FILE = "RatesView watchOS WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.RatesView-watchOS.watchkitapp.watchkitextension";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
-			};
-			name = Release;
-		};
-		6476634A242BC37E00DE291B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB40B87E6A538E764F2DCFC6 /* Pods-RatesView watchOS WatchKit App.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6M4XU22V82;
-				IBSC_MODULE = RatesView_watchOS_WatchKit_Extension;
-				INFOPLIST_FILE = "RatesView watchOS WatchKit App/Info.plist";
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.RatesView-watchOS.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
-			};
-			name = Debug;
-		};
-		6476634B242BC37E00DE291B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12A9C7DC976DCEF6527968DF /* Pods-RatesView watchOS WatchKit App.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6M4XU22V82;
-				IBSC_MODULE = RatesView_watchOS_WatchKit_Extension;
-				INFOPLIST_FILE = "RatesView watchOS WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.RatesView-watchOS.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
-			};
-			name = Release;
-		};
-		6476634E242BC37E00DE291B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A9817AE30115480FFFC0E7C /* Pods-RatesView watchOS.debug.xcconfig */;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6M4XU22V82;
-				MARKETING_VERSION = 1.0;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.RatesView-watchOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		6476634F242BC37E00DE291B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1469AFB10ABB9BF97BC62ECE /* Pods-RatesView watchOS.release.xcconfig */;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6M4XU22V82;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.RatesView-watchOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		647DBB8523DBDAF40065CC89 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F731C55B6F6462C93E0852BB /* Pods-RatesView iOS.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 411;
-				DEVELOPMENT_TEAM = 6M4XU22V82;
-				INFOPLIST_FILE = "RatesView iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 3.0;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.cer-3-0";
-				PRODUCT_NAME = "RatesView 3.0";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		647DBB8623DBDAF40065CC89 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7471C954E4BB109CFA767DBD /* Pods-RatesView iOS.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 411;
-				DEVELOPMENT_TEAM = 6M4XU22V82;
-				INFOPLIST_FILE = "RatesView iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.cer-3-0";
-				PRODUCT_NAME = "RatesView 3.0";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		6495ACF923FC06E100BA00A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EABB6B279CE742850DE531C /* Pods-RatesView iOS Pro.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 411;
-				DEVELOPMENT_TEAM = 6M4XU22V82;
-				INFOPLIST_FILE = "RatesView iOS Pro/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 3.0;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.ratesview-3-0";
-				PRODUCT_NAME = "RatesView Pro 3.0";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG RATESVIEW_PRO";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		6495ACFA23FC06E100BA00A3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 382A87199E023F2486D3CF38 /* Pods-RatesView iOS Pro.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 411;
-				DEVELOPMENT_TEAM = 6M4XU22V82;
-				INFOPLIST_FILE = "RatesView iOS Pro/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.ratesview-3-0";
-				PRODUCT_NAME = "RatesView Pro 3.0";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = RATESVIEW_PRO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -2438,6 +1540,9 @@
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -2490,6 +1595,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG RATESVIEW_BASE";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_REFLECTION_METADATA_LEVEL = none;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2502,6 +1608,9 @@
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -2551,6 +1660,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = RATESVIEW_BASE;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_REFLECTION_METADATA_LEVEL = none;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -2573,6 +1683,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.esie.RatesViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RatesView.app/RatesView";
@@ -2595,6 +1706,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.esie.RatesViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RatesView.app/RatesView";
@@ -2667,51 +1779,6 @@
 			buildConfigurations = (
 				645B7D4F23FC1EE0007B7EC1 /* Debug */,
 				645B7D5023FC1EE0007B7EC1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		64766345242BC37E00DE291B /* Build configuration list for PBXNativeTarget "RatesView watchOS WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				64766346242BC37E00DE291B /* Debug */,
-				64766347242BC37E00DE291B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		64766349242BC37E00DE291B /* Build configuration list for PBXNativeTarget "RatesView watchOS WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6476634A242BC37E00DE291B /* Debug */,
-				6476634B242BC37E00DE291B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6476634D242BC37E00DE291B /* Build configuration list for PBXNativeTarget "RatesView watchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6476634E242BC37E00DE291B /* Debug */,
-				6476634F242BC37E00DE291B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		647DBB8423DBDAF40065CC89 /* Build configuration list for PBXNativeTarget "RatesView iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				647DBB8523DBDAF40065CC89 /* Debug */,
-				647DBB8623DBDAF40065CC89 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6495ACF823FC06E100BA00A3 /* Build configuration list for PBXNativeTarget "RatesView iOS Pro" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6495ACF923FC06E100BA00A3 /* Debug */,
-				6495ACFA23FC06E100BA00A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
