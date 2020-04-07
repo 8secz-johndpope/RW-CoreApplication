@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>ARConverter.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>28</integer>
+		</dict>
+		<key>CryptoView.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>ESConverter.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>RatesView copy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>RatesView iOS Pro.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>RatesView iOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>RatesView watchOS WatchKit App.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>29</integer>
+		</dict>
+		<key>RatesViewLite.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>Sykaaaaaa.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>30</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>645B7CDC23FC1E24007B7EC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>645B7CF423FC1E3F007B7EC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>645B7D0C23FC1E72007B7EC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>647DBB5923DBDAF30065CC89</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6495ACE623FC06E000BA00A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64DB5CCD238C9830006B3CD8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64DB5CE6238C9832006B3CD8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64DB5CF1238C9832006B3CD8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

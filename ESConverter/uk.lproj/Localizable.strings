@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  RatesView
+
+  Created by Esie on 3/30/20.
+  Copyright © 2020 Denis Esie. All rights reserved.
+*/
+ 
+"Cancel"="Вiдмiна";
+"Delete"="Видалити";
+"Currencies"="Валюти";
+"Crypto"="Крипта";
+"Converter"="Конвертер";
+"Hidden"="Сховано";
+"Quick Search"="Швидки Пошук";
+"Search"="Пошук";
+"Europe"="Европа";
+"Asia"="Азiя";
+"South America"="Пiвденна Америка";
+"North America"="Пiвнична Америка";
+"Oceania"="Океанiя";
+"Africa"="Африка";
