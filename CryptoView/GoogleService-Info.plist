@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>425594125803-sb0q1nl6rt2ced150oo1vfkvmg3srvdp.apps.googleusercontent.com</string>
+	<string>1050981544858-hak31ep6qnrlr562h7am60iulg0lro8v.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.425594125803-sb0q1nl6rt2ced150oo1vfkvmg3srvdp</string>
+	<string>com.googleusercontent.apps.1050981544858-hak31ep6qnrlr562h7am60iulg0lro8v</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAX5MfeOHtMtjgSISgycdRoUb09ASP2JvE</string>
+	<string>AIzaSyBAE_qm6rh-u8D3Q5048HVha9Tx659TS6s</string>
 	<key>GCM_SENDER_ID</key>
-	<string>425594125803</string>
+	<string>1050981544858</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.esie.cryptoview</string>
 	<key>PROJECT_ID</key>
-	<string>ratesviewcore</string>
+	<string>rw-core</string>
 	<key>STORAGE_BUCKET</key>
-	<string>ratesviewcore.appspot.com</string>
+	<string>rw-core.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:425594125803:ios:eed9b5188051ac512c6dae</string>
+	<string>1:1050981544858:ios:7a38af0a3c97391572c023</string>
 	<key>DATABASE_URL</key>
-	<string>https://ratesviewcore.firebaseio.com</string>
+	<string>https://rw-core.firebaseio.com</string>
 </dict>
 </plist>

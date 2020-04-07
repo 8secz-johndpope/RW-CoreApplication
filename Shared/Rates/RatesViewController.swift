@@ -47,6 +47,7 @@ final class RatesViewController: RWViewController {
     
     /// Sets view controller background.
     private func setBackground() {
+        #if SECONVERTER
         let circleImage = UIImage(named: "bg_circle")
         
         // Bottom-Right small circle.
@@ -60,6 +61,7 @@ final class RatesViewController: RWViewController {
         let bigCircleSize = CGSize(width: width*1.25, height: width*1.25)
         view.addSubview(bigCircle)
         bigCircle.sizeConstraints(bigCircleSize).topConstraint(-width*0.2).leadingConstraint(-width*0.5)
+        #endif
     }
     
     /// React to device orientation change.

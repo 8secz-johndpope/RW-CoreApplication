@@ -11,6 +11,7 @@
 		34C5B3CDB64F2CF119F62FF6 /* libPods-CryptoView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C05C07695D3823D9F9442F6E /* libPods-CryptoView.a */; };
 		48B57219B017B8255CA13AB9 /* Pods_ARConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F429F5B3D8264245152DA00D /* Pods_ARConverter.framework */; };
 		6435B9D223EBD38C001363C0 /* WatchlistSection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D123EBD38C001363C0 /* WatchlistSection+Extension.swift */; };
+		64539219243C8939009CAACB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64539218243C8939009CAACB /* GoogleService-Info.plist */; };
 		6454FD3E243C4C4100179EC7 /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E21512415035700162443 /* Rates.swift */; };
 		6454FD3F243C4C4100179EC7 /* RatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E214D2415018200162443 /* RatesViewController.swift */; };
 		6454FD40243C4C4100179EC7 /* RatesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E214F241502A600162443 /* RatesPresenter.swift */; };
@@ -190,7 +191,6 @@
 		646D3206243AC54400730639 /* libRWExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 646D3205243AC54400730639 /* libRWExtensions.a */; };
 		646D3208243AC54900730639 /* libRWSession.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 646D3207243AC54900730639 /* libRWSession.a */; };
 		646D320A243AC54E00730639 /* libRWUserInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 646D3209243AC54E00730639 /* libRWUserInterface.a */; };
-		646D320C243AC6B200730639 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 646D320B243AC6B200730639 /* GoogleService-Info.plist */; };
 		646E20AC2414FE6200162443 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E20AB2414FE6200162443 /* SceneDelegate.swift */; };
 		646E214E2415018200162443 /* RatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E214D2415018200162443 /* RatesViewController.swift */; };
 		646E2150241502A600162443 /* RatesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E214F241502A600162443 /* RatesPresenter.swift */; };
@@ -395,6 +395,7 @@
 		643CE480239278780014DE29 /* WatchlistHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistHeaderView.swift; sourceTree = "<group>"; };
 		643CE484239351480014DE29 /* WatchlistCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCellView.swift; sourceTree = "<group>"; };
 		64426F9123E1EFCF0040CA8D /* UpdateLog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UpdateLog.txt; sourceTree = "<group>"; };
+		64539218243C8939009CAACB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64570101243220F300254B99 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		64570102243220F300254B99 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Interface.strings"; sourceTree = "<group>"; };
 		64570105243220FD00254B99 /* en-AU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-AU"; path = "en-AU.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -434,7 +435,7 @@
 		645701302432240E00254B99 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6457EFCC23D39BAC0012A73C /* CountryFlags.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CountryFlags.xcassets; sourceTree = "<group>"; };
 		6457EFCF23D3A3260012A73C /* CryptoIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CryptoIcons.xcassets; sourceTree = "<group>"; };
-		645B7CF523FC1E3F007B7EC1 /* CryptoView 0.95b.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CryptoView 0.95b.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		645B7CF523FC1E3F007B7EC1 /* CryptoView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		645B7D0523FC1E3F007B7EC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		645B7D0D23FC1E72007B7EC1 /* SmartConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		645B7D1823FC1E72007B7EC1 /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
@@ -460,7 +461,6 @@
 		646D3205243AC54400730639 /* libRWExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRWExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		646D3207243AC54900730639 /* libRWSession.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRWSession.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		646D3209243AC54E00730639 /* libRWUserInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRWUserInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		646D320B243AC6B200730639 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		646E20AB2414FE6200162443 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		646E214D2415018200162443 /* RatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesViewController.swift; sourceTree = "<group>"; };
 		646E214F241502A600162443 /* RatesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesPresenter.swift; sourceTree = "<group>"; };
@@ -685,6 +685,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6418417F243C8AB7007C1A2F /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				6435B9D423EC3D4D001363C0 /* WebSession.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		64184180243C8AC1007C1A2F /* SettingsTab */ = {
+			isa = PBXGroup;
+			children = (
+				64B23BC023E34E8600B06241 /* MoreTab.swift */,
+			);
+			path = SettingsTab;
+			sourceTree = "<group>";
+		};
 		64190F9923C7CCD700D4B081 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -742,8 +758,8 @@
 				646D31F9243AC43D00730639 /* SceneDelegate */,
 				646D31FF243AC45300730639 /* ColorPalettes */,
 				646D31FB243AC43D00730639 /* Icon.xcassets */,
-				646D320B243AC6B200730639 /* GoogleService-Info.plist */,
 				645B7D0523FC1E3F007B7EC1 /* Info.plist */,
+				64539218243C8939009CAACB /* GoogleService-Info.plist */,
 			);
 			path = CryptoView;
 			sourceTree = "<group>";
@@ -787,13 +803,12 @@
 			path = Analitycs;
 			sourceTree = "<group>";
 		};
-		646BDB02241D9EF700513B69 /* AppDelegate */ = {
+		646BDB02241D9EF700513B69 /* InitialSettings */ = {
 			isa = PBXGroup;
 			children = (
-				64DBAC6023944A8B00B15E11 /* AppDelegate+CoreData.swift */,
 				64DBAC6223944B2400B15E11 /* AppDelegate+InitialSettings.swift */,
 			);
-			path = AppDelegate;
+			path = InitialSettings;
 			sourceTree = "<group>";
 		};
 		646BDB11241D9FCA00513B69 /* SceneDelegate */ = {
@@ -898,14 +913,13 @@
 		64ACE17F23EEA5E90035D690 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				64DB5DD4238C9F06006B3CD8 /* CoreData */,
+				64184180243C8AC1007C1A2F /* SettingsTab */,
+				6418417F243C8AB7007C1A2F /* Session */,
 				6468AB2F243B84D50081DD07 /* ColorPalettes */,
-				646BDB02241D9EF700513B69 /* AppDelegate */,
-				64DB5DE4238CA193006B3CD8 /* Application Screens */,
+				646BDB02241D9EF700513B69 /* InitialSettings */,
+				64DB5DE4238CA193006B3CD8 /* Legacy */,
 				64DB5DE1238CA159006B3CD8 /* Supporting Files */,
 				646BDADB241D1E7500513B69 /* Analitycs */,
-				6435B9D423EC3D4D001363C0 /* WebSession.swift */,
-				64B23BC023E34E8600B06241 /* MoreTab.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -962,7 +976,7 @@
 				64DB5CF2238C9832006B3CD8 /* RatesViewUITests.xctest */,
 				647DBB5A23DBDAF30065CC89 /* RatesView 3.0.app */,
 				6495ACE723FC06E000BA00A3 /* RatesView Pro 3.0.app */,
-				645B7CF523FC1E3F007B7EC1 /* CryptoView 0.95b.app */,
+				645B7CF523FC1E3F007B7EC1 /* CryptoView.app */,
 				645B7D0D23FC1E72007B7EC1 /* SmartConverter.app */,
 				645B7D3D23FC1EDF007B7EC1 /* ARConverter 3.0.app */,
 				64766327242BC37C00DE291B /* RatesView watchOS.app */,
@@ -999,6 +1013,7 @@
 				64CDAB6124262D5C00A0C96D /* Rates */,
 				6447895324273FD300706D99 /* Chart */,
 				644789542427407F00706D99 /* Converter */,
+				64DB5DD4238C9F06006B3CD8 /* CoreData */,
 				64ACE17F23EEA5E90035D690 /* Services */,
 			);
 			path = Shared;
@@ -1010,6 +1025,7 @@
 				64DB5CDA238C9830006B3CD8 /* RatesView.xcdatamodeld */,
 				6469E71023EAA93500CE81BF /* WatchlistAsset+Extension.swift */,
 				6435B9D123EBD38C001363C0 /* WatchlistSection+Extension.swift */,
+				64DBAC6023944A8B00B15E11 /* AppDelegate+CoreData.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -1022,13 +1038,13 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		64DB5DE4238CA193006B3CD8 /* Application Screens */ = {
+		64DB5DE4238CA193006B3CD8 /* Legacy */ = {
 			isa = PBXGroup;
 			children = (
 				648306AF24019634006193FC /* Portfolio */,
 				643CE46923926A770014DE29 /* Watchlist */,
 			);
-			path = "Application Screens";
+			path = Legacy;
 			sourceTree = "<group>";
 		};
 		64FD5BD22426291100715CD5 /* QuickSearch */ = {
@@ -1102,7 +1118,7 @@
 			);
 			name = CryptoView;
 			productName = CryptoView;
-			productReference = 645B7CF523FC1E3F007B7EC1 /* CryptoView 0.95b.app */;
+			productReference = 645B7CF523FC1E3F007B7EC1 /* CryptoView.app */;
 			productType = "com.apple.product-type.application";
 		};
 		645B7D0C23FC1E72007B7EC1 /* Converter */ = {
@@ -1359,12 +1375,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				645B7D8123FC2138007B7EC1 /* LaunchScreen.storyboard in Resources */,
-				646D320C243AC6B200730639 /* GoogleService-Info.plist in Resources */,
 				645B7E3A23FC216F007B7EC1 /* CountryFlags.xcassets in Resources */,
 				645B7E3B23FC216F007B7EC1 /* CryptoIcons.xcassets in Resources */,
 				646D3203243AC45300730639 /* Palettes.xcassets in Resources */,
 				645B7E3923FC216F007B7EC1 /* Assets.xcassets in Resources */,
 				646D31FE243AC43D00730639 /* Icon.xcassets in Resources */,
+				64539219243C8939009CAACB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2054,8 +2070,8 @@
 				);
 				MARKETING_VERSION = 0.95;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.cryptoview-0-95-b";
-				PRODUCT_NAME = "CryptoView 0.95b";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esie.cryptoview;
+				PRODUCT_NAME = CryptoView;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG CRYPTOVIEW";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2078,8 +2094,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.95;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.cryptoview-0-95-b";
-				PRODUCT_NAME = "CryptoView 0.95b";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esie.cryptoview;
+				PRODUCT_NAME = CryptoView;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = CRYPTOVIEW;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
