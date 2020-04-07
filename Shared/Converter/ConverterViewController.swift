@@ -57,6 +57,11 @@ final class ConverterViewController: RWViewController {
     }
     #endif
     
+    override func viewWillTransition(toSize: CGSize) {
+        floatingButton.switchToHide()
+        floatingButton.hide()
+    }
+    
     //MARK: UI Input
     
     enum InputType: Int {
