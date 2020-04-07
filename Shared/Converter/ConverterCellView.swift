@@ -97,12 +97,10 @@ final class ConverterCellView: RWInteractiveCollectionViewCell {
         if isInHiddenSection {
             amountField.isHidden = true
             addLabel.isHidden = false
-            mainView.isUserInteractionEnabled = true
             return
         } else {
             amountField.isHidden = false
             addLabel.isHidden = true
-            mainView.isUserInteractionEnabled = false
         }
         
         // Select or deselect cell when scrolling collection view.
