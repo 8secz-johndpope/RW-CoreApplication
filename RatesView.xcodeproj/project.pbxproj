@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26CAFE4F21DF953D3FB05F2F /* libPods-Converter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4503696FCA6FBB11202EDA1C /* libPods-Converter.a */; };
+		34C5B3CDB64F2CF119F62FF6 /* libPods-CryptoView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C05C07695D3823D9F9442F6E /* libPods-CryptoView.a */; };
 		48B57219B017B8255CA13AB9 /* Pods_ARConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F429F5B3D8264245152DA00D /* Pods_ARConverter.framework */; };
 		6435B9D223EBD38C001363C0 /* WatchlistSection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D123EBD38C001363C0 /* WatchlistSection+Extension.swift */; };
 		6454FD3E243C4C4100179EC7 /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E21512415035700162443 /* Rates.swift */; };
@@ -309,12 +311,10 @@
 		64EB05DD2417F8E800A9946E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647617552403034700DA5BA1 /* AdSupport.framework */; };
 		64EEA0DD23E99BB300B6FB28 /* libCoreModules.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EEA0DC23E99BB300B6FB28 /* libCoreModules.a */; };
 		80654BD7267D1FE24CB64F9D /* Pods_RatesView_watchOS_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1FADD12D7AB1BB7D382A0D /* Pods_RatesView_watchOS_WatchKit_App.framework */; };
-		8139A45D81178AA304EE1540 /* libPods-SEConverter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B256660456CE6F14DCE29199 /* libPods-SEConverter.a */; };
 		9836B9616F6DB558B54C1BFA /* Pods_RatesView_watchOS_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2D2B378D07B439D98FB461 /* Pods_RatesView_watchOS_WatchKit_Extension.framework */; };
 		E3448EA5AEF9823BF6AD2C8B /* Pods_RatesView_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A651B6C1CA4321D54CE4E6E0 /* Pods_RatesView_iOS.framework */; };
 		E99E465ABDAD3C690DC12910 /* Pods_RatesView_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8B99ED1783027733463064 /* Pods_RatesView_watchOS.framework */; };
 		EC8A4D60B583B3315AF4D96A /* Pods_RatesView_iOS_Pro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD25A8125F5395BA80F16943 /* Pods_RatesView_iOS_Pro.framework */; };
-		EFFDDFD24E19C9E39BBCCB61 /* Pods_CryptoView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECCEE033DB925956DFC0D0 /* Pods_CryptoView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -366,12 +366,12 @@
 		1469AFB10ABB9BF97BC62ECE /* Pods-RatesView watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatesView watchOS.release.xcconfig"; path = "Target Support Files/Pods-RatesView watchOS/Pods-RatesView watchOS.release.xcconfig"; sourceTree = "<group>"; };
 		15BC36BB25C1EC894337937C /* Pods-SEConverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SEConverter.release.xcconfig"; path = "Target Support Files/Pods-SEConverter/Pods-SEConverter.release.xcconfig"; sourceTree = "<group>"; };
 		1DB7EF6EC95AA4F0844B0C0D /* Pods-Sykaaaaaa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sykaaaaaa.release.xcconfig"; path = "Target Support Files/Pods-Sykaaaaaa/Pods-Sykaaaaaa.release.xcconfig"; sourceTree = "<group>"; };
-		24ECCEE033DB925956DFC0D0 /* Pods_CryptoView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FE3231D59CFE7570D807114 /* libPods-Sykaaaaaa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sykaaaaaa.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		382A87199E023F2486D3CF38 /* Pods-RatesView iOS Pro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatesView iOS Pro.release.xcconfig"; path = "Target Support Files/Pods-RatesView iOS Pro/Pods-RatesView iOS Pro.release.xcconfig"; sourceTree = "<group>"; };
 		3B6850B9FA93FDF2D739C5C8 /* Pods-RatesView watchOS WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatesView watchOS WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-RatesView watchOS WatchKit Extension/Pods-RatesView watchOS WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		3BCB22581DAE4E18E7BDE9DD /* Pods-ARConverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARConverter.debug.xcconfig"; path = "Target Support Files/Pods-ARConverter/Pods-ARConverter.debug.xcconfig"; sourceTree = "<group>"; };
 		3F2D2B378D07B439D98FB461 /* Pods_RatesView_watchOS_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatesView_watchOS_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4503696FCA6FBB11202EDA1C /* libPods-Converter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Converter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8B99ED1783027733463064 /* Pods_RatesView_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatesView_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5208AC2F6269F98EFAF0B506 /* Pods-RatesView macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatesView macOS.debug.xcconfig"; path = "Target Support Files/Pods-RatesView macOS/Pods-RatesView macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		5B617FB834C8E9CCFC216E36 /* Pods-ARConverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARConverter.release.xcconfig"; path = "Target Support Files/Pods-ARConverter/Pods-ARConverter.release.xcconfig"; sourceTree = "<group>"; };
@@ -434,7 +434,7 @@
 		645701302432240E00254B99 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6457EFCC23D39BAC0012A73C /* CountryFlags.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CountryFlags.xcassets; sourceTree = "<group>"; };
 		6457EFCF23D3A3260012A73C /* CryptoIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CryptoIcons.xcassets; sourceTree = "<group>"; };
-		645B7CF523FC1E3F007B7EC1 /* CryptoView 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CryptoView 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		645B7CF523FC1E3F007B7EC1 /* CryptoView 0.95b.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CryptoView 0.95b.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		645B7D0523FC1E3F007B7EC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		645B7D0D23FC1E72007B7EC1 /* SmartConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		645B7D1823FC1E72007B7EC1 /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
@@ -542,13 +542,15 @@
 		7471C954E4BB109CFA767DBD /* Pods-RatesView iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatesView iOS.release.xcconfig"; path = "Target Support Files/Pods-RatesView iOS/Pods-RatesView iOS.release.xcconfig"; sourceTree = "<group>"; };
 		74BD9324B5728251FF3A8722 /* Pods-RatesView watchOS WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatesView watchOS WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-RatesView watchOS WatchKit Extension/Pods-RatesView watchOS WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		7AC8DC644CED977B29317C98 /* Pods-CryptoView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoView.debug.xcconfig"; path = "Target Support Files/Pods-CryptoView/Pods-CryptoView.debug.xcconfig"; sourceTree = "<group>"; };
+		8FAF644A4AADC86318B2F68C /* Pods-Converter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Converter.debug.xcconfig"; path = "Target Support Files/Pods-Converter/Pods-Converter.debug.xcconfig"; sourceTree = "<group>"; };
 		94C76347354A45D9DCE79D99 /* Pods_RatesView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatesView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9817AE30115480FFFC0E7C /* Pods-RatesView watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatesView watchOS.debug.xcconfig"; path = "Target Support Files/Pods-RatesView watchOS/Pods-RatesView watchOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9FA8D23727950899DAE75F4A /* Pods-RatesView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatesView.release.xcconfig"; path = "Target Support Files/Pods-RatesView/Pods-RatesView.release.xcconfig"; sourceTree = "<group>"; };
 		A651B6C1CA4321D54CE4E6E0 /* Pods_RatesView_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatesView_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1FADD12D7AB1BB7D382A0D /* Pods_RatesView_watchOS_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatesView_watchOS_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD25A8125F5395BA80F16943 /* Pods_RatesView_iOS_Pro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatesView_iOS_Pro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B256660456CE6F14DCE29199 /* libPods-SEConverter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SEConverter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C05C07695D3823D9F9442F6E /* libPods-CryptoView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CryptoView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6372509AD04A0FBC1743554 /* Pods-Converter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Converter.release.xcconfig"; path = "Target Support Files/Pods-Converter/Pods-Converter.release.xcconfig"; sourceTree = "<group>"; };
 		CB40B87E6A538E764F2DCFC6 /* Pods-RatesView watchOS WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatesView watchOS WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-RatesView watchOS WatchKit App/Pods-RatesView watchOS WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		CDF7BD649386B4111F456741 /* libPods-RatesView macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RatesView macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80093BE70CE0488FF1A4F38 /* Pods-RatesView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatesView.debug.xcconfig"; path = "Target Support Files/Pods-RatesView/Pods-RatesView.debug.xcconfig"; sourceTree = "<group>"; };
@@ -583,7 +585,7 @@
 				646D3206243AC54400730639 /* libRWExtensions.a in Frameworks */,
 				646D3204243AC53D00730639 /* AdSupport.framework in Frameworks */,
 				646D320A243AC54E00730639 /* libRWUserInterface.a in Frameworks */,
-				EFFDDFD24E19C9E39BBCCB61 /* Pods_CryptoView.framework in Frameworks */,
+				34C5B3CDB64F2CF119F62FF6 /* libPods-CryptoView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,7 +597,7 @@
 				64EB05DC2417F8DE00A9946E /* libRWUserInterface.a in Frameworks */,
 				6487361F2417D4FD00E3FB92 /* libRWSession.a in Frameworks */,
 				64EB05DD2417F8E800A9946E /* AdSupport.framework in Frameworks */,
-				8139A45D81178AA304EE1540 /* libPods-SEConverter.a in Frameworks */,
+				26CAFE4F21DF953D3FB05F2F /* libPods-Converter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,6 +679,8 @@
 				74BD9324B5728251FF3A8722 /* Pods-RatesView watchOS WatchKit Extension.release.xcconfig */,
 				E0414B21BC78DA62C6183A85 /* Pods-Sykaaaaaa.debug.xcconfig */,
 				1DB7EF6EC95AA4F0844B0C0D /* Pods-Sykaaaaaa.release.xcconfig */,
+				8FAF644A4AADC86318B2F68C /* Pods-Converter.debug.xcconfig */,
+				C6372509AD04A0FBC1743554 /* Pods-Converter.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -958,7 +962,7 @@
 				64DB5CF2238C9832006B3CD8 /* RatesViewUITests.xctest */,
 				647DBB5A23DBDAF30065CC89 /* RatesView 3.0.app */,
 				6495ACE723FC06E000BA00A3 /* RatesView Pro 3.0.app */,
-				645B7CF523FC1E3F007B7EC1 /* CryptoView 1.0.app */,
+				645B7CF523FC1E3F007B7EC1 /* CryptoView 0.95b.app */,
 				645B7D0D23FC1E72007B7EC1 /* SmartConverter.app */,
 				645B7D3D23FC1EDF007B7EC1 /* ARConverter 3.0.app */,
 				64766327242BC37C00DE291B /* RatesView watchOS.app */,
@@ -1068,14 +1072,14 @@
 				94C76347354A45D9DCE79D99 /* Pods_RatesView.framework */,
 				CDF7BD649386B4111F456741 /* libPods-RatesView macOS.a */,
 				F429F5B3D8264245152DA00D /* Pods_ARConverter.framework */,
-				24ECCEE033DB925956DFC0D0 /* Pods_CryptoView.framework */,
 				A651B6C1CA4321D54CE4E6E0 /* Pods_RatesView_iOS.framework */,
 				AD25A8125F5395BA80F16943 /* Pods_RatesView_iOS_Pro.framework */,
 				4D8B99ED1783027733463064 /* Pods_RatesView_watchOS.framework */,
 				AC1FADD12D7AB1BB7D382A0D /* Pods_RatesView_watchOS_WatchKit_App.framework */,
 				3F2D2B378D07B439D98FB461 /* Pods_RatesView_watchOS_WatchKit_Extension.framework */,
 				2FE3231D59CFE7570D807114 /* libPods-Sykaaaaaa.a */,
-				B256660456CE6F14DCE29199 /* libPods-SEConverter.a */,
+				4503696FCA6FBB11202EDA1C /* libPods-Converter.a */,
+				C05C07695D3823D9F9442F6E /* libPods-CryptoView.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1098,7 +1102,7 @@
 			);
 			name = CryptoView;
 			productName = CryptoView;
-			productReference = 645B7CF523FC1E3F007B7EC1 /* CryptoView 1.0.app */;
+			productReference = 645B7CF523FC1E3F007B7EC1 /* CryptoView 0.95b.app */;
 			productType = "com.apple.product-type.application";
 		};
 		645B7D0C23FC1E72007B7EC1 /* Converter */ = {
@@ -1502,7 +1506,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SEConverter-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Converter-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2040,7 +2044,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 500;
+				CURRENT_PROJECT_VERSION = 510;
 				DEVELOPMENT_TEAM = 6M4XU22V82;
 				INFOPLIST_FILE = CryptoView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -2048,10 +2052,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.95;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.cryptoview-1-0";
-				PRODUCT_NAME = "CryptoView 1.0";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.cryptoview-0-95-b";
+				PRODUCT_NAME = "CryptoView 0.95b";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG CRYPTOVIEW";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2065,7 +2069,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 500;
+				CURRENT_PROJECT_VERSION = 510;
 				DEVELOPMENT_TEAM = 6M4XU22V82;
 				INFOPLIST_FILE = CryptoView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -2073,9 +2077,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.cryptoview-1-0";
-				PRODUCT_NAME = "CryptoView 1.0";
+				MARKETING_VERSION = 0.95;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.cryptoview-0-95-b";
+				PRODUCT_NAME = "CryptoView 0.95b";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = CRYPTOVIEW;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2084,7 +2088,7 @@
 		};
 		645B7D1F23FC1E72007B7EC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0953F3CA5781F89C58F7E598 /* Pods-SEConverter.debug.xcconfig */;
+			baseConfigurationReference = 8FAF644A4AADC86318B2F68C /* Pods-Converter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2113,7 +2117,7 @@
 		};
 		645B7D2023FC1E72007B7EC1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15BC36BB25C1EC894337937C /* Pods-SEConverter.release.xcconfig */;
+			baseConfigurationReference = C6372509AD04A0FBC1743554 /* Pods-Converter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

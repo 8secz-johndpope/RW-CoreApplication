@@ -10,10 +10,9 @@ target 'ARConverter' do
 end
 
 target 'CryptoView' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for CryptoView
+  
+  pod 'NVActivityIndicatorView'
+  pod 'Firebase/Analytics'
 
 end
 
@@ -57,11 +56,9 @@ target 'RatesView watchOS WatchKit Extension' do
 
 end
 
-target 'SEConverter' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  # use_frameworks!
+target 'Converter' do
+
   pod 'NVActivityIndicatorView'
   pod 'Firebase/Analytics'
-  # Pods for SEConverter
 
 end
