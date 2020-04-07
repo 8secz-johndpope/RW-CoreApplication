@@ -38,7 +38,7 @@ final class ConverterViewController: RWViewController {
         view.backgroundColor = .background
         tabBarController?.tabBar.tintColor = .tint
         
-        #if SECONVERTER
+        #if TARGET_SC
         let circleImage = UIImage(named: "bg_circle")
         let smallCircle = UIImageView(image: circleImage)
         let smallCircleSize = CGSize(width: width, height: width)
@@ -51,7 +51,7 @@ final class ConverterViewController: RWViewController {
         #endif
     }
     
-    #if SECONVERTER
+    #if TARGET_SC
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }

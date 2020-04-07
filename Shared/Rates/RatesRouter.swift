@@ -60,7 +60,7 @@ final class RatesRouter {
             let contextWindow = RWContextWindowViewController(parentViewController: viewController)
             contextWindow.present(viewController: quickVC, presentationType: .animatedTop)
             
-        #if !SECONVERTER
+        #if TARGET_AR
         case .toSettings:
             let vc = settingsParentPage
             vc.backgroundColor = .background

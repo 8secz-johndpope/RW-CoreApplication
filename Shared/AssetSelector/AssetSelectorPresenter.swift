@@ -39,7 +39,7 @@ final class AssetSelectorPresenter: RWPresenter {
     override func viewDidDisappear() {
         let watchlistPresenter = SceneDelegate.rates.presenter!
         watchlistPresenter.updateData() {
-            #if SECONVERTER || CRYPTOVIEW
+            #if TARGET_SC || TARGET_CW
             watchlistPresenter.dissmisAssetSelectorScreen(type: self.selectedCellType)
             #else
             watchlistPresenter.continueSession(isImmediate: true)

@@ -40,7 +40,7 @@ final class ChartViewController: RWViewController {
         navigationController?.navigationBar.tintColor = .link
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissPage))
         
-        #if !SECONVERTER
+        #if TARGET_CW || TARGET_CER || TARGET_CERPRO || TARGET_RW
         let save = UIBarButtonItem(image: UIImage(named: "list"), style: .done, target: self, action: broadcastInput)
         save.tag = InputType.save.rawValue
         navigationItem.leftBarButtonItem = save
@@ -106,7 +106,7 @@ extension ChartViewController {
         }
     }
     
-    #if !SECONVERTER
+    #if TARGET_CER || TARGET_CERPRO || TARGET_RW
     func openProfile() {
         typeSegmentedControl.selectedSegmentIndex = 0
     }
@@ -262,7 +262,7 @@ extension ChartViewController {
     
     //MARK: FINANCIALS
     
-    #if !SECONVERTER
+    #if TARGET_CER || TARGET_CERPRO || TARGET_RW
     func openFinancials() {
         typeSegmentedControl.selectedSegmentIndex = 2
     }

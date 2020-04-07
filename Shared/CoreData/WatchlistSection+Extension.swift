@@ -34,7 +34,7 @@ extension CDWatchlistSectionAdapter {
         asset.sectionInConverter = 0
         asset.rowInConverter = overrrideRowInConverter ?? index + rowInConverter
         
-        #if SECONVERTER
+        #if TARGET_SC || TARGET_AR
         asset.iconImage = assetIcon(fromInternalCode: internalFullCode)?.pngData()
         asset.name = assetName(fromInternalCode: internalFullCode)
         #else

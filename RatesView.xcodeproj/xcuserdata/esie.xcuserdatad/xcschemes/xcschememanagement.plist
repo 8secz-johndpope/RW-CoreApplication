@@ -7,17 +7,12 @@
 		<key>ARConverter.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>28</integer>
+			<integer>2</integer>
 		</dict>
 		<key>CryptoView.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
-		</dict>
-		<key>ESConverter.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
 		</dict>
 		<key>RatesView copy.xcscheme_^#shared#^_</key>
 		<dict>
@@ -29,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>SmartConverter.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
 		<key>Sykaaaaaa.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -37,6 +37,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>64184184243D28A4007C1A2F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>645B7CDC23FC1E24007B7EC1</key>
 		<dict>
 			<key>primary</key>
@@ -48,6 +53,11 @@
 			<true/>
 		</dict>
 		<key>645B7D0C23FC1E72007B7EC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>645B7D3C23FC1EDF007B7EC1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

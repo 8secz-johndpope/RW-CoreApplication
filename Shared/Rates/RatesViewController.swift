@@ -39,7 +39,7 @@ final class RatesViewController: RWViewController {
         setBackground()
     }
     
-    #if SECONVERTER || CRYPTOVIEW
+    #if TARGET_SC || TARGET_CW
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -49,7 +49,7 @@ final class RatesViewController: RWViewController {
     private func setBackground() {
         
         // Converter App background with two circles.
-        #if SECONVERTER
+        #if TARGET_SC
         let circleImage = UIImage(named: "bg_circle")
         
         // Bottom-Right small circle.
@@ -127,7 +127,7 @@ final class RatesViewController: RWViewController {
             self.collectionViewDataSource.apply(collectionSnapshot, animatingDifferences: animated) {
                 
                 // Settings button located below the collection view.
-                #if ARCONVERTER
+                #if TARGET_AR
                 self.settingsButton.center = CGPoint(x: self.width/2, y: self.collectionView.contentSize.height+15)
                 #endif
                 
@@ -165,7 +165,7 @@ extension RatesViewController {
         view.addSubview(cellSnapshot)
         
         // Settings Button located below the collection view.
-        #if ARCONVERTER
+        #if TARGET_AR
         settingsButton = UIButton(type: .roundedRect)
         settingsButton.setTitle("Settings", for: .normal)
         settingsButton.frame = CGRect(x: 0, y: 0, width: width*0.5, height: 35)
@@ -553,7 +553,7 @@ extension RatesViewController {
     
     //MARK: Layout – CONVERTER
     
-    #if SECONVERTER || ARCONVERTER
+    #if TARGET_SC || TARGET_AR
     private func createLayout() -> UICollectionViewLayout {
         let config = UICollectionViewCompositionalLayoutConfiguration()
         config.interSectionSpacing = 0
@@ -585,7 +585,7 @@ extension RatesViewController {
     
     //MARK: Layout – CRYPTOVIEW, RATESVIEW, CER
     
-    #if CRYPTOVIEW || CER || CERPRO || RATESVIEW
+    #if TARGET_CW || TARGET_CER || TARGET_CERPRO || TARGET_RW
     private func createLayout() -> UICollectionViewLayout {
         let config = UICollectionViewCompositionalLayoutConfiguration()
         config.interSectionSpacing = 0
