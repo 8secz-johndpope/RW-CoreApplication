@@ -43,6 +43,10 @@ final class ConverterCellView: RWInteractiveCollectionViewCell {
         shadowView.layer.masksToBounds = true
         shadowView.layer.cornerRadius = 8.5
         shadowView.layer.shouldRasterize = true
+        shadowView.layer.shadowColor = UIColor.black.cgColor
+        shadowView.layer.shadowRadius = 3.5
+        shadowView.layer.shadowOpacity = 0.1
+        shadowView.layer.shadowOffset = CGSize.zero
         mainView.addSubview(shadowView)
         shadowView.verticalConstraint(3.5).horizontalConstraint(2.5)
         
@@ -65,7 +69,7 @@ final class ConverterCellView: RWInteractiveCollectionViewCell {
         
         addButton.setImage(.add, for: .normal)
         mainView.addSubview(addButton)
-        addButton.verticalConstraint().trailingConstraint(-12).leadingConstraint(toTrail: codeLabel)
+        addButton.verticalConstraint().trailingConstraint(-12).widthConstraint(50)
         addButton.addTarget(self, action: #selector(addLabelTapped), for: .touchDown)
         
         amountField.textAlignment = .right
@@ -75,11 +79,6 @@ final class ConverterCellView: RWInteractiveCollectionViewCell {
         amountField.actionDelegate = self
         mainView.addSubview(amountField)
         amountField.verticalConstraint().trailingConstraint(-10.5).leadingConstraint(toTrail: codeLabel)
-        
-        shadowView.layer.shadowColor = UIColor.black.cgColor
-        shadowView.layer.shadowRadius = 3.5
-        shadowView.layer.shadowOpacity = 0.1
-        shadowView.layer.shadowOffset = CGSize.zero
     }
     
     //MARK: Update Data
