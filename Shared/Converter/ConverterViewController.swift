@@ -51,6 +51,12 @@ final class ConverterViewController: RWViewController {
         #endif
     }
     
+    #if SECONVERTER
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    #endif
+    
     //MARK: UI Input
     
     enum InputType: Int {

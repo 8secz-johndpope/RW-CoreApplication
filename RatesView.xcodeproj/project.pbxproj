@@ -895,7 +895,6 @@
 			isa = PBXGroup;
 			children = (
 				64DB5DD4238C9F06006B3CD8 /* CoreData */,
-				64190F9923C7CCD700D4B081 /* Resources */,
 				6468AB2F243B84D50081DD07 /* ColorPalettes */,
 				646BDB02241D9EF700513B69 /* AppDelegate */,
 				64DB5DE4238CA193006B3CD8 /* Application Screens */,
@@ -990,6 +989,7 @@
 		64DB5D05238C9C8A006B3CD8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				64190F9923C7CCD700D4B081 /* Resources */,
 				64FD5BD22426291100715CD5 /* QuickSearch */,
 				64CDAB6024262C6A00A0C96D /* AssetSelector */,
 				64CDAB6124262D5C00A0C96D /* Rates */,
