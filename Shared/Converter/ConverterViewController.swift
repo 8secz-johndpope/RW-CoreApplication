@@ -250,7 +250,7 @@ extension ConverterViewController {
                 DispatchQueue.global(qos: .userInteractive).async {
                     let assets = self.presenter.activeList
                     
-                    #if DEBUG
+                    #if DEBUG //test
                     self.presenter.activeList.forEach { (asset) in
                         print("\(asset.fullCode) – \(asset.rowInConverter)")
                     }
