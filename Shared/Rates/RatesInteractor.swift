@@ -38,17 +38,24 @@ final class RatesInteractor: RWInteractor {
         let currencies = initialCurrencies.contains(localCurrency) ? initialCurrencies : [localCurrency] + initialCurrencies
         let crypto = ["COINBASE:BTC-USD", "COINBASE:ETH-USD", "COINBASE:XRP-USD"]
         
-        // Enable currencies section on all apps.
+        // Currencies section.
         addsection(title: "Currencies", position: 0, entities: currencies)
         
-        // Enable crypto section only for SE App.
+        // Crypto section.
         let currenciesCount = Int16(currencies.count)
         addsection(title: "Crypto", position: 1, entities: crypto, prevSectionCount: currenciesCount)
         #endif
         
         #if CRYPTOVIEW
+        // Assets data source full codes.
+        let currencies = ["FX_IDC:EUR-USD", "FX_IDC:USD-EUR"]
+        let crypto = ["COINBASE:BTC-USD", "COINBASE:ETH-USD", "COINBASE:XRP-USD"]
         
+        // Currencies section.
+        addsection(title: "Fiat", position: 0, entities: currencies)
         
+        // Crypto section.
+        addsection(title: "Crypto", position: 1, entities: crypto, prevSectionCount: 2)
         #endif
         
         startUpdates()

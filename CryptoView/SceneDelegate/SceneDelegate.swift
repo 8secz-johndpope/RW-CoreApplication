@@ -13,6 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     static var window: UIWindow!
     static var tabBar: UITabBarController!
     static var rates: RatesViewController!
+    static var chart: ChartViewController!
     static var converter: ConverterViewController!
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -23,16 +24,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             // Currencies tab
             SceneDelegate.rates = Rates.construct()
             let watchlist = SceneDelegate.rates!
-            watchlist.tabBarItem = UITabBarItem(title: NSLocalizedString("Watchlist", comment: ""), image: UIImage(named: "Watchlist"), tag: 0)
+            watchlist.tabBarItem = UITabBarItem(title: "Watchlist", image: UIImage(named: "Watchlist"), tag: 0)
 
+            // Chart tab
+            SceneDelegate.chart = Chart.construct()
+            let chart = SceneDelegate.chart!
+            chart.tabBarItem = UITabBarItem(title: "Chart", image: UIImage(named: "Chart"), tag: 1)
+            
             // Converter tab
             SceneDelegate.converter = Converter.construct()
             let converter = SceneDelegate.converter!
-            converter.tabBarItem = UITabBarItem(title: NSLocalizedString("Converter", comment: ""), image: UIImage(named: "Converter"), tag: 2)
+            converter.tabBarItem = UITabBarItem(title: "Converter", image: UIImage(named: "Converter"), tag: 2)
             
             // Configure tab bar and main window
             let tabBar = UITabBarController()
-            tabBar.viewControllers = [watchlist, converter]
+            tabBar.viewControllers = [watchlist, chart, converter]
             SceneDelegate.tabBar = tabBar
             SceneDelegate.window.rootViewController = tabBar
             SceneDelegate.window.makeKeyAndVisible()
