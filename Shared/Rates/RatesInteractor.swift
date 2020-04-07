@@ -28,6 +28,8 @@ final class RatesInteractor: RWInteractor {
     
     /// Create initial watchlist assets.
     override func dataSourceIsEmpty(context: NSManagedObjectContext, entity: String) {
+        
+        #if SECONVERTER
         let currencyCode = Locale.current.currencyCode ?? "USD"
         let localCurrency = currencyCode == "USD" ? "FX_IDC:EUR-USD" : "FX_IDC:USD-\(currencyCode)"
         let initialCurrencies = ["FX_IDC:EUR-USD", "FX_IDC:USD-EUR", "FX_IDC:USD-GBP", "FX_IDC:USD-JPY", "FX_IDC:USD-CAD", "FX_IDC:USD-RUB"]
@@ -40,9 +42,13 @@ final class RatesInteractor: RWInteractor {
         addsection(title: "Currencies", position: 0, entities: currencies)
         
         // Enable crypto section only for SE App.
-        #if SECONVERTER
         let currenciesCount = Int16(currencies.count)
         addsection(title: "Crypto", position: 1, entities: crypto, prevSectionCount: currenciesCount)
+        #endif
+        
+        #if CRYPTOVIEW
+        
+        
         #endif
         
         startUpdates()

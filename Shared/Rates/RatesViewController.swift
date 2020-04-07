@@ -39,7 +39,7 @@ final class RatesViewController: RWViewController {
         setBackground()
     }
     
-    #if SECONVERTER
+    #if SECONVERTER || CRYPTOVIEW
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -47,6 +47,8 @@ final class RatesViewController: RWViewController {
     
     /// Sets view controller background.
     private func setBackground() {
+        
+        // Converter App background with two circles.
         #if SECONVERTER
         let circleImage = UIImage(named: "bg_circle")
         
@@ -125,7 +127,7 @@ final class RatesViewController: RWViewController {
             self.collectionViewDataSource.apply(collectionSnapshot, animatingDifferences: animated) {
                 
                 // Settings button located below the collection view.
-                #if !SECONVERTER
+                #if ARCONVERTER
                 self.settingsButton.center = CGPoint(x: self.width/2, y: self.collectionView.contentSize.height+15)
                 #endif
                 
@@ -163,7 +165,7 @@ extension RatesViewController {
         view.addSubview(cellSnapshot)
         
         // Settings Button located below the collection view.
-        #if !SECONVERTER
+        #if ARCONVERTER
         settingsButton = UIButton(type: .roundedRect)
         settingsButton.setTitle("Settings", for: .normal)
         settingsButton.frame = CGRect(x: 0, y: 0, width: width*0.5, height: 35)
@@ -551,7 +553,7 @@ extension RatesViewController {
     
     //MARK: Layout – CONVERTER
     
-    #if SECONVERTER
+    #if SECONVERTER || ARCONVERTER
     private func createLayout() -> UICollectionViewLayout {
         let config = UICollectionViewCompositionalLayoutConfiguration()
         config.interSectionSpacing = 0
@@ -581,9 +583,9 @@ extension RatesViewController {
     }
     #endif
     
-    //MARK: Layout – CRYPTOVIEW
+    //MARK: Layout – CRYPTOVIEW, RATESVIEW, CER
     
-    #if CRYPTOVIEW
+    #if CRYPTOVIEW || CER || CERPRO || RATESVIEW
     private func createLayout() -> UICollectionViewLayout {
         let config = UICollectionViewCompositionalLayoutConfiguration()
         config.interSectionSpacing = 0
@@ -592,9 +594,9 @@ extension RatesViewController {
         let layout = UICollectionViewCompositionalLayout(sectionProvider: { (sectionIndex, _ ) -> NSCollectionLayoutSection? in
         
             // Section layout.
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1.0))
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(.standartCellHeigh))
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(.quadCellHeigh))
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
             group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: .standartPageInset, bottom: 0, trailing: .standartPageInset)
             let section = NSCollectionLayoutSection(group: group)
