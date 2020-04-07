@@ -66,6 +66,7 @@ final class ConverterCellView: RWInteractiveCollectionViewCell {
         addButton.setImage(.add, for: .normal)
         mainView.addSubview(addButton)
         addButton.verticalConstraint().trailingConstraint(-12).leadingConstraint(toTrail: codeLabel)
+        addButton.addTarget(self, action: #selector(addLabelTapped), for: .touchDown)
         
         amountField.textAlignment = .right
         amountField.font = UIFont(name: "Futura-Bold", size: 28)
@@ -79,8 +80,6 @@ final class ConverterCellView: RWInteractiveCollectionViewCell {
         shadowView.layer.shadowRadius = 3.5
         shadowView.layer.shadowOpacity = 0.1
         shadowView.layer.shadowOffset = CGSize.zero
-        
-        mainView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(addLabelTapped)))
     }
     
     //MARK: Update Data
