@@ -57,9 +57,17 @@ final class ConverterViewController: RWViewController {
     }
     #endif
     
+    /// React to device orientation change.
     override func viewWillTransition(toSize: CGSize) {
-        floatingButton.switchToHide()
-        floatingButton.hide()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.02) {
+            
+            // Update cells blur background.
+            self.addBlurToCollectionCells()
+            
+            // Update floating button position on device orientation change.
+            self.floatingButton.switchToHide()
+            self.floatingButton.hide()
+        }
     }
     
     //MARK: UI Input
