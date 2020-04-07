@@ -16,7 +16,7 @@ final class ConverterCellView: RWInteractiveCollectionViewCell {
     private var flagImageView = UIImageView()
     private var codeLabel = UILabel()
     private var nameLabel = UILabel()
-    private var addLabel = UILabel()
+    private var addButton = UIButton(type: .roundedRect)
     private var amountField = RWDecimalField()
     private var displayLink: CADisplayLink?
     
@@ -63,11 +63,9 @@ final class ConverterCellView: RWInteractiveCollectionViewCell {
         mainView.addSubview(nameLabel)
         nameLabel.topConstraint(toBot: flagImageView).bottomConstraint().leadingConstraint(to: flagImageView).trailingConstraint(-100)
         
-        addLabel.text = "+"
-        addLabel.textAlignment = .right
-        addLabel.font = .boldSystemFont(ofSize: 45)
-        mainView.addSubview(addLabel)
-        addLabel.verticalConstraint().trailingConstraint(-12).leadingConstraint(toTrail: codeLabel)
+        addButton.setImage(.add, for: .normal)
+        mainView.addSubview(addButton)
+        addButton.verticalConstraint().trailingConstraint(-12).leadingConstraint(toTrail: codeLabel)
         
         amountField.textAlignment = .right
         amountField.font = UIFont(name: "Futura-Bold", size: 28)
@@ -96,11 +94,11 @@ final class ConverterCellView: RWInteractiveCollectionViewCell {
         
         if isInHiddenSection {
             amountField.isHidden = true
-            addLabel.isHidden = false
+            addButton.isHidden = false
             return
         } else {
             amountField.isHidden = false
-            addLabel.isHidden = true
+            addButton.isHidden = true
         }
         
         // Select or deselect cell when scrolling collection view.
