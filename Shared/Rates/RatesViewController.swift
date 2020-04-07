@@ -358,7 +358,7 @@ extension RatesViewController: UICollectionViewDelegate {
             
             // Configure selected cell snapshot.
             cellSnapshot.image = cell.takeScreenshotOnMainThread()
-            cellSnapshot.frame = CGRect(x: 0, y: 0, width: width-CGFloat.standartDoublePageInset, height: .standartCellHeigh)
+            cellSnapshot.frame = cell.frame
             cellSnapshot.isHidden = false
             cellSnapshot.center = gesture.location(in: view)
             

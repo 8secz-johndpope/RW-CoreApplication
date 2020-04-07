@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "645B7CF423FC1E3F007B7EC1"
-               BuildableName = "CryptoView.app"
+               BuildableName = "CryptoView 1.0.app"
                BlueprintName = "CryptoView"
                ReferencedContainer = "container:RatesView.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "645B7CF423FC1E3F007B7EC1"
-            BuildableName = "CryptoView.app"
+            BuildableName = "CryptoView 1.0.app"
             BlueprintName = "CryptoView"
             ReferencedContainer = "container:RatesView.xcodeproj">
          </BuildableReference>
@@ -68,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "645B7CF423FC1E3F007B7EC1"
-            BuildableName = "CryptoView.app"
+            BuildableName = "CryptoView 1.0.app"
             BlueprintName = "CryptoView"
             ReferencedContainer = "container:RatesView.xcodeproj">
          </BuildableReference>

@@ -37,7 +37,7 @@ final class RatesInteractor: RWInteractor {
         // Assets data source full codes.
         let currencies = initialCurrencies.contains(localCurrency) ? initialCurrencies : [localCurrency] + initialCurrencies
         let crypto = ["COINBASE:BTC-USD", "COINBASE:ETH-USD", "COINBASE:XRP-USD"]
-        
+         
         // Currencies section.
         addsection(title: "Currencies", position: 0, entities: currencies)
         
