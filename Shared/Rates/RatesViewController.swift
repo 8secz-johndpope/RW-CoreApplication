@@ -646,8 +646,8 @@ extension RatesViewController {
                 let inset = CGFloat.standartInset
                 let size = CGSize(width: cell.frame.width-(inset*2), height: cell.frame.height-(inset*2))
                 let frame = CGRect(origin: cellOrigin + Vector2D(inset), size: size)
-                
-                // Create cells backgroubd view.
+                 
+                // Create cell background view.
                 let blurView = RWThirdBlurredView()
                 blurView.layer.cornerRadius = CGFloat.standartCornerRadius
                 blurView.clipsToBounds = true

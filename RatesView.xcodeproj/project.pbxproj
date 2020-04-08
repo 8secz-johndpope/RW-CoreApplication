@@ -1165,7 +1165,7 @@
 				CURRENT_PROJECT_VERSION = 520;
 				DEVELOPMENT_TEAM = 6M4XU22V82;
 				INFOPLIST_FILE = SmartConverter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1190,7 +1190,7 @@
 				CURRENT_PROJECT_VERSION = 520;
 				DEVELOPMENT_TEAM = 6M4XU22V82;
 				INFOPLIST_FILE = SmartConverter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1214,7 +1214,7 @@
 				CURRENT_PROJECT_VERSION = 520;
 				DEVELOPMENT_TEAM = 6M4XU22V82;
 				INFOPLIST_FILE = CryptoView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1239,7 +1239,7 @@
 				CURRENT_PROJECT_VERSION = 520;
 				DEVELOPMENT_TEAM = 6M4XU22V82;
 				INFOPLIST_FILE = CryptoView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1263,7 +1263,7 @@
 				CURRENT_PROJECT_VERSION = 411;
 				DEVELOPMENT_TEAM = 6M4XU22V82;
 				INFOPLIST_FILE = ARConverter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1288,7 +1288,7 @@
 				CURRENT_PROJECT_VERSION = 411;
 				DEVELOPMENT_TEAM = 6M4XU22V82;
 				INFOPLIST_FILE = ARConverter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
