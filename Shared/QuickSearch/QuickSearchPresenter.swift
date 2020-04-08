@@ -34,8 +34,10 @@ final class QuickSearchPresenter: RWPresenter {
     override func handleInput(type: Int, context: Any?) {
         let input = QuickSearchViewController.InputType(rawValue: type)
         switch input {
+            
         case .open:
             router.routeTo(.toChart, context: context)
+            
         default:
             break
         }

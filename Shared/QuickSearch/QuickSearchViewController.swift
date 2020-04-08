@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import WebKit
 import RWExtensions
 import RWUserInterface
 

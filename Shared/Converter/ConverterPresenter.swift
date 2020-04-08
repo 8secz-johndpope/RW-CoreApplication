@@ -8,7 +8,6 @@
 
 import Foundation
 import RWExtensions
-import RWUserInterface
 
 final class ConverterPresenter: RWPresenter {
     

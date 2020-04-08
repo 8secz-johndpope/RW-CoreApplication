@@ -10,11 +10,10 @@ import UIKit
 import RWExtensions
 import RWUserInterface
 import RWSession
-import CoreData
 
 final class RatesViewController: RWViewController {
     
-    typealias DataSource = UICollectionViewDiffableDataSource<CDWatchlistSectionAdapter, NSManagedObject>
+    typealias DataSource = UICollectionViewDiffableDataSource<CDWatchlistSectionAdapter, RWCoreDataObject>
     
     private lazy var collectionViewDataSource = createCollectionCell()
     var presenter: RatesPresenter!
@@ -39,7 +38,7 @@ final class RatesViewController: RWViewController {
         setBackground()
     }
     
-    #if TARGET_SC || TARGET_CW
+    #if TARGET_SC || TARGET_CW || TARGET_AR
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -102,7 +101,7 @@ final class RatesViewController: RWViewController {
         
         // Switch to the background queue to avoid performing calculation on the main thread.
         DispatchQueue.global(qos: .userInteractive).async { [presenter = self.presenter!] in
-            var collectionSnapshot = NSDiffableDataSourceSnapshot<CDWatchlistSectionAdapter, NSManagedObject>()
+            var collectionSnapshot = NSDiffableDataSourceSnapshot<CDWatchlistSectionAdapter, RWCoreDataObject>()
             collectionSnapshot.appendSections(presenter.sections)
             
             for section in presenter.sections {
@@ -113,11 +112,11 @@ final class RatesViewController: RWViewController {
                 
                 // Remove selected asset if user is reordering it.
                 let filteredAssets = sortedAssets.filter { $0.fullCode != self.reorderedAsset }
-                var managedObjects = filteredAssets.map { $0 as NSManagedObject }
+                var managedObjects = filteredAssets.map { $0 as RWCoreDataObject }
 
                 // Insert empty cell if user is adding an asset or reordering it.
                 if let indexPath = self.draggedIndexPath, indexPath.section == section.position {
-                    let dummyObject = NSManagedObject()
+                    let dummyObject = RWCoreDataObject()
                     managedObjects.insert(dummyObject, at: indexPath.row)
                 }
                 
@@ -413,10 +412,10 @@ extension RatesViewController: UICollectionViewDelegate {
             
             #if DEBUG
             let array: [CDWatchlistAssetAdapter] = Array(self.presenter.allAssets.values)
-            let array2 = array.sorted { $0.positionInWatchlist < $1.positionInWatchlist }
+            let arraySorted = array.sorted { $0.positionInWatchlist < $1.positionInWatchlist }
             
-            for i in 0...array2.count-1 {
-                let asset = array2[i]
+            for i in 0...arraySorted.count-1 {
+                let asset = arraySorted[i]
                 print("\(String(describing: asset.internalFullCode)) – \(asset.positionInWatchlist)")
             }
             print()

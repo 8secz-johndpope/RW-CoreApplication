@@ -44,7 +44,10 @@ final class RatesPresenter: RWPresenter {
         // Register analytics event with user assets.
         let assets = Array(self.allAssets.keys)
         DispatchQueue.global(qos: .background).async {
-            let assets = (assets.map { $0.toPair() }).map { $0.replacingOccurrences(of: "USD", with: "$") }
+            let assets = (assets.map { $0.toPair() })
+                .map { $0.replacingOccurrences(of: "USD", with: "$") }
+                .map { $0.replacingOccurrences(of: "EUR", with: "€") }
+                .map { $0.replacingOccurrences(of: "USD", with: "£") }
             AnalyticsEvent.register(source: .watchlist, key: RWAnalyticsEventOpened, messages: assets)
         }
     }
@@ -63,11 +66,11 @@ final class RatesPresenter: RWPresenter {
         case .toChart:
             router.routeTo(.toChart, context: context)
         
-        // Respand to user's tap on settings button.
+        // Respond to user's tap on settings button.
         case .toSettings:
             router.routeTo(.toSettings)
         
-        // Respand to user's tap on quick search bar.
+        // Respond to user's tap on quick search bar.
         case .toQuickSearch:
             router.routeTo(.toQuickSearch)
             

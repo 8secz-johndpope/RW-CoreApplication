@@ -9,7 +9,6 @@
 import CoreData
 import RWSession
 import RWExtensions
-import RWUserInterface
 
 final class AssetSelectorPresenter: RWPresenter {
     
@@ -116,7 +115,6 @@ extension AssetSelectorPresenter {
         }
         
         SceneDelegate.rates.floatingButton.hide()
-        resignCurrentContextController()
         router.routeTo(.toParent)
     }
 }

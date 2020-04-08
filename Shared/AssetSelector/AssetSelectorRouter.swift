@@ -8,6 +8,7 @@
 
 import UIKit
 import RWExtensions
+import RWUserInterface
 
 final class AssetSelectorRouter {
     
@@ -26,6 +27,7 @@ final class AssetSelectorRouter {
         switch to {
             
         case .toParent:
+            resignCurrentContextController()
             viewController.dismiss(animated: true)
         }
     }

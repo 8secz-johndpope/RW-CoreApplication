@@ -36,7 +36,7 @@
 		64184202243D2B4B007C1A2F /* RatesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E21592415053100162443 /* RatesCellView.swift */; };
 		64184203243D2B4F007C1A2F /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BF23A11F0B0005E2E2 /* Chart.swift */; };
 		64184204243D2B4F007C1A2F /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BC23A11F0B0005E2E2 /* ChartViewController.swift */; };
-		64184205243D2B4F007C1A2F /* ChartIndicatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEAA3523FF0771006F7116 /* ChartIndicatorsViewController.swift */; };
+		64184205243D2B4F007C1A2F /* IndicatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEAA3523FF0771006F7116 /* IndicatorsViewController.swift */; };
 		64184206243D2B4F007C1A2F /* ChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4C023A11F0B0005E2E2 /* ChartPresenter.swift */; };
 		64184207243D2B4F007C1A2F /* ChartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BD23A11F0B0005E2E2 /* ChartInteractor.swift */; };
 		64184208243D2B4F007C1A2F /* ChartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BE23A11F0B0005E2E2 /* ChartRouter.swift */; };
@@ -112,13 +112,13 @@
 		646E6A8E24381C4200D037C7 /* RatesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E21592415053100162443 /* RatesCellView.swift */; };
 		646E6A8F24381C5100D037C7 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BF23A11F0B0005E2E2 /* Chart.swift */; };
 		646E6A9024381C5100D037C7 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BC23A11F0B0005E2E2 /* ChartViewController.swift */; };
-		646E6A9124381C5100D037C7 /* ChartIndicatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEAA3523FF0771006F7116 /* ChartIndicatorsViewController.swift */; };
+		646E6A9124381C5100D037C7 /* IndicatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEAA3523FF0771006F7116 /* IndicatorsViewController.swift */; };
 		646E6A9224381C5100D037C7 /* ChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4C023A11F0B0005E2E2 /* ChartPresenter.swift */; };
 		646E6A9324381C5100D037C7 /* ChartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BD23A11F0B0005E2E2 /* ChartInteractor.swift */; };
 		646E6A9424381C5100D037C7 /* ChartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BE23A11F0B0005E2E2 /* ChartRouter.swift */; };
 		646E6A9524381C5300D037C7 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BF23A11F0B0005E2E2 /* Chart.swift */; };
 		646E6A9624381C5300D037C7 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BC23A11F0B0005E2E2 /* ChartViewController.swift */; };
-		646E6A9724381C5300D037C7 /* ChartIndicatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEAA3523FF0771006F7116 /* ChartIndicatorsViewController.swift */; };
+		646E6A9724381C5300D037C7 /* IndicatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEAA3523FF0771006F7116 /* IndicatorsViewController.swift */; };
 		646E6A9824381C5300D037C7 /* ChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4C023A11F0B0005E2E2 /* ChartPresenter.swift */; };
 		646E6A9924381C5300D037C7 /* ChartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BD23A11F0B0005E2E2 /* ChartInteractor.swift */; };
 		646E6A9A24381C5300D037C7 /* ChartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6405B4BE23A11F0B0005E2E2 /* ChartRouter.swift */; };
@@ -295,7 +295,7 @@
 		64DC5BDE2421D3B300C138A9 /* QuickSearchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSearchRouter.swift; sourceTree = "<group>"; };
 		64DC5BDF2421D3B300C138A9 /* QuickSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSearch.swift; sourceTree = "<group>"; };
 		64DC5BE02421D3B300C138A9 /* QuickSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSearchViewController.swift; sourceTree = "<group>"; };
-		64DEAA3523FF0771006F7116 /* ChartIndicatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartIndicatorsViewController.swift; sourceTree = "<group>"; };
+		64DEAA3523FF0771006F7116 /* IndicatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsViewController.swift; sourceTree = "<group>"; };
 		64DEAA5724005D2C006F7116 /* PortfolioAssetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioAssetsViewController.swift; sourceTree = "<group>"; };
 		64E60999240BB839006C3C57 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		64E7CBF02417FD89006E7538 /* libRWExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRWExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -476,10 +476,10 @@
 			children = (
 				6405B4BF23A11F0B0005E2E2 /* Chart.swift */,
 				6405B4BC23A11F0B0005E2E2 /* ChartViewController.swift */,
-				64DEAA3523FF0771006F7116 /* ChartIndicatorsViewController.swift */,
 				6405B4C023A11F0B0005E2E2 /* ChartPresenter.swift */,
 				6405B4BD23A11F0B0005E2E2 /* ChartInteractor.swift */,
 				6405B4BE23A11F0B0005E2E2 /* ChartRouter.swift */,
+				64DEAA3523FF0771006F7116 /* IndicatorsViewController.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -986,7 +986,7 @@
 				641841FB243D2B47007C1A2F /* AssetSelectorInteractor.swift in Sources */,
 				64184216243D2B7B007C1A2F /* AppDelegate+InitialSettings.swift in Sources */,
 				641841FD243D2B4B007C1A2F /* Rates.swift in Sources */,
-				64184205243D2B4F007C1A2F /* ChartIndicatorsViewController.swift in Sources */,
+				64184205243D2B4F007C1A2F /* IndicatorsViewController.swift in Sources */,
 				64184207243D2B4F007C1A2F /* ChartInteractor.swift in Sources */,
 				64184214243D2B74007C1A2F /* WebSession.swift in Sources */,
 				64184204243D2B4F007C1A2F /* ChartViewController.swift in Sources */,
@@ -1024,7 +1024,7 @@
 				64A3994E243C39A300750FAC /* RatesViewController.swift in Sources */,
 				646E6AB124381C7900D037C7 /* QuickSearchInteractor.swift in Sources */,
 				646E6AAC24381C7200D037C7 /* AssetSelectorInteractor.swift in Sources */,
-				646E6A9124381C5100D037C7 /* ChartIndicatorsViewController.swift in Sources */,
+				646E6A9124381C5100D037C7 /* IndicatorsViewController.swift in Sources */,
 				646E6AA124381C6800D037C7 /* ConverterRouter.swift in Sources */,
 				64A39951243C39A300750FAC /* RatesRouter.swift in Sources */,
 				646E6A9D24381C6800D037C7 /* Converter.swift in Sources */,
@@ -1070,7 +1070,7 @@
 				6468AB33243B85440081DD07 /* UIColor+Extension.swift in Sources */,
 				646E6A9624381C5300D037C7 /* ChartViewController.swift in Sources */,
 				645B7E4E23FC2179007B7EC1 /* RatesView.xcdatamodeld in Sources */,
-				646E6A9724381C5300D037C7 /* ChartIndicatorsViewController.swift in Sources */,
+				646E6A9724381C5300D037C7 /* IndicatorsViewController.swift in Sources */,
 				646E6AB424381C8D00D037C7 /* AnalyticsEvents.swift in Sources */,
 				645B7E5923FC217E007B7EC1 /* WatchlistSection+Extension.swift in Sources */,
 				646E6A8C24381C4200D037C7 /* RatesInteractor.swift in Sources */,

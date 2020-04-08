@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import CoreData
 import RWExtensions
 import RWUserInterface
 
 final class ConverterViewController: RWViewController {
     
-    typealias DataSource = UICollectionViewDiffableDataSource<String, NSManagedObject>
+    typealias DataSource = UICollectionViewDiffableDataSource<String, RWCoreDataObject>
     
     var presenter: ConverterPresenter!
     
@@ -82,15 +81,15 @@ final class ConverterViewController: RWViewController {
         guard presenter.isEverythingLoaded else { return }
         DispatchQueue.global(qos: .userInteractive).async {
             let sections = self.sections
-            var collectionSnapshot = NSDiffableDataSourceSnapshot<String, NSManagedObject>()
+            var collectionSnapshot = NSDiffableDataSourceSnapshot<String, RWCoreDataObject>()
             collectionSnapshot.appendSections(sections)
     
             let assets = self.presenter.activeList
             let fileteredAssets = assets.filter { $0.fullCode != self.reorderedAssetCode }
-            var managedObjects = fileteredAssets.map { $0 as NSManagedObject }
+            var managedObjects = fileteredAssets.map { $0 as RWCoreDataObject }
 
             if let indexPath = self.draggedIndexPath, indexPath.section == 0 {
-                let dummyObject = NSManagedObject()
+                let dummyObject = RWCoreDataObject()
                 managedObjects.insert(dummyObject, at: indexPath.row)
             }
             
@@ -192,7 +191,7 @@ extension ConverterViewController {
         case .began:
             guard let selectedIndexPath = collectionView.indexPathForItem(at: gesture.location(in: collectionView)),
                 selectedIndexPath.section == 0 else {
-                    reorderedAssetCode = "LOCK"
+                    reorderedAssetCode = RWLockKey
                     return
             }
             
@@ -227,7 +226,7 @@ extension ConverterViewController {
                 isDeleting = false
                 floatingButton.setUnhovered()
             
-            guard let selectedIndexPath = collectionView.indexPathForItem(at: gesture.location(in: collectionView)), reorderedAssetCode != "LOCK" else { break }
+            guard let selectedIndexPath = collectionView.indexPathForItem(at: gesture.location(in: collectionView)), reorderedAssetCode != RWLockKey else { break }
                 if selectedIndexPath != draggedIndexPath {
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     draggedIndexPath = selectedIndexPath
@@ -236,7 +235,7 @@ extension ConverterViewController {
             }
             
         case .ended:
-            guard let code = reorderedAssetCode, reorderedAssetCode != "LOCK" else { return }
+            guard let code = reorderedAssetCode, reorderedAssetCode != RWLockKey else { return }
             let draggedAsset = presenter.activeList.filter { $0.fullCode == code }[0]
             let fromIndex = Int(draggedAsset.rowInConverter)
             draggedIndexPath = nil
@@ -269,7 +268,7 @@ extension ConverterViewController {
                 DispatchQueue.global(qos: .userInteractive).async {
                     let assets = self.presenter.activeList
                     
-                    #if DEBUG //test
+                    #if DEBUG
                     self.presenter.activeList.forEach { (asset) in
                         print("\(asset.fullCode) – \(asset.rowInConverter)")
                     }
@@ -369,30 +368,28 @@ extension ConverterViewController: UICollectionViewDelegate {
     //MARK: Cell Blur
     
     private func addBlurToCollectionCells() {
+        
         collectionView.subviews.forEach {
             if $0 is RWBlurredView { $0.removeFromSuperview() }
         }
         
-        //DispatchQueue.global(qos: .userInteractive).async {
-            let dataSource = self.presenter.activeList
-            let count = dataSource.count
-            if count == 0 { return }
+        let dataSource = self.presenter.activeList
+        let count = dataSource.count
+        if count == 0 { return }
+        
+        for i in 0...count-1 {
+            let indexPath = IndexPath(row: i, section: 0)
             
-            for i in 0...count-1 {
-                let indexPath = IndexPath(row: i, section: 0)
-                //DispatchQueue.main.async {
-                    guard let cell = self.collectionView.cellForItem(at: indexPath) else { return }
-                    let cellOrigin = cell.convert(CGPoint.zero, to: self.collectionView)
-                    let inset = CGFloat.standartInset
-                    let size = CGSize(width: cell.frame.width-(inset*2), height: cell.frame.height-(inset*2))
-                    let frame = CGRect(origin: cellOrigin + Vector2D(inset), size: size)
-                    let blurView = RWThirdBlurredView()
-                    blurView.layer.cornerRadius = CGFloat.standartCornerRadius
-                    blurView.clipsToBounds = true
-                    blurView.frame = frame
-                    self.collectionView.insertSubview(blurView, at: 0)
-                //}
-            }
-        //}
+            guard let cell = self.collectionView.cellForItem(at: indexPath) else { return }
+            let cellOrigin = cell.convert(CGPoint.zero, to: self.collectionView)
+            let inset = CGFloat.standartInset
+            let size = CGSize(width: cell.frame.width-(inset*2), height: cell.frame.height-(inset*2))
+            let frame = CGRect(origin: cellOrigin + Vector2D(inset), size: size)
+            let blurView = RWThirdBlurredView()
+            blurView.layer.cornerRadius = CGFloat.standartCornerRadius
+            blurView.clipsToBounds = true
+            blurView.frame = frame
+            self.collectionView.insertSubview(blurView, at: 0)
+        }
     }
 }
