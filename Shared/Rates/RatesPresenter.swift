@@ -41,6 +41,7 @@ final class RatesPresenter: RWPresenter {
         viewController.addQuickSearchBar()
         viewController.addFloatingButton()
         viewController.unfreezeInput()
+        viewController.portfolioDataDidChanged()
         
         // Register analytics event with user assets.
         let assets = Array(self.allAssets.keys)

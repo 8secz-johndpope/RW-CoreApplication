@@ -10,6 +10,11 @@
 		31A112AA3003AC1D636F4270 /* libPods-ARConverter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 500B20B2A068385B71AAC439 /* libPods-ARConverter.a */; };
 		34C5B3CDB64F2CF119F62FF6 /* libPods-CryptoView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C05C07695D3823D9F9442F6E /* libPods-CryptoView.a */; };
 		451E553AA126B054E2FF227C /* libPods-SmartConverter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E3FA3FD5D307EEEF2C54EA /* libPods-SmartConverter.a */; };
+		6415EB2D243F4A2E00B968F7 /* PortfolioBlock+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6456897B243F1B800097B6D8 /* PortfolioBlock+Extension.swift */; };
+		6415EB2E243F4A6A00B968F7 /* PortfolioCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64568986243F30550097B6D8 /* PortfolioCellView.swift */; };
+		6415EB2F243F4A6A00B968F7 /* PortfolioCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64568986243F30550097B6D8 /* PortfolioCellView.swift */; };
+		6415EB30243F4A8300B968F7 /* RatesApplicationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64568988243F44A00097B6D8 /* RatesApplicationProvider.swift */; };
+		6415EB31243F4A8400B968F7 /* RatesApplicationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64568988243F44A00097B6D8 /* RatesApplicationProvider.swift */; };
 		641841DA243D2913007C1A2F /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 641841A0243D290D007C1A2F /* Icon.xcassets */; };
 		641841DB243D2913007C1A2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641841A2243D290D007C1A2F /* AppDelegate.swift */; };
 		641841DD243D2913007C1A2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641841A7243D290E007C1A2F /* SceneDelegate.swift */; };
@@ -71,7 +76,8 @@
 		64568981243F27BD0097B6D8 /* WatchlistAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6469E71023EAA93500CE81BF /* WatchlistAsset+Extension.swift */; };
 		64568982243F27BD0097B6D8 /* WatchlistSection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D123EBD38C001363C0 /* WatchlistSection+Extension.swift */; };
 		64568983243F27BD0097B6D8 /* AppDelegate+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6023944A8B00B15E11 /* AppDelegate+CoreData.swift */; };
-		64568987243F30550097B6D8 /* PortfolioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64568986243F30550097B6D8 /* PortfolioCell.swift */; };
+		64568987243F30550097B6D8 /* PortfolioCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64568986243F30550097B6D8 /* PortfolioCellView.swift */; };
+		64568989243F44A00097B6D8 /* RatesApplicationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64568988243F44A00097B6D8 /* RatesApplicationProvider.swift */; };
 		645B7D4923FC1EE0007B7EC1 /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645B7D4823FC1EE0007B7EC1 /* Icon.xcassets */; };
 		645B7D5223FC205C007B7EC1 /* libCoreModules.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EEA0DC23E99BB300B6FB28 /* libCoreModules.a */; };
 		645B7D6323FC2116007B7EC1 /* WebSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D423EC3D4D001363C0 /* WebSession.swift */; };
@@ -206,7 +212,8 @@
 		64426F9123E1EFCF0040CA8D /* UpdateLog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UpdateLog.txt; sourceTree = "<group>"; };
 		64539218243C8939009CAACB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6456897B243F1B800097B6D8 /* PortfolioBlock+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PortfolioBlock+Extension.swift"; sourceTree = "<group>"; };
-		64568986243F30550097B6D8 /* PortfolioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCell.swift; sourceTree = "<group>"; };
+		64568986243F30550097B6D8 /* PortfolioCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCellView.swift; sourceTree = "<group>"; };
+		64568988243F44A00097B6D8 /* RatesApplicationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesApplicationProvider.swift; sourceTree = "<group>"; };
 		64570101243220F300254B99 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		64570105243220FD00254B99 /* en-AU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-AU"; path = "en-AU.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		645701072432212200254B99 /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -500,6 +507,22 @@
 			path = Converter;
 			sourceTree = "<group>";
 		};
+		6456898A243F46290097B6D8 /* CoreApplicationProviders */ = {
+			isa = PBXGroup;
+			children = (
+				64568988243F44A00097B6D8 /* RatesApplicationProvider.swift */,
+			);
+			path = CoreApplicationProviders;
+			sourceTree = "<group>";
+		};
+		6456898B243F463B0097B6D8 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				64568986243F30550097B6D8 /* PortfolioCellView.swift */,
+			);
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
 		645B7CF623FC1E3F007B7EC1 /* CryptoView */ = {
 			isa = PBXGroup;
 			children = (
@@ -615,7 +638,6 @@
 				646E21532415039300162443 /* RatesInteractor.swift */,
 				646E2155241503E900162443 /* RatesRouter.swift */,
 				646E21592415053100162443 /* RatesCellView.swift */,
-				64568986243F30550097B6D8 /* PortfolioCell.swift */,
 			);
 			path = Rates;
 			sourceTree = "<group>";
@@ -647,6 +669,8 @@
 		64DB5D05238C9C8A006B3CD8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				6456898B243F463B0097B6D8 /* Portfolio */,
+				6456898A243F46290097B6D8 /* CoreApplicationProviders */,
 				64190F9923C7CCD700D4B081 /* Resources */,
 				64FD5BD22426291100715CD5 /* QuickSearch */,
 				64CDAB6024262C6A00A0C96D /* AssetSelector */,
@@ -980,9 +1004,11 @@
 				641841F4243D2B43007C1A2F /* QuickSearchViewController.swift in Sources */,
 				641841F7243D2B43007C1A2F /* QuickSearchRouter.swift in Sources */,
 				641841FC243D2B47007C1A2F /* AssetSelectorRouter.swift in Sources */,
+				6415EB2D243F4A2E00B968F7 /* PortfolioBlock+Extension.swift in Sources */,
 				64184209243D2B53007C1A2F /* Converter.swift in Sources */,
 				6418420D243D2B53007C1A2F /* ConverterRouter.swift in Sources */,
 				641841F3243D2B43007C1A2F /* QuickSearch.swift in Sources */,
+				6415EB30243F4A8300B968F7 /* RatesApplicationProvider.swift in Sources */,
 				641841FF243D2B4B007C1A2F /* RatesPresenter.swift in Sources */,
 				6418420E243D2B53007C1A2F /* ConverterCellView.swift in Sources */,
 				641841F5243D2B43007C1A2F /* QuickSearchPresenter.swift in Sources */,
@@ -1009,6 +1035,7 @@
 				64184202243D2B4B007C1A2F /* RatesCellView.swift in Sources */,
 				641841DD243D2913007C1A2F /* SceneDelegate.swift in Sources */,
 				64184201243D2B4B007C1A2F /* RatesRouter.swift in Sources */,
+				6415EB2E243F4A6A00B968F7 /* PortfolioCellView.swift in Sources */,
 				64184215243D2B77007C1A2F /* UIColor+Extension.swift in Sources */,
 				641841F8243D2B47007C1A2F /* AssetSelector.swift in Sources */,
 				641841FE243D2B4B007C1A2F /* RatesViewController.swift in Sources */,
@@ -1027,12 +1054,13 @@
 				646E6AAB24381C7200D037C7 /* AssetSelectorPresenter.swift in Sources */,
 				64A3994E243C39A300750FAC /* RatesViewController.swift in Sources */,
 				646E6AB124381C7900D037C7 /* QuickSearchInteractor.swift in Sources */,
-				64568987243F30550097B6D8 /* PortfolioCell.swift in Sources */,
+				64568987243F30550097B6D8 /* PortfolioCellView.swift in Sources */,
 				646E6AAC24381C7200D037C7 /* AssetSelectorInteractor.swift in Sources */,
 				646E6A9124381C5100D037C7 /* IndicatorsViewController.swift in Sources */,
 				646E6AA124381C6800D037C7 /* ConverterRouter.swift in Sources */,
 				64A39951243C39A300750FAC /* RatesRouter.swift in Sources */,
 				646E6A9D24381C6800D037C7 /* Converter.swift in Sources */,
+				64568989243F44A00097B6D8 /* RatesApplicationProvider.swift in Sources */,
 				645B7E5523FC217D007B7EC1 /* WatchlistSection+Extension.swift in Sources */,
 				646D31FC243AC43D00730639 /* AppDelegate.swift in Sources */,
 				646E6A9324381C5100D037C7 /* ChartInteractor.swift in Sources */,
@@ -1079,7 +1107,9 @@
 				646E6A9724381C5300D037C7 /* IndicatorsViewController.swift in Sources */,
 				646E6AB424381C8D00D037C7 /* AnalyticsEvents.swift in Sources */,
 				645B7E5923FC217E007B7EC1 /* WatchlistSection+Extension.swift in Sources */,
+				6415EB2F243F4A6A00B968F7 /* PortfolioCellView.swift in Sources */,
 				646E6A8C24381C4200D037C7 /* RatesInteractor.swift in Sources */,
+				6415EB31243F4A8400B968F7 /* RatesApplicationProvider.swift in Sources */,
 				646E6AA624381C6900D037C7 /* ConverterInteractor.swift in Sources */,
 				646E6A8D24381C4200D037C7 /* RatesRouter.swift in Sources */,
 				646E6A8A24381C4200D037C7 /* RatesViewController.swift in Sources */,
@@ -1180,7 +1210,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.converter-1-0";
 				PRODUCT_NAME = "SmartConverter 1.0";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG TARGET_SC";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG TARGET_SC BACIS_LAYOUT FORCE_DISABLE_DARKMODE";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1204,7 +1234,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.converter-1-0";
 				PRODUCT_NAME = "SmartConverter 1.0";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = TARGET_SC;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "TARGET_SC BACIS_LAYOUT FORCE_DISABLE_DARKMODE";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = TARGET_SC;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

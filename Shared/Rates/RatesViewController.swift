@@ -111,7 +111,7 @@ final class RatesViewController: RWViewController {
         case toQuickSearch = 3
     }
     
-    //MARK: UI Update
+    //MARK: UI Update – Master
     
     override func dataSourceDidChanged(animated: Bool = true) {
         
@@ -151,6 +151,18 @@ final class RatesViewController: RWViewController {
             }
         }
     }
+    
+    //MARK: UI Update – Portfolio
+    
+    func portfolioDataDidChanged(animated: Bool = true) {
+        #if ENABLE_PORTFOLIO
+        let sections = presenter.portfolioSections
+        var collectionSnapshot = NSDiffableDataSourceSnapshot<String, CDPortfolioSectionAdapter>()
+        collectionSnapshot.appendSections(["Portfolio"])
+        collectionSnapshot.appendItems(sections, toSection: "Portfolio")
+        self.portfolioCollectionViewDataSource.apply(collectionSnapshot)
+        #endif
+    }
 }
 
 //MARK: - PRESENTER->VIEW INTERFFACE - MASTER
@@ -160,7 +172,8 @@ extension RatesViewController {
     //MARK: Add Collection View and Settings Button
     
     func addCollectionView() {
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+        let layout = RatesApplicationProvider.createLayout()
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isUserInteractionEnabled = false
         collectionView.dataSource = collectionViewDataSource
         collectionView.delegate = self
@@ -215,7 +228,7 @@ extension RatesViewController {
                                                                          for: indexPath) as! RWBigTitleHeaderView
             let section = self.presenter.sections[indexPath.section]
             header.textLabel.textColor = .text
-            header.textLabel.font = UIFont(name: "Futura-Bold", size: 20)
+            header.textLabel.font = RatesApplicationProvider.headerFont
             header.textLabel.text = NSLocalizedString(section.title ?? "Section", comment: "")
             return header
         }
@@ -223,14 +236,22 @@ extension RatesViewController {
     
     func addPortfolioCollectionView() {
         #if ENABLE_PORTFOLIO
-        portfolioCollectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+        let layout = RatesApplicationProvider.createPortfolioLayout()
+        portfolioCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         portfolioCollectionView.dataSource = portfolioCollectionViewDataSource
         portfolioCollectionView.delegate = self
-        portfolioCollectionView.backgroundColor = .systemRed
+        portfolioCollectionView.backgroundColor = .background
         portfolioCollectionView.register(PortfolioCellView.self, forCellWithReuseIdentifier: PortfolioCellView.reuseIdentifier)
         portfolioCollectionView.frame = CGRect(x: 0, y: -CGFloat.portfolioSectionHeight,
                                                width: width, height: CGFloat.portfolioSectionHeight)
         collectionView.addSubview(portfolioCollectionView)
+        
+        let headerLabel = UILabel()
+        headerLabel.font = RatesApplicationProvider.headerFont
+        headerLabel.text = NSLocalizedString("Portfolio", comment: "")
+        headerLabel.frame = CGRect(x: .standartDoublePageInset, y: -.portfolioSectionHeight-5, width: width, height: 50)
+        headerLabel.textColor = .text
+        collectionView.addSubview(headerLabel)
         #endif
     }
     
@@ -588,8 +609,8 @@ extension RatesViewController {
     
     private func createPortfolioCollectionCell() -> PortfolioDataSource {
         return PortfolioDataSource(collectionView: portfolioCollectionView, cellProvider: { [unowned self] collectionView, indexPath, assetEntity in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RatesCellView.reuseIdentifier,
-                                                          for: indexPath) as! RatesCellView
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PortfolioCellView.reuseIdentifier,
+                                                          for: indexPath) as! PortfolioCellView
             cell.viewController = self
 //            cell.isEmptyCell = !(assetEntity is CDWatchlistAssetAdapter)
 //            cell.representedObject = assetEntity as? CDWatchlistAssetAdapter
@@ -598,69 +619,6 @@ extension RatesViewController {
         })
     }
     
-    //MARK: Layout – CONVERTER
-    
-    #if BACIS_LAYOUT
-    private func createLayout() -> UICollectionViewLayout {
-        let config = UICollectionViewCompositionalLayoutConfiguration()
-        config.interSectionSpacing = 0
-        
-        // Create collection view layout.
-        let layout = UICollectionViewCompositionalLayout(sectionProvider: { (sectionIndex, _ ) -> NSCollectionLayoutSection? in
-        
-            // Section layout.
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-            let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(.standartCellHeigh))
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-            group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: .standartPageInset, bottom: 0, trailing: .standartPageInset)
-            let section = NSCollectionLayoutSection(group: group)
-            section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0)
-            
-            // Section header layout.
-            let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-                layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(.standartHeaderHeigh)),
-                elementKind: RWBigTitleHeaderView.headerElementKind,
-                alignment: .top)
-            section.boundarySupplementaryItems = [sectionHeader]
-            return section
-            
-        }, configuration: config)
-        return layout
-    }
-    #endif
-    
-    //MARK: Layout – CRYPTOVIEW, RATESVIEW, CER
-    
-    #if COMPLEX_LAYOUT
-    private func createLayout() -> UICollectionViewLayout {
-        let config = UICollectionViewCompositionalLayoutConfiguration()
-        config.interSectionSpacing = 0
-        
-        // Create collection view layout.
-        let layout = UICollectionViewCompositionalLayout(sectionProvider: { (sectionIndex, _ ) -> NSCollectionLayoutSection? in
-        
-            // Section layout.
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1.0))
-            let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(.quadCellHeigh))
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-            group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: .standartPageInset, bottom: 0, trailing: .standartPageInset)
-            let section = NSCollectionLayoutSection(group: group)
-            //section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0)
-            
-            // Section header layout.
-            let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-                layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(.standartHeaderHeigh)),
-                elementKind: RWBigTitleHeaderView.headerElementKind,
-                alignment: .top)
-            section.boundarySupplementaryItems = [sectionHeader]
-            return section
-            
-        }, configuration: config)
-        return layout
-    }
-    #endif
     
     //MARK: Cell Blur
     

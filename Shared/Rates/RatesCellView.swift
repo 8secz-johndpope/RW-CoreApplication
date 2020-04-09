@@ -37,28 +37,32 @@ final class RatesCellView: RWInteractiveCollectionViewCell {
     //MARK: Constructor
     
     override func constructView() {
+        
+        // Interactive background view used for reordering cells or for interaction with floating button.
         interactiveView.backgroundColor = .itemInteractive
         interactiveView.layer.cornerRadius = .standartCornerRadius
         interactiveView.clipsToBounds = true
         
+        // Main cell view with represented asset data.
         mainAssetView.backgroundColor = .itemBackground
         mainAssetView.layer.cornerRadius = .standartCornerRadius
         mainAssetView.clipsToBounds = true
         mainView.addSubview(mainAssetView)
         mainAssetView.frameConstraint(CGFloat.standartInset)
         
+        // Flag image for currencies and icon for stocks/cryptocurrencies.
         iconImageView.setPlaceholder(withRadius: 5.5)
-        iconImageView.contentMode = .scaleAspectFill
         mainAssetView.addSubview(iconImageView)
-        iconImageView.topLeftConstraint(7.5).sizeConstraints(width: 28, height: 28)
+        iconImageView.topLeftConstraint(7.5).sizeConstraints(width: 45, height: 32)
         
+        // Price label.
         mainAssetView.addSubview(priceTextView)
         priceTextView.textColor = .white
         priceTextView.textAlignment = .right
-        priceTextView.font = UIFont(name: "Futura", size: 28)
+        priceTextView.font = UIFont(name: "Futura", size: 30)
         priceTextView.horizontalConstraint(15).verticalConstraint()
         
-        changeLabel.setPlaceholder()
+        // Price change in percantage label.
         changeLabel.textAlignment = .center
         changeLabel.textColor = .white
         changeLabel.layer.cornerRadius = 3.5
@@ -67,26 +71,30 @@ final class RatesCellView: RWInteractiveCollectionViewCell {
         mainAssetView.addSubview(changeLabel)
         changeLabel.sizeConstraints(CGSize(width: 50, height: 11.5)).trailingConstraint(-14).bottomConstraint(-7.5)
         
-        nameLabel.setPlaceholder()
+        // Asset's name label.
         nameLabel.textColor = .text
         nameLabel.numberOfLines = 0
-        nameLabel.font = UIFont(name: "Futura-Bold", size: 15)
+        nameLabel.font = UIFont(name: "Futura-Bold", size: 15.5)
         mainAssetView.addSubview(nameLabel)
         nameLabel.topConstraint(to: iconImageView).heightConstraint(15)
             .leadingConstraint(7.5, toTrail: iconImageView).trailingConstraint()
         
+        // Asset's code label.
         codeLabel.textColor = .text
-        codeLabel.font = UIFont(name: "Futura", size: 8)
+        codeLabel.font = UIFont(name: "Futura", size: 9)
         mainAssetView.addSubview(codeLabel)
-        codeLabel.topConstraint(1.5, toBot: nameLabel).leadingConstraint(8.5, toTrail: iconImageView)
+        codeLabel.topConstraint(3.5, toBot: nameLabel).leadingConstraint(8.5, toTrail: iconImageView)
             .trailingConstraint().heightConstraint(8.5)
         
+        // Start icon to show local currency.
         addSubview(starIconView)
         starIconView.topConstraint(10).trailingConstraint(-10).sizeConstraints(CGSize(width: 15, height: 15))
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showChart))
         mainAssetView.addGestureRecognizer(tapGesture)
         
-        loadingAnimationView = NVActivityIndicatorView(frame: .zero, type: .ballBeat, color: UIColor.white.withAlphaComponent(0.5), padding: 25)
+        // Animation view for loading the price.
+        let color = UIColor.white.withAlphaComponent(0.5)
+        loadingAnimationView = NVActivityIndicatorView(frame: .zero, type: .ballBeat, color: color, padding: 25)
         mainAssetView.addSubview(loadingAnimationView)
         loadingAnimationView.verticalConstraint().widthConstraint(100).trailingConstraint()
     }
@@ -95,51 +103,58 @@ final class RatesCellView: RWInteractiveCollectionViewCell {
     
     override func updateView(animated: Bool) {
         let asset = representedObject as! CDWatchlistAssetAdapter
-        
-        // Star icon for local currencies
+
+        // Star icon for local currencies.
         if asset.currencyToUSD == Locale.current.currencyCode {
             starIconView.image = UIImage(named: "star")
         } else {
             starIconView.image = nil
         }
         
-        // Asset Icon
+        // Asset's icon.
         if let data = asset.iconImage {
             iconImageView.image = UIImage(data: data)
+            
+            if asset.isCrypto {
+                iconImageView.contentMode = .scaleAspectFit
+            } else {
+                iconImageView.contentMode = .scaleAspectFill
+            }
+            
         } else {
             iconImageView.image = nil
         }
         
-        // Asset Full Name
+        // Asset full name.
         if let name = asset.name {
             nameLabel.releasePlaceholder()
             nameLabel.text = name == "United States dollar" ? "United States dollar (to Euro)" : name
         }
         
-        // Asset Code
+        // Asset Code.
         codeLabel.text = asset.code == "USDUSD" ? "EURUSD" : asset.code
         codeLabel.releasePlaceholder()
         
         if viewController.presenter.loadMask[asset.fullCode] ?? false {
             loadingAnimationView.stopAnimating()
             
-            // Asset Price
+            // Asset Price.
             if let price = asset.price {
                 let newPrice = Double(truncating: price).rounded(places: asset.pricePlaces)
                 cachedOldPrice = newPrice
                 
-                // Display price
+                // Display price.
                 if animated {
                     setNewPriceAnimated(newPrice)
                 
-                // Update price
+                // Update price.
                 } else {
                     priceTextView.text = String(newPrice)
                 }
             }
             
-            // Price change in percentage
-            // Invert percent
+            // Price change in percentage.
+            // Invert percent.
             if asset.isCurrency {
                 if asset.pricePercent > 0 {
                     changeLabel.text = "-\(String(asset.pricePercent))%"
@@ -150,7 +165,7 @@ final class RatesCellView: RWInteractiveCollectionViewCell {
                     changeLabel.backgroundColor = UIColor.systemGreen.withAlphaComponent(0.5)
                 }
                 
-            // Display original
+            // Display original.
             } else {
                 if asset.pricePercent > 0 {
                     changeLabel.text = "+\(String(asset.pricePercent))%"
@@ -160,6 +175,7 @@ final class RatesCellView: RWInteractiveCollectionViewCell {
                     changeLabel.backgroundColor = UIColor.systemRed.withAlphaComponent(0.5)
                 }
             }
+            
         } else {
             loadingAnimationView.startAnimating()
             priceTextView.text = ""

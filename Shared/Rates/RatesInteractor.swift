@@ -66,7 +66,8 @@ final class RatesInteractor: RWInteractor {
     
     private func setCryptoModel() {
         #if TARGET_CW
-        let section = CDPortfolioSectionAdapter(title: "Overview", position: 0)
+        _ = CDPortfolioSectionAdapter(title: "Overview", position: 0)
+        _ = CDPortfolioSectionAdapter(title: "Test", position: 1)
         
         // Assets data source full codes.
         let currencies = ["FX_IDC:EUR-USD", "FX_IDC:USD-EUR"]
