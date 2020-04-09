@@ -118,12 +118,7 @@ extension AssetSelectorViewController: UITableViewDelegate {
             cell.detailTextLabel?.text = assetInternalCode
             cell.detailTextLabel?.textColor = .textDetail
             cell.accessoryType = .disclosureIndicator
-            
-            if let icon = self.presenter.currentList[indexPath.section].icon {
-                cell.imageView?.image = icon.resizeTo(size: CGSize(width: 25, height: 25))
-            } else {
-                cell.imageView?.image = assetIcon(fromInternalCode: assetInternalCode)
-            }
+            cell.imageView?.image = assetIconResized(fromInternalCode: assetInternalCode)
             
             let cellTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(sender:)))
             cell.addGestureRecognizer(cellTapGesture)
