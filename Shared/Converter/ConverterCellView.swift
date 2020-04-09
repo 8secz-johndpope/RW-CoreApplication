@@ -12,6 +12,8 @@ import RWExtensions
 
 final class ConverterCellView: RWInteractiveCollectionViewCell {
     
+    static let reuseIdentifier = "ConverterCellView"
+    
     private var shadowView = UIView()
     private var flagImageView = UIImageView()
     private var codeLabel = UILabel()

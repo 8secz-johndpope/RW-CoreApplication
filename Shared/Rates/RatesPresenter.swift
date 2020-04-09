@@ -37,6 +37,7 @@ final class RatesPresenter: RWPresenter {
         
         // Configure view controller.
         viewController.addCollectionView()
+        viewController.addPortfolioCollectionView()
         viewController.addQuickSearchBar()
         viewController.addFloatingButton()
         viewController.unfreezeInput()
@@ -47,7 +48,7 @@ final class RatesPresenter: RWPresenter {
             let assets = (assets.map { $0.toPair() })
                 .map { $0.replacingOccurrences(of: "USD", with: "$") }
                 .map { $0.replacingOccurrences(of: "EUR", with: "€") }
-                .map { $0.replacingOccurrences(of: "USD", with: "£") }
+                .map { $0.replacingOccurrences(of: "GBP", with: "£") }
             AnalyticsEvent.register(source: .watchlist, key: RWAnalyticsEventOpened, messages: assets)
         }
     }
@@ -202,7 +203,7 @@ extension RatesPresenter {
 
 //MARK: - VIEW->PRESENTER INTERFFACE - PORTFOLIO
 
-#if TARGET_CW
+#if ENABLE_PORTFOLIO
 
 extension RatesPresenter {
     

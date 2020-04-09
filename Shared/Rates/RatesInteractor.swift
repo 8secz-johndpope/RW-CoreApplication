@@ -15,7 +15,7 @@ final class RatesInteractor: RWInteractor {
     unowned var presenter: RatesPresenter!
     private var isLoaded = false
     
-    #if TARGET_CW
+    #if ENABLE_PORTFOLIO
     var portfolioSections = [CDPortfolioSectionAdapter]()
     #endif
     
@@ -25,7 +25,7 @@ final class RatesInteractor: RWInteractor {
         let context = AppDelegate.persistentContainer.viewContext
         loadFromContext(context, entity: CDWatchlistSectionAdapter.identifier)
         
-        #if TARGET_CW
+        #if ENABLE_PORTFOLIO
         portfolioSections = fetchEntities(in: context, entity: CDPortfolioSectionAdapter.identifier)
         #endif
         
@@ -40,6 +40,8 @@ final class RatesInteractor: RWInteractor {
         setCryptoModel()
         startUpdates()
     }
+    
+    //MARK: Smart Converter
     
     private func setBasicModel() {
         #if TARGET_SC
@@ -59,6 +61,8 @@ final class RatesInteractor: RWInteractor {
         addsection(title: "Crypto", position: 1, entities: crypto, prevSectionCount: currenciesCount)
         #endif
     }
+    
+    //MARK: CryptoView
     
     private func setCryptoModel() {
         #if TARGET_CW

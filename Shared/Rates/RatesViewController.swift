@@ -14,10 +14,13 @@ import RWSession
 final class RatesViewController: RWViewController {
     
     typealias DataSource = UICollectionViewDiffableDataSource<CDWatchlistSectionAdapter, RWCoreDataObject>
+    typealias PortfolioDataSource = UICollectionViewDiffableDataSource<String, CDPortfolioSectionAdapter>
     
     private lazy var collectionViewDataSource = createCollectionCell()
+    private lazy var portfolioCollectionViewDataSource = createPortfolioCollectionCell()
     var presenter: RatesPresenter!
     var collectionView: UICollectionView!
+    var portfolioCollectionView: UICollectionView!
     var draggedIndexPath: IndexPath?
     var floatingButton: RWFloatingButton!
     
@@ -35,19 +38,18 @@ final class RatesViewController: RWViewController {
         navigationController?.navigationBar.tintColor = .tint
         view.backgroundColor = .background
         tabBarController?.tabBar.tintColor = .tint
-        setBackground()
+        setBasicBackground()
+        setCryptoBackground()
     }
     
-    #if TARGET_SC || TARGET_CW || TARGET_AR
+    #if FORCE_DISABLE_DARKMODE
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     #endif
     
-    /// Sets view controller background.
-    private func setBackground() {
-        
-        // Converter App background with two circles.
+    // Converter App background with two circles.
+    private func setBasicBackground() {
         #if TARGET_SC
         let circleImage = UIImage(named: "bg_circle")
         
@@ -65,6 +67,13 @@ final class RatesViewController: RWViewController {
         #endif
     }
     
+    // Converter App background with two circles.
+    private func setCryptoBackground() {
+        #if TARGET_CW
+        
+        #endif
+    }
+    
     /// React to device orientation change.
     override func viewWillTransition(toSize: CGSize? = nil) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.02) {
@@ -74,8 +83,15 @@ final class RatesViewController: RWViewController {
             
             // Update quick search button size.
             let inset = CGFloat.standartPageInset
+            
+            #if ENABLE_PORTFOLIO
+            let constant: CGFloat = (DEVICE_IS_NEW_SCREEN_TYPE ? -45.0 : -35.0) - CGFloat.portfolioSectionHeight
+            let frame = CGRect(x: inset, y: constant,width: self.width-(inset*2), height: 33.5)
+            #else
             let constant: CGFloat = DEVICE_IS_NEW_SCREEN_TYPE ? -45.0 : -35.0
             let frame = CGRect(x: inset, y: constant,width: self.width-(inset*2), height: 33.5)
+            #endif
+            
             self.searchButton.frame = frame
             
             // Update floating button position on device orientation change.
@@ -155,7 +171,14 @@ extension RatesViewController {
         collectionView.backgroundColor = .clear
         collectionView.horizontalConstraint().bottomConstraint().topSafeConstraint()
         collectionView.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
+        
+        #if ENABLE_PORTFOLIO
+        collectionView.contentInset = UIEdgeInsets(top: 45+CGFloat.portfolioSectionHeight, left: 0,
+                                                   bottom: 65, right: 0)
+        #else
         collectionView.contentInset = UIEdgeInsets(top: 45, left: 0, bottom: 65, right: 0)
+        #endif
+        
         collectionView.alpha = 0
         
         // Cell snapshot image view.
@@ -192,10 +215,23 @@ extension RatesViewController {
                                                                          for: indexPath) as! RWBigTitleHeaderView
             let section = self.presenter.sections[indexPath.section]
             header.textLabel.textColor = .text
-            header.textLabel.font = UIFont(name: "Futura-Bold", size: 30)
+            header.textLabel.font = UIFont(name: "Futura-Bold", size: 20)
             header.textLabel.text = NSLocalizedString(section.title ?? "Section", comment: "")
             return header
         }
+    }
+    
+    func addPortfolioCollectionView() {
+        #if ENABLE_PORTFOLIO
+        portfolioCollectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+        portfolioCollectionView.dataSource = portfolioCollectionViewDataSource
+        portfolioCollectionView.delegate = self
+        portfolioCollectionView.backgroundColor = .systemRed
+        portfolioCollectionView.register(PortfolioCellView.self, forCellWithReuseIdentifier: PortfolioCellView.reuseIdentifier)
+        portfolioCollectionView.frame = CGRect(x: 0, y: -CGFloat.portfolioSectionHeight,
+                                               width: width, height: CGFloat.portfolioSectionHeight)
+        collectionView.addSubview(portfolioCollectionView)
+        #endif
     }
     
     //MARK: Add Quick Search Bar
@@ -550,9 +586,21 @@ extension RatesViewController {
         })
     }
     
+    private func createPortfolioCollectionCell() -> PortfolioDataSource {
+        return PortfolioDataSource(collectionView: portfolioCollectionView, cellProvider: { [unowned self] collectionView, indexPath, assetEntity in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RatesCellView.reuseIdentifier,
+                                                          for: indexPath) as! RatesCellView
+            cell.viewController = self
+//            cell.isEmptyCell = !(assetEntity is CDWatchlistAssetAdapter)
+//            cell.representedObject = assetEntity as? CDWatchlistAssetAdapter
+//            cell.updateState()
+            return cell
+        })
+    }
+    
     //MARK: Layout – CONVERTER
     
-    #if TARGET_SC || TARGET_AR || TARGET_CW
+    #if BACIS_LAYOUT
     private func createLayout() -> UICollectionViewLayout {
         let config = UICollectionViewCompositionalLayoutConfiguration()
         config.interSectionSpacing = 0
@@ -584,7 +632,7 @@ extension RatesViewController {
     
     //MARK: Layout – CRYPTOVIEW, RATESVIEW, CER
     
-    #if !TARGET_CW || TARGET_CER || TARGET_CERPRO || TARGET_RW
+    #if COMPLEX_LAYOUT
     private func createLayout() -> UICollectionViewLayout {
         let config = UICollectionViewCompositionalLayoutConfiguration()
         config.interSectionSpacing = 0
@@ -599,7 +647,7 @@ extension RatesViewController {
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
             group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: .standartPageInset, bottom: 0, trailing: .standartPageInset)
             let section = NSCollectionLayoutSection(group: group)
-            section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0)
+            //section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0)
             
             // Section header layout.
             let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(

@@ -16,12 +16,12 @@ final class RatesRouter {
     unowned var viewController: RatesViewController!
     
     //MARK: Types
-    
+
     enum Routes: Int {
         case toChart = 1
-//        case toProfile = 2
-//        case toFinancials = 3
-//        case addStock = 4
+        case toProfile = 2
+        case toFinancials = 3
+        case addStock = 4
         case addCurrency = 5
         case addCrypto = 6
         case toSettings = 7

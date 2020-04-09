@@ -1,19 +1,18 @@
 //
-//  RatesCellView.swift
-//  SEConverter
+//  PortfolioCell.swift
+//  CryptoView
 //
-//  Created by Esie on 3/8/20.
+//  Created by Esie on 4/9/20.
 //  Copyright © 2020 Denis Esie. All rights reserved.
 //
-
 import UIKit
 import RWExtensions
 import RWUserInterface
 import NVActivityIndicatorView
 
-final class RatesCellView: RWInteractiveCollectionViewCell {
-    
-    public static let reuseIdentifier = "RatesCell"
+final class PortfolioCellView: RWInteractiveCollectionViewCell {
+
+    public static let reuseIdentifier = "PortfolioCellView"
     
     private var displayLink: CADisplayLink?
     private var animationStartDate: Date?
@@ -169,7 +168,7 @@ final class RatesCellView: RWInteractiveCollectionViewCell {
     }
 }
 
-extension RatesCellView {
+extension PortfolioCellView {
     
     @objc private func showChart() {
         guard let asset = representedObject as? CDWatchlistAssetAdapter else { return }

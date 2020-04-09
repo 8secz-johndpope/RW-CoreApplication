@@ -71,6 +71,7 @@
 		64568981243F27BD0097B6D8 /* WatchlistAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6469E71023EAA93500CE81BF /* WatchlistAsset+Extension.swift */; };
 		64568982243F27BD0097B6D8 /* WatchlistSection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D123EBD38C001363C0 /* WatchlistSection+Extension.swift */; };
 		64568983243F27BD0097B6D8 /* AppDelegate+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6023944A8B00B15E11 /* AppDelegate+CoreData.swift */; };
+		64568987243F30550097B6D8 /* PortfolioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64568986243F30550097B6D8 /* PortfolioCell.swift */; };
 		645B7D4923FC1EE0007B7EC1 /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645B7D4823FC1EE0007B7EC1 /* Icon.xcassets */; };
 		645B7D5223FC205C007B7EC1 /* libCoreModules.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EEA0DC23E99BB300B6FB28 /* libCoreModules.a */; };
 		645B7D6323FC2116007B7EC1 /* WebSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D423EC3D4D001363C0 /* WebSession.swift */; };
@@ -205,6 +206,7 @@
 		64426F9123E1EFCF0040CA8D /* UpdateLog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UpdateLog.txt; sourceTree = "<group>"; };
 		64539218243C8939009CAACB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6456897B243F1B800097B6D8 /* PortfolioBlock+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PortfolioBlock+Extension.swift"; sourceTree = "<group>"; };
+		64568986243F30550097B6D8 /* PortfolioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCell.swift; sourceTree = "<group>"; };
 		64570101243220F300254B99 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		64570105243220FD00254B99 /* en-AU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-AU"; path = "en-AU.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		645701072432212200254B99 /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -613,6 +615,7 @@
 				646E21532415039300162443 /* RatesInteractor.swift */,
 				646E2155241503E900162443 /* RatesRouter.swift */,
 				646E21592415053100162443 /* RatesCellView.swift */,
+				64568986243F30550097B6D8 /* PortfolioCell.swift */,
 			);
 			path = Rates;
 			sourceTree = "<group>";
@@ -1024,6 +1027,7 @@
 				646E6AAB24381C7200D037C7 /* AssetSelectorPresenter.swift in Sources */,
 				64A3994E243C39A300750FAC /* RatesViewController.swift in Sources */,
 				646E6AB124381C7900D037C7 /* QuickSearchInteractor.swift in Sources */,
+				64568987243F30550097B6D8 /* PortfolioCell.swift in Sources */,
 				646E6AAC24381C7200D037C7 /* AssetSelectorInteractor.swift in Sources */,
 				646E6A9124381C5100D037C7 /* IndicatorsViewController.swift in Sources */,
 				646E6AA124381C6800D037C7 /* ConverterRouter.swift in Sources */,
@@ -1225,7 +1229,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.cryptoview-1-0";
 				PRODUCT_NAME = "CryptoView 1.0";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG TARGET_CW";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG TARGET_CW ENABLE_PORTFOLIO COMPLEX_LAYOUT FORCE_DISABLE_DARKMODE";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1249,7 +1253,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.cryptoview-1-0";
 				PRODUCT_NAME = "CryptoView 1.0";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = TARGET_CW;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "TARGET_CW ENABLE_PORTFOLIO COMPLEX_LAYOUT FORCE_DISABLE_DARKMODE";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
