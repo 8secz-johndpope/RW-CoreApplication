@@ -200,6 +200,20 @@ extension RatesPresenter {
     }
 }
 
+//MARK: - VIEW->PRESENTER INTERFFACE - PORTFOLIO
+
+#if TARGET_CW
+
+extension RatesPresenter {
+    
+    var portfolioSections: [CDPortfolioSectionAdapter] {
+        return interactor.portfolioSections.sorted { $0.position < $1.position }
+    }
+    
+}
+
+#endif
+
 //MARK: - INTERNAL - MASTER
 
 extension RatesPresenter {

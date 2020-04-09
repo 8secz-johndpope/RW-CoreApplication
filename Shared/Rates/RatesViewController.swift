@@ -552,7 +552,7 @@ extension RatesViewController {
     
     //MARK: Layout – CONVERTER
     
-    #if TARGET_SC || TARGET_AR
+    #if TARGET_SC || TARGET_AR || TARGET_CW
     private func createLayout() -> UICollectionViewLayout {
         let config = UICollectionViewCompositionalLayoutConfiguration()
         config.interSectionSpacing = 0
@@ -584,7 +584,7 @@ extension RatesViewController {
     
     //MARK: Layout – CRYPTOVIEW, RATESVIEW, CER
     
-    #if TARGET_CW || TARGET_CER || TARGET_CERPRO || TARGET_RW
+    #if !TARGET_CW || TARGET_CER || TARGET_CERPRO || TARGET_RW
     private func createLayout() -> UICollectionViewLayout {
         let config = UICollectionViewCompositionalLayoutConfiguration()
         config.interSectionSpacing = 0

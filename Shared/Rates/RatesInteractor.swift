@@ -13,14 +13,22 @@ import UIKit
 final class RatesInteractor: RWInteractor {
     
     unowned var presenter: RatesPresenter!
-    
     private var isLoaded = false
+    
+    #if TARGET_CW
+    var portfolioSections = [CDPortfolioSectionAdapter]()
+    #endif
     
     //MARK: Initial Data Check
     
     override func initialDataSourceCheck() {
         let context = AppDelegate.persistentContainer.viewContext
         loadFromContext(context, entity: CDWatchlistSectionAdapter.identifier)
+        
+        #if TARGET_CW
+        portfolioSections = fetchEntities(in: context, entity: CDPortfolioSectionAdapter.identifier)
+        #endif
+        
         startUpdates()
     }
     
@@ -28,7 +36,12 @@ final class RatesInteractor: RWInteractor {
     
     /// Create initial watchlist assets.
     override func dataSourceIsEmpty(context: NSManagedObjectContext, entity: String) {
-        
+        setBasicModel()
+        setCryptoModel()
+        startUpdates()
+    }
+    
+    private func setBasicModel() {
         #if TARGET_SC
         let currencyCode = Locale.current.currencyCode ?? "USD"
         let localCurrency = currencyCode == "USD" ? "FX_IDC:EUR-USD" : "FX_IDC:USD-\(currencyCode)"
@@ -45,9 +58,10 @@ final class RatesInteractor: RWInteractor {
         let currenciesCount = Int16(currencies.count)
         addsection(title: "Crypto", position: 1, entities: crypto, prevSectionCount: currenciesCount)
         #endif
-        
+    }
+    
+    private func setCryptoModel() {
         #if TARGET_CW
-        
         let section = CDPortfolioSectionAdapter(title: "Overview", position: 0)
         
         // Assets data source full codes.
@@ -55,14 +69,16 @@ final class RatesInteractor: RWInteractor {
         let crypto = ["COINBASE:BTC-USD", "COINBASE:ETH-USD", "COINBASE:XRP-USD", "COINBASE:LTC-USD", "COINBASE:BCH-USD", "COINBASE:DASH-USD", "COINBASE:ETC-USD"]
         
         // Currencies section.
-        addsection(title: "Fiat", position: 1, entities: currencies)
+        addsection(title: "Currencies", position: 0, entities: currencies)
         
         // Crypto section.
-        addsection(title: "Crypto", position: 2, entities: crypto, prevSectionCount: 2)
+        addsection(title: "Crypto", position: 1, entities: crypto, prevSectionCount: 2)
         #endif
-        
-        startUpdates()
     }
+    
+}
+
+extension RatesInteractor {
     
     /// Add single section to the watchlist.
     private func addsection(title: String, position: Int16, entities: [String], prevSectionCount: Int16 = 0) {

@@ -46,9 +46,6 @@
 		6418420C243D2B53007C1A2F /* ConverterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485394923A2C0C200BD4C9F /* ConverterInteractor.swift */; };
 		6418420D243D2B53007C1A2F /* ConverterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485394A23A2C0C200BD4C9F /* ConverterRouter.swift */; };
 		6418420E243D2B53007C1A2F /* ConverterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485395223A2D8B800BD4C9F /* ConverterCellView.swift */; };
-		6418420F243D2B5D007C1A2F /* WatchlistAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6469E71023EAA93500CE81BF /* WatchlistAsset+Extension.swift */; };
-		64184210243D2B5D007C1A2F /* WatchlistSection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D123EBD38C001363C0 /* WatchlistSection+Extension.swift */; };
-		64184211243D2B5D007C1A2F /* AppDelegate+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6023944A8B00B15E11 /* AppDelegate+CoreData.swift */; };
 		64184212243D2B69007C1A2F /* RatesView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64DB5CDA238C9830006B3CD8 /* RatesView.xcdatamodeld */; };
 		64184214243D2B74007C1A2F /* WebSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D423EC3D4D001363C0 /* WebSession.swift */; };
 		64184215243D2B77007C1A2F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E60999240BB839006C3C57 /* UIColor+Extension.swift */; };
@@ -71,6 +68,9 @@
 		6454FD7C243C4C5000179EC7 /* QuickSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDC2421D3B300C138A9 /* QuickSearchInteractor.swift */; };
 		6454FD7D243C4C5000179EC7 /* QuickSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDE2421D3B300C138A9 /* QuickSearchRouter.swift */; };
 		6456897C243F1B800097B6D8 /* PortfolioBlock+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6456897B243F1B800097B6D8 /* PortfolioBlock+Extension.swift */; };
+		64568981243F27BD0097B6D8 /* WatchlistAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6469E71023EAA93500CE81BF /* WatchlistAsset+Extension.swift */; };
+		64568982243F27BD0097B6D8 /* WatchlistSection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D123EBD38C001363C0 /* WatchlistSection+Extension.swift */; };
+		64568983243F27BD0097B6D8 /* AppDelegate+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6023944A8B00B15E11 /* AppDelegate+CoreData.swift */; };
 		645B7D4923FC1EE0007B7EC1 /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645B7D4823FC1EE0007B7EC1 /* Icon.xcassets */; };
 		645B7D5223FC205C007B7EC1 /* libCoreModules.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EEA0DC23E99BB300B6FB28 /* libCoreModules.a */; };
 		645B7D6323FC2116007B7EC1 /* WebSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D423EC3D4D001363C0 /* WebSession.swift */; };
@@ -980,7 +980,6 @@
 				64184209243D2B53007C1A2F /* Converter.swift in Sources */,
 				6418420D243D2B53007C1A2F /* ConverterRouter.swift in Sources */,
 				641841F3243D2B43007C1A2F /* QuickSearch.swift in Sources */,
-				64184211243D2B5D007C1A2F /* AppDelegate+CoreData.swift in Sources */,
 				641841FF243D2B4B007C1A2F /* RatesPresenter.swift in Sources */,
 				6418420E243D2B53007C1A2F /* ConverterCellView.swift in Sources */,
 				641841F5243D2B43007C1A2F /* QuickSearchPresenter.swift in Sources */,
@@ -988,20 +987,22 @@
 				64184216243D2B7B007C1A2F /* AppDelegate+InitialSettings.swift in Sources */,
 				641841FD243D2B4B007C1A2F /* Rates.swift in Sources */,
 				64184205243D2B4F007C1A2F /* IndicatorsViewController.swift in Sources */,
+				64568982243F27BD0097B6D8 /* WatchlistSection+Extension.swift in Sources */,
 				64184207243D2B4F007C1A2F /* ChartInteractor.swift in Sources */,
 				64184214243D2B74007C1A2F /* WebSession.swift in Sources */,
 				64184204243D2B4F007C1A2F /* ChartViewController.swift in Sources */,
 				641841FA243D2B47007C1A2F /* AssetSelectorPresenter.swift in Sources */,
 				6418420C243D2B53007C1A2F /* ConverterInteractor.swift in Sources */,
+				64568983243F27BD0097B6D8 /* AppDelegate+CoreData.swift in Sources */,
 				6418420B243D2B53007C1A2F /* ConverterPresenter.swift in Sources */,
 				64184218243D2B8C007C1A2F /* AnalyticsEvents.swift in Sources */,
 				641841DB243D2913007C1A2F /* AppDelegate.swift in Sources */,
 				64184200243D2B4B007C1A2F /* RatesInteractor.swift in Sources */,
 				64184208243D2B4F007C1A2F /* ChartRouter.swift in Sources */,
-				64184210243D2B5D007C1A2F /* WatchlistSection+Extension.swift in Sources */,
 				641841F6243D2B43007C1A2F /* QuickSearchInteractor.swift in Sources */,
 				64184206243D2B4F007C1A2F /* ChartPresenter.swift in Sources */,
 				64184212243D2B69007C1A2F /* RatesView.xcdatamodeld in Sources */,
+				64568981243F27BD0097B6D8 /* WatchlistAsset+Extension.swift in Sources */,
 				64184202243D2B4B007C1A2F /* RatesCellView.swift in Sources */,
 				641841DD243D2913007C1A2F /* SceneDelegate.swift in Sources */,
 				64184201243D2B4B007C1A2F /* RatesRouter.swift in Sources */,
@@ -1009,7 +1010,6 @@
 				641841F8243D2B47007C1A2F /* AssetSelector.swift in Sources */,
 				641841FE243D2B4B007C1A2F /* RatesViewController.swift in Sources */,
 				641841F9243D2B47007C1A2F /* AssetSelectorViewController.swift in Sources */,
-				6418420F243D2B5D007C1A2F /* WatchlistAsset+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
