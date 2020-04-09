@@ -47,15 +47,36 @@ final class RatesInteractor: RWInteractor {
         #endif
         
         #if TARGET_CW
+        
+        /*
+        let prtfSection = CDWatchlistSectionAdapter(context: context)
+        prtfSection.isPortfolioSection = true
+        prtfSection.position = 0
+        prtfSection.title = "Portfolio"
+        dataSource.append(prtfSection)
+        
+        let pItem = PortfolioItem(context: context)
+        pItem.isGeneral = true
+        pItem.position = 0
+        pItem.title = "Overview"
+        prtfSection.addToPortfolioItems(pItem)
+        
+        let pItem2 = PortfolioItem(context: context)
+        pItem2.isGeneral = false
+        pItem2.position = 1
+        pItem2.title = "Test"
+        prtfSection.addToPortfolioItems(pItem2)
+        */
+        
         // Assets data source full codes.
         let currencies = ["FX_IDC:EUR-USD", "FX_IDC:USD-EUR"]
-        let crypto = ["COINBASE:BTC-USD", "COINBASE:ETH-USD", "COINBASE:XRP-USD"]
+        let crypto = ["COINBASE:BTC-USD", "COINBASE:ETH-USD", "COINBASE:XRP-USD", "COINBASE:LTC-USD", "COINBASE:BCH-USD", "COINBASE:DASH-USD", "COINBASE:ETC-USD"]
         
         // Currencies section.
-        addsection(title: "Fiat", position: 0, entities: currencies)
+        addsection(title: "Fiat", position: 1, entities: currencies)
         
         // Crypto section.
-        addsection(title: "Crypto", position: 1, entities: crypto, prevSectionCount: 2)
+        addsection(title: "Crypto", position: 2, entities: crypto, prevSectionCount: 2)
         #endif
         
         startUpdates()

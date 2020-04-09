@@ -50,7 +50,6 @@
 		64184210243D2B5D007C1A2F /* WatchlistSection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D123EBD38C001363C0 /* WatchlistSection+Extension.swift */; };
 		64184211243D2B5D007C1A2F /* AppDelegate+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6023944A8B00B15E11 /* AppDelegate+CoreData.swift */; };
 		64184212243D2B69007C1A2F /* RatesView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64DB5CDA238C9830006B3CD8 /* RatesView.xcdatamodeld */; };
-		64184213243D2B70007C1A2F /* MoreTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B23BC023E34E8600B06241 /* MoreTab.swift */; };
 		64184214243D2B74007C1A2F /* WebSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D423EC3D4D001363C0 /* WebSession.swift */; };
 		64184215243D2B77007C1A2F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E60999240BB839006C3C57 /* UIColor+Extension.swift */; };
 		64184216243D2B7B007C1A2F /* AppDelegate+InitialSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6223944B2400B15E11 /* AppDelegate+InitialSettings.swift */; };
@@ -77,7 +76,7 @@
 		645B7D6523FC2117007B7EC1 /* WebSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D423EC3D4D001363C0 /* WebSession.swift */; };
 		645B7D8123FC2138007B7EC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 647DBB6A23DBDAF40065CC89 /* LaunchScreen.storyboard */; };
 		645B7D8323FC2138007B7EC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 647DBB6A23DBDAF40065CC89 /* LaunchScreen.storyboard */; };
-		645B7D9923FC2146007B7EC1 /* MoreTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B23BC023E34E8600B06241 /* MoreTab.swift */; };
+		645B7D9923FC2146007B7EC1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B23BC023E34E8600B06241 /* Settings.swift */; };
 		645B7E3923FC216F007B7EC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64DB5D3E238C9DEE006B3CD8 /* Assets.xcassets */; };
 		645B7E3A23FC216F007B7EC1 /* CountryFlags.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6457EFCC23D39BAC0012A73C /* CountryFlags.xcassets */; };
 		645B7E3B23FC216F007B7EC1 /* CryptoIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6457EFCF23D3A3260012A73C /* CryptoIcons.xcassets */; };
@@ -146,7 +145,7 @@
 		646E6AB224381C7900D037C7 /* QuickSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDE2421D3B300C138A9 /* QuickSearchRouter.swift */; };
 		646E6AB324381C8C00D037C7 /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646BDADD241D1E8600513B69 /* AnalyticsEvents.swift */; };
 		646E6AB424381C8D00D037C7 /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646BDADD241D1E8600513B69 /* AnalyticsEvents.swift */; };
-		646E6AB624381CAF00D037C7 /* MoreTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B23BC023E34E8600B06241 /* MoreTab.swift */; };
+		646E6AB624381CAF00D037C7 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B23BC023E34E8600B06241 /* Settings.swift */; };
 		64A3994D243C39A300750FAC /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E21512415035700162443 /* Rates.swift */; };
 		64A3994E243C39A300750FAC /* RatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E214D2415018200162443 /* RatesViewController.swift */; };
 		64A3994F243C39A300750FAC /* RatesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E214F241502A600162443 /* RatesPresenter.swift */; };
@@ -282,7 +281,7 @@
 		64A12C3A23C65C0100E97E51 /* libWebDataSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libWebDataSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A12C6723C65D2A00E97E51 /* libReusableListViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReusableListViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A12C7C23C65E0F00E97E51 /* libUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		64B23BC023E34E8600B06241 /* MoreTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTab.swift; sourceTree = "<group>"; };
+		64B23BC023E34E8600B06241 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		64B3FF9C23F405750085162B /* PortfolioCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCellView.swift; sourceTree = "<group>"; };
 		64B5C9CE240BC930007DCC14 /* libContextMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libContextMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		64BD120B23D6465800F628FA /* libReusableListViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReusableListViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -401,12 +400,12 @@
 			path = Session;
 			sourceTree = "<group>";
 		};
-		64184180243C8AC1007C1A2F /* SettingsTab */ = {
+		64184180243C8AC1007C1A2F /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				64B23BC023E34E8600B06241 /* MoreTab.swift */,
+				64B23BC023E34E8600B06241 /* Settings.swift */,
 			);
-			path = SettingsTab;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		64184186243D28A4007C1A2F /* SmartConverter */ = {
@@ -580,7 +579,7 @@
 		64ACE17F23EEA5E90035D690 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				64184180243C8AC1007C1A2F /* SettingsTab */,
+				64184180243C8AC1007C1A2F /* Settings */,
 				6418417F243C8AB7007C1A2F /* Session */,
 				6468AB2F243B84D50081DD07 /* ColorPalettes */,
 				646BDB02241D9EF700513B69 /* InitialSettings */,
@@ -976,7 +975,6 @@
 				641841F7243D2B43007C1A2F /* QuickSearchRouter.swift in Sources */,
 				641841FC243D2B47007C1A2F /* AssetSelectorRouter.swift in Sources */,
 				64184209243D2B53007C1A2F /* Converter.swift in Sources */,
-				64184213243D2B70007C1A2F /* MoreTab.swift in Sources */,
 				6418420D243D2B53007C1A2F /* ConverterRouter.swift in Sources */,
 				641841F3243D2B43007C1A2F /* QuickSearch.swift in Sources */,
 				64184211243D2B5D007C1A2F /* AppDelegate+CoreData.swift in Sources */,
@@ -1035,7 +1033,7 @@
 				646E6AB024381C7900D037C7 /* QuickSearchPresenter.swift in Sources */,
 				646E6AB324381C8C00D037C7 /* AnalyticsEvents.swift in Sources */,
 				646E6A8F24381C5100D037C7 /* Chart.swift in Sources */,
-				645B7D9923FC2146007B7EC1 /* MoreTab.swift in Sources */,
+				645B7D9923FC2146007B7EC1 /* Settings.swift in Sources */,
 				64A39950243C39A300750FAC /* RatesInteractor.swift in Sources */,
 				646E6A9024381C5100D037C7 /* ChartViewController.swift in Sources */,
 				646E6A9E24381C6800D037C7 /* ConverterViewController.swift in Sources */,
@@ -1063,7 +1061,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6454FD7A243C4C5000179EC7 /* QuickSearchViewController.swift in Sources */,
-				646E6AB624381CAF00D037C7 /* MoreTab.swift in Sources */,
+				646E6AB624381CAF00D037C7 /* Settings.swift in Sources */,
 				6454FD7B243C4C5000179EC7 /* QuickSearchPresenter.swift in Sources */,
 				646E6AA324381C6900D037C7 /* Converter.swift in Sources */,
 				646E6A8E24381C4200D037C7 /* RatesCellView.swift in Sources */,

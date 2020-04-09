@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RWUserInterface
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -15,6 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     static var rates: RatesViewController!
     static var chart: ChartViewController!
     static var converter: ConverterViewController!
+    static var settings: RWReusableTableViewController!
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -36,9 +38,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let converter = SceneDelegate.converter!
             converter.tabBarItem = UITabBarItem(title: "Converter", image: UIImage(named: "Converter"), tag: 2)
             
+            // Settings tab
+            SceneDelegate.settings = Settings.settingsParentPage
+            let settings = SceneDelegate.settings!
+            settings.tabBarItem = UITabBarItem(title: "More", image: UIImage(named: "More"), tag: 3)
+            
             // Configure tab bar and main window
             let tabBar = UITabBarController()
-            tabBar.viewControllers = [watchlist, chart, converter]
+            tabBar.viewControllers = [watchlist, chart, converter, settings]
             SceneDelegate.tabBar = tabBar
             SceneDelegate.window.rootViewController = tabBar
             SceneDelegate.window.makeKeyAndVisible()
