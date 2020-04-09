@@ -48,25 +48,7 @@ final class RatesInteractor: RWInteractor {
         
         #if TARGET_CW
         
-        /*
-        let prtfSection = CDWatchlistSectionAdapter(context: context)
-        prtfSection.isPortfolioSection = true
-        prtfSection.position = 0
-        prtfSection.title = "Portfolio"
-        dataSource.append(prtfSection)
-        
-        let pItem = PortfolioItem(context: context)
-        pItem.isGeneral = true
-        pItem.position = 0
-        pItem.title = "Overview"
-        prtfSection.addToPortfolioItems(pItem)
-        
-        let pItem2 = PortfolioItem(context: context)
-        pItem2.isGeneral = false
-        pItem2.position = 1
-        pItem2.title = "Test"
-        prtfSection.addToPortfolioItems(pItem2)
-        */
+        let section = CDPortfolioSectionAdapter(title: "Overview", position: 0)
         
         // Assets data source full codes.
         let currencies = ["FX_IDC:EUR-USD", "FX_IDC:USD-EUR"]

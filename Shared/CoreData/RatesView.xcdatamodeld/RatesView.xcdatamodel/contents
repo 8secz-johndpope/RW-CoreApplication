@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
-    <entity name="OperationBlock" representedClassName="OperationBlock" syncable="YES" codeGenerationType="class">
-        <attribute name="changeAnount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
-        <attribute name="portfolioAssetKey" optional="YES" attributeType="String"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="PortfolioBlock" representedClassName="PortfolioBlock" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="conversionRate" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="currencyCode" optional="YES" attributeType="String"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OperationCategory" inverseName="allOperations" inverseEntity="OperationCategory"/>
+        <attribute name="typeCategory" optional="YES" attributeType="String"/>
+        <attribute name="typeColor" optional="YES" attributeType="String"/>
+        <attribute name="typeSubcategory" optional="YES" attributeType="String"/>
+        <relationship name="inSection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PortfolioSection" inverseName="blocks" inverseEntity="PortfolioSection"/>
     </entity>
-    <entity name="OperationCategory" representedClassName="OperationCategory" syncable="YES" codeGenerationType="class">
-        <attribute name="colorHex" optional="YES" attributeType="String"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="subname" optional="YES" attributeType="String"/>
-        <relationship name="allOperations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OperationBlock" inverseName="category" inverseEntity="OperationBlock"/>
-    </entity>
-    <entity name="PortfolioItem" representedClassName="PortfolioItem" syncable="YES" codeGenerationType="class">
+    <entity name="PortfolioSection" representedClassName="PortfolioSection" syncable="YES" codeGenerationType="class">
         <attribute name="icon" optional="YES" attributeType="Binary"/>
-        <attribute name="isGeneral" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="assets" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="WatchlistAsset" inverseName="inPortfolioItems" inverseEntity="WatchlistAsset"/>
-        <relationship name="inSection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WatchlistSection" inverseName="portfolioItems" inverseEntity="WatchlistSection"/>
+        <relationship name="blocks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PortfolioBlock" inverseName="inSection" inverseEntity="PortfolioBlock"/>
     </entity>
     <entity name="WatchlistAsset" representedClassName="WatchlistAsset" syncable="YES" codeGenerationType="class">
         <attribute name="chartImage" optional="YES" attributeType="Binary"/>
@@ -34,7 +30,6 @@
         <attribute name="profile" optional="YES" attributeType="String"/>
         <attribute name="rowInConverter" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="sectionInConverter" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="inPortfolioItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PortfolioItem" inverseName="assets" inverseEntity="PortfolioItem"/>
         <relationship name="section" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WatchlistSection" inverseName="assets" inverseEntity="WatchlistSection"/>
     </entity>
     <entity name="WatchlistSection" representedClassName="WatchlistSection" syncable="YES" codeGenerationType="class">
@@ -43,13 +38,11 @@
         <attribute name="position" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" attributeType="String" defaultValueString="New Section"/>
         <relationship name="assets" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="WatchlistAsset" inverseName="section" inverseEntity="WatchlistAsset"/>
-        <relationship name="portfolioItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PortfolioItem" inverseName="inSection" inverseEntity="PortfolioItem"/>
     </entity>
     <elements>
-        <element name="OperationBlock" positionX="-67.90625" positionY="51.0703125" width="128" height="103"/>
-        <element name="OperationCategory" positionX="252.33203125" positionY="131.375" width="128" height="103"/>
-        <element name="PortfolioItem" positionX="40.796875" positionY="507.34375" width="128" height="133"/>
-        <element name="WatchlistAsset" positionX="526.578125" positionY="271.54296875" width="128" height="268"/>
-        <element name="WatchlistSection" positionX="278.60546875" positionY="725.53125" width="129.96875" height="133"/>
+        <element name="PortfolioBlock" positionX="-67.90625" positionY="51.0703125" width="128" height="163"/>
+        <element name="PortfolioSection" positionX="40.796875" positionY="507.34375" width="128" height="103"/>
+        <element name="WatchlistAsset" positionX="526.578125" positionY="271.54296875" width="128" height="253"/>
+        <element name="WatchlistSection" positionX="278.60546875" positionY="725.53125" width="129.96875" height="118"/>
     </elements>
 </model>

@@ -70,6 +70,7 @@
 		6454FD7B243C4C5000179EC7 /* QuickSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDD2421D3B300C138A9 /* QuickSearchPresenter.swift */; };
 		6454FD7C243C4C5000179EC7 /* QuickSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDC2421D3B300C138A9 /* QuickSearchInteractor.swift */; };
 		6454FD7D243C4C5000179EC7 /* QuickSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC5BDE2421D3B300C138A9 /* QuickSearchRouter.swift */; };
+		6456897C243F1B800097B6D8 /* PortfolioBlock+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6456897B243F1B800097B6D8 /* PortfolioBlock+Extension.swift */; };
 		645B7D4923FC1EE0007B7EC1 /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645B7D4823FC1EE0007B7EC1 /* Icon.xcassets */; };
 		645B7D5223FC205C007B7EC1 /* libCoreModules.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EEA0DC23E99BB300B6FB28 /* libCoreModules.a */; };
 		645B7D6323FC2116007B7EC1 /* WebSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D423EC3D4D001363C0 /* WebSession.swift */; };
@@ -203,6 +204,7 @@
 		643CE484239351480014DE29 /* WatchlistCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCellView.swift; sourceTree = "<group>"; };
 		64426F9123E1EFCF0040CA8D /* UpdateLog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UpdateLog.txt; sourceTree = "<group>"; };
 		64539218243C8939009CAACB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6456897B243F1B800097B6D8 /* PortfolioBlock+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PortfolioBlock+Extension.swift"; sourceTree = "<group>"; };
 		64570101243220F300254B99 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		64570105243220FD00254B99 /* en-AU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-AU"; path = "en-AU.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		645701072432212200254B99 /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -661,6 +663,7 @@
 				6469E71023EAA93500CE81BF /* WatchlistAsset+Extension.swift */,
 				6435B9D123EBD38C001363C0 /* WatchlistSection+Extension.swift */,
 				64DBAC6023944A8B00B15E11 /* AppDelegate+CoreData.swift */,
+				6456897B243F1B800097B6D8 /* PortfolioBlock+Extension.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -1040,6 +1043,7 @@
 				646E6A9F24381C6800D037C7 /* ConverterPresenter.swift in Sources */,
 				64A3994F243C39A300750FAC /* RatesPresenter.swift in Sources */,
 				645B7E5423FC217D007B7EC1 /* WatchlistAsset+Extension.swift in Sources */,
+				6456897C243F1B800097B6D8 /* PortfolioBlock+Extension.swift in Sources */,
 				646E6AAA24381C7200D037C7 /* AssetSelectorViewController.swift in Sources */,
 				646E6AA924381C7200D037C7 /* AssetSelector.swift in Sources */,
 				646E6AAF24381C7900D037C7 /* QuickSearchViewController.swift in Sources */,

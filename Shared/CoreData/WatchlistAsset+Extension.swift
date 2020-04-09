@@ -22,14 +22,6 @@ extension CDWatchlistAssetAdapter {
         self.internalFullCode = internalFullCode
     }
     
-    convenience init(source: String, internalCode: String) {
-        self.init(context: AppDelegate.persistentContainer.viewContext)
-    }
-    
-    convenience init(source: String, currency: String, baseCurrency: String) {
-        self.init(context: AppDelegate.persistentContainer.viewContext)
-    }
-    
 }
 
 extension CDWatchlistAssetAdapter {

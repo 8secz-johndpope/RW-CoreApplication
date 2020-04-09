@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import RWExtensions
 import CoreData
 
 extension AppDelegate {
     
-    static var identifier = "RatesView"
+    static var coreDataIdentifier = "RatesView"
     
     static func saveContext() {
         DispatchQueue.main.async {
@@ -27,7 +28,7 @@ extension AppDelegate {
     }
     
     static var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: AppDelegate.identifier)
+        let container = NSPersistentContainer(name: AppDelegate.coreDataIdentifier)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 print("Unresolved error. \(error), \(error.userInfo)")
