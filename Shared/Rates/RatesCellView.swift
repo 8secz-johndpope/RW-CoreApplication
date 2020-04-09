@@ -51,9 +51,10 @@ final class RatesCellView: RWInteractiveCollectionViewCell {
         mainAssetView.frameConstraint(CGFloat.standartInset)
         
         // Flag image for currencies and icon for stocks/cryptocurrencies.
-        iconImageView.setPlaceholder(withRadius: 5.5)
+        iconImageView.layer.cornerRadius = 5.5
+        iconImageView.clipsToBounds = true
         mainAssetView.addSubview(iconImageView)
-        iconImageView.topLeftConstraint(7.5).sizeConstraints(width: 45, height: 32)
+        iconImageView.topLeftConstraint(7.5).sizeConstraints(width: 47.5, height: 32)
         
         // Price label.
         mainAssetView.addSubview(priceTextView)

@@ -35,13 +35,10 @@ enum WebSession {
                         assetEntity.name = assetName(fromInternalCode: assetEntity.internalFullCode!)
                     }
                     
-                    let isDetailed = assetEntity.isStock && assetEntity.name != nil &&
-                        assetEntity.hasNoIcon == false && assetEntity.icon == nil
-                    
+                    let isDetailed = assetEntity.isStock && assetEntity.name == nil && assetEntity.icon == nil
                     let asset = AssetBridgeObject(fullCode: assetEntity.fullCode, isDetailed: isDetailed)
-                    
                     sessionAssets.append(asset)
-                    
+    
                 }
                 
                 DispatchQueue.main.async {
