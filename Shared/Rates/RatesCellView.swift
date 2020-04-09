@@ -117,6 +117,7 @@ final class RatesCellView: RWInteractiveCollectionViewCell {
             
             if asset.isCrypto {
                 iconImageView.contentMode = .scaleAspectFit
+                iconImageView.backgroundColor = .clear
             } else {
                 iconImageView.contentMode = .scaleAspectFill
             }
