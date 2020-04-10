@@ -1,5 +1,5 @@
 //
-//  ModuleViewController.swift
+//  ChartViewController.swift
 //  RatesView
 //
 //  Created by Dennis Esie on 11/26/19.
@@ -24,7 +24,6 @@ final class ChartViewController: RWViewController {
     private var priceView: UIView!
     private var loadingAnimationView: NVActivityIndicatorView!
     private var mainContainerView: UIView!
-    private var segmentTypes = ["1", "0", "3", "2", "5"]
     
     private var profileContainerView: UIView!
     private var chartContainerView: UIView!
@@ -40,11 +39,11 @@ final class ChartViewController: RWViewController {
         navigationController?.navigationBar.tintColor = .link
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissPage))
         
-        #if TARGET_CW || TARGET_CER || TARGET_CERPRO || TARGET_RW
-        let save = UIBarButtonItem(image: UIImage(named: "list"), style: .done, target: self, action: broadcastInput)
-        save.tag = InputType.save.rawValue
-        navigationItem.leftBarButtonItem = save
-        #endif
+//        #if TARGET_CW || TARGET_CER || TARGET_CERPRO || TARGET_RW
+//        let save = UIBarButtonItem(image: UIImage(named: "list"), style: .done, target: self, action: broadcastInput)
+//        save.tag = InputType.save.rawValue
+//        navigationItem.leftBarButtonItem = save
+//        #endif
     }
     
     //MARK: UI Input
@@ -54,6 +53,7 @@ final class ChartViewController: RWViewController {
         case delete = 1
         case more = 2
         case save = 3
+        case indicators = 4
     }
     
     override func updateDataSource(animated: Bool) {
@@ -66,10 +66,6 @@ final class ChartViewController: RWViewController {
 extension ChartViewController {
     
     //MARK: Subviews
-    
-    func initView() {
-
-    }
     
     func addMainContainer() {
         if mainContainerView == nil {
@@ -84,7 +80,7 @@ extension ChartViewController {
             priceView.addSubview(loadingAnimationView)
             
             let session = RWSession.sharedInstance()
-            session.fetchSingleAsset(fullcode: presenter.lastShownAsset) { (price) in
+            session.fetchSingleAsset(fullcode: presenter.lastAsset) { (price) in
                 DispatchQueue.main.async {
                     self.loadingAnimationView.stopAnimating()
                     self.loadingAnimationView.removeFromSuperview()
@@ -94,7 +90,7 @@ extension ChartViewController {
                     priceLabel.textColor = .text
                     self.priceView.addSubview(priceLabel)
                     priceLabel.frameConstraint()
-                    priceLabel.text = "\(self.presenter.lastShownName) – \(String(price))"
+                    priceLabel.text = "\(self.presenter.lastName) – \(String(price))"
                 }
             }
             
@@ -106,11 +102,23 @@ extension ChartViewController {
         }
     }
     
+    //MARK: Profile
+    
     #if TARGET_CER || TARGET_CERPRO || TARGET_RW
     func openProfile() {
         typeSegmentedControl.selectedSegmentIndex = 0
     }
     #endif
+    
+    //MARK: Financials
+    
+    #if TARGET_CER || TARGET_CERPRO || TARGET_RW
+    func openFinancials() {
+        typeSegmentedControl.selectedSegmentIndex = 2
+    }
+    #endif
+    
+    //MARK: Chart
     
     func openChart() {
         typeSegmentedControl.selectedSegmentIndex = 1
@@ -181,7 +189,8 @@ extension ChartViewController {
             indicatorsArray.layer.cornerRadius = 5.5
             indicatorsArray.layer.masksToBounds = true
             indicatorsArray.titleLabel?.font = .systemFont(ofSize: 14)
-            indicatorsArray.addTarget(self, action: #selector(changeIndicators), for: .touchDown)
+            indicatorsArray.tag = InputType.indicators.rawValue
+            indicatorsArray.addTarget(self, action: broadcastInput, for: .touchDown)
             chartContainerView.addSubview(indicatorsArray)
             indicatorsArray.topConstraint(5, toBot: styleSegmentedControl).heightConstraint(30)
                 .leadingConstraint(5, toTrail: styleLabel).trailingConstraint(-5)
@@ -210,62 +219,45 @@ extension ChartViewController {
     }
     
     func openWebChart() {
-        let indicators = presenter.selectedIndicatorPaths()
-        webChartView.openChart(presenter.lastShownAsset,
-                               interval: presenter.interval,
-                               style: presenter.style,
-                               overrideDarkTheme: true,
-                               indicators: indicators)
+        #if FORCE_DISABLE_DARKMODE
+        let overrideDarkTheme = true
+        #else
+        let overrideDarkTheme = true
+        #endif
         
-        if indicators.isEmpty {
-            indicatorsArray.setTitle("+", for: .normal)
-        } else {
-            DispatchQueue.global(qos: .userInteractive).async {
-                let indicatorsArray = indicators.map { (indicator) -> String in
-                    let splited = indicator.split(separator: "@", maxSplits: 1)
-                    return String(splited[0])
-                }
-                let usedIndicators = indicatorsArray.joined(separator: ", ")
-                DispatchQueue.main.sync {
-                    self.indicatorsArray.setTitle(usedIndicators, for: .normal)
+        presenter.selectedIndicatorPaths(completion: { (indicators) -> Void in
+            let presenter = self.presenter!
+            self.webChartView.openChart(presenter.lastAsset, presenter.interval, presenter.style, overrideDarkTheme, indicators)
+            
+            if indicators.isEmpty {
+                self.indicatorsArray.setTitle("+", for: .normal)
+            } else {
+                DispatchQueue.global(qos: .userInteractive).async {
+                    let indicatorsArray = indicators.map { String($0.split(separator: "@", maxSplits: 1)[0]) }
+                    let usedIndicators = indicatorsArray.joined(separator: ", ")
+                    DispatchQueue.main.async {
+                        self.indicatorsArray.setTitle(usedIndicators, for: .normal)
+                    }
                 }
             }
-        }
+        })
     }
 }
 
+// MARK: -
+
 extension ChartViewController {
-    
-    @objc private func changeIndicators() {
-        let indicatorsVC = ChartIndicatorsViewController()
-        indicatorsVC.presenter = presenter
-        navigationController?.pushViewController(indicatorsVC, animated: true)
-    }
     
     @objc private func changeStyle() {
         let selectedIndex = styleSegmentedControl.selectedSegmentIndex
-        let style = Int(segmentTypes[selectedIndex])!
-        AnalyticsEvent.register(source: .chart, key: RWAnalyticsEventChartStyleChanged, context: String(style))
-        presenter.style = style
-        presenter.stylelIndex = selectedIndex
-        openWebChart()
+        presenter.changeStyle(index: selectedIndex)
     }
     
     @objc private func changeInterval() {
         let selectedIndex = intervalSegmentedControl.selectedSegmentIndex
-        let interval = intervalSegmentedControl.titleForSegment(at: selectedIndex)!
-        AnalyticsEvent.register(source: .chart, key: RWAnalyticsEventChartIntervalChanged, context: String(interval))
-        presenter.interval = interval
-        presenter.intervalIndex = selectedIndex
-        openWebChart()
+        guard let interval = intervalSegmentedControl.titleForSegment(at: selectedIndex) else { return }
+        presenter.changeInterval(value: interval, at: selectedIndex)
+
     }
-    
-    //MARK: FINANCIALS
-    
-    #if TARGET_CER || TARGET_CERPRO || TARGET_RW
-    func openFinancials() {
-        typeSegmentedControl.selectedSegmentIndex = 2
-    }
-    #endif
     
 }

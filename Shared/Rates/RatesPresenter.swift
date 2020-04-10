@@ -1,6 +1,6 @@
 //
 //  RatesPresenter.swift
-//  SEConverter
+//  RatesView
 //
 //  Created by Esie on 3/8/20.
 //  Copyright © 2020 Denis Esie. All rights reserved.
@@ -199,6 +199,12 @@ extension RatesPresenter {
                 }
             }
         }
+    }
+    
+    /// Route to chart vc from the wathclist.
+    func showChart(asset: CDWatchlistAssetAdapter) {
+        AnalyticsEvent.register(source: .watchlist, key: RWAnalyticsEventAssetOpened, context: asset.fullCode)
+        viewController.presenter.router.routeTo(.toChart, context: [asset.fullCode, asset.name])
     }
 }
 

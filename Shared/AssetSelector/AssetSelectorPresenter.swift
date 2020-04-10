@@ -53,7 +53,7 @@ extension AssetSelectorPresenter {
             
             // Get current assets list depending on the selected type.
             let list = getCurrentFullList()
-            guard isSearching else { return list }
+            guard isSearching, !searchText.isEmpty else { return list }
             
             // Iterate through every section.
             var filteredSections = [FinanceAsset.SourceSection]()

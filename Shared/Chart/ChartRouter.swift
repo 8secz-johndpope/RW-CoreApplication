@@ -23,12 +23,18 @@ final class ChartRouter {
         case open = 4
         case toSaved = 5
         case toOptions = 6
+        case toIndicators = 7
     }
     
     //MARK: Routes
     
     func routeTo(_ to: Routes, context: Any? = nil) {
         switch to {
+            
+        case .toIndicators:
+            let indicatorsVC = IndicatorsViewController()
+            indicatorsVC.presenter = presenter
+            viewController.navigationController?.pushViewController(indicatorsVC, animated: true)
             
         case .open:
             break

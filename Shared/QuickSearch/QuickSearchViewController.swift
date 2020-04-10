@@ -109,8 +109,10 @@ extension QuickSearchViewController: UITableViewDelegate {
             cell.backgroundColor = .clear
             cell.textLabel?.text = assetName(fromInternalCode: assetInternalCode)
             cell.textLabel?.textColor = .text
+            cell.textLabel?.font = ConditionalProvider.selectorTitle
             cell.detailTextLabel?.text = assetInternalCode
             cell.detailTextLabel?.textColor = .textDetail
+            cell.detailTextLabel?.font = ConditionalProvider.selectorTitleSecondary
             cell.accessoryType = .disclosureIndicator
             return cell
         })

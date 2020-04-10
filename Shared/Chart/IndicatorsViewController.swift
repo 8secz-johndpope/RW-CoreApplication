@@ -1,5 +1,5 @@
 //
-//  ChartIndicatorsViewController.swift
+//  IndicatorsViewController.swift
 //  RatesView
 //
 //  Created by Esie on 2/20/20.
@@ -9,12 +9,14 @@
 import UIKit
 import RWExtensions
 
-class ChartIndicatorsViewController: UIViewController, UITableViewDelegate {
+class IndicatorsViewController: UIViewController, UITableViewDelegate {
 
     private typealias DataSource = UITableViewDiffableDataSource<String, String>
+    
     private let tableView = UITableView(frame: .zero, style: .insetGrouped)
-    private lazy var tableDataSource = createCell()
     private let sections = ["Presented", "Hidden"]
+    private lazy var dataSource = createCell()
+    
     private var indicators = [String]()
     private var presentedIndicators = [String]()
     private var hiddenIndicators = [String]()
@@ -27,17 +29,21 @@ class ChartIndicatorsViewController: UIViewController, UITableViewDelegate {
         navigationController?.navigationBar.prefersLargeTitles = false
         title = "Indicators"
         view.addSubview(tableView)
+        addTableview()
+        updateData()
+    }
+    
+    private func addTableview() {
         tableView.frameConstraint()
         tableView.delegate = self
         tableView.backgroundColor = .background
         tableView.contentInset = UIEdgeInsets(top: 30, left: 0, bottom: 0, right: 0)
-        tableView.dataSource = tableDataSource
+        tableView.dataSource = dataSource
         tableView.separatorInset = .zero
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.reuseIdentifier)
-        updateData()
     }
     
-    func updateData() {
+    private func updateData() {
         DispatchQueue.global(qos: .userInteractive).async {
             self.indicators = self.presenter.indicatorNames()
             self.presentedIndicators = []
@@ -55,13 +61,16 @@ class ChartIndicatorsViewController: UIViewController, UITableViewDelegate {
                 }
             }
             
-            self.tableDataSource.apply(snapshot, animatingDifferences: true) {
+            self.dataSource.apply(snapshot, animatingDifferences: true) {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
             }
         }
     }
+}
+
+extension IndicatorsViewController {
     
     private func createCell() -> DataSource {
         return DataSource(tableView: tableView) { (tableView, indexPath, string) -> UITableViewCell? in
@@ -70,7 +79,7 @@ class ChartIndicatorsViewController: UIViewController, UITableViewDelegate {
             let selectedIndicator = isPresented ? self.presentedIndicators[indexPath.row] : self.hiddenIndicators[indexPath.row]
             cell.imageView?.image = isPresented ? .remove : .add
             cell.textLabel?.text = selectedIndicator
-            cell.textLabel?.font = UIFont(name: "Futura", size: 14.5)
+            cell.textLabel?.font = ConditionalProvider.selectorTitle
             cell.textLabel?.textColor = .text
             cell.backgroundColor = .presentedItemBackground
             return cell
@@ -82,7 +91,7 @@ class ChartIndicatorsViewController: UIViewController, UITableViewDelegate {
         let headerLabel = UILabel()
         headerLabel.textColor = .text
         headerLabel.text = section == 0 ? presentedIndicators.count == 0 ? "" : sections[section] : sections[section]
-        headerLabel.font = UIFont(name: "Futura", size: 18.5)
+        headerLabel.font = ConditionalProvider.selectorHeaderFont
         headerView.addSubview(headerLabel)
         headerLabel.heightConstraint(40).widthConstraint(200).bottomConstraint().leadingConstraint(25)
         return headerView

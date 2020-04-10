@@ -68,7 +68,7 @@ extension QuickSearchPresenter {
         }
         
         // End serching if the input text is empty.
-        if searchText == "" {
+        if searchText.isEmpty {
             isSearching = false
             return
         }

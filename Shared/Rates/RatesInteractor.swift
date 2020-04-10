@@ -1,6 +1,6 @@
 //
 //  RatesInteractor.swift
-//  SEConverter
+//  RatesView
 //
 //  Created by Esie on 3/8/20.
 //  Copyright © 2020 Denis Esie. All rights reserved.

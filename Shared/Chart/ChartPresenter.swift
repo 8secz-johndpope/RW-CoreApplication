@@ -16,6 +16,8 @@ final class ChartPresenter: RWPresenter {
     unowned var viewController: ChartViewController!
     var launchOption: Chart.LauchOption?
     
+    private var segmentTypes = ["1", "0", "3", "2", "5"]
+    
     @autosaved(key: "interval", defaultValue: "1D")
     var interval: String
     
@@ -29,10 +31,10 @@ final class ChartPresenter: RWPresenter {
     var stylelIndex: Int
     
     @autosaved(key: "lastShownAsset", defaultValue: "NASDAQ:AAPL")
-    var lastShownAsset: String
+    var lastAsset: String
     
     @autosaved(key: "lastShownName", defaultValue: "Apple Inc")
-    var lastShownName: String
+    var lastName: String
     
     @autosaved(key: "indicatorsMask", defaultValue: Array(repeating: false, count: 61))
     var indicatorsMask: [Bool]
@@ -41,13 +43,12 @@ final class ChartPresenter: RWPresenter {
     
     override func didLoad() {
         if let code = launchContext as? [String] {
-            lastShownAsset = code[0]
-            lastShownName = code[1]
+            lastAsset = code[0]
+            lastName = code[1]
         }
     }
     
     override func interactorDidLoadData() {
-        viewController.initView()
         viewController.addMainContainer()
         viewController.openChart()
     }
@@ -70,26 +71,53 @@ final class ChartPresenter: RWPresenter {
         case .more:
             router.routeTo(.toOptions)
             
+        case .indicators:
+            router.routeTo(.toIndicators)
+            
         default:
             break
         }
     }
     
-    func indicatorName(forIndex: Int) -> String {
-        guard interactor.totalIndicatorsCount <= interactor.totalIndicatorsCount else { return "Invalid Indicator Index" }
-        let indicatorPath = interactor.availableIndicators[forIndex]
-        return String(indicatorPath.split(separator: "@")[0])
-    }
+}
+
+//MARK: - PRESENTER->VIEW INTERFFACE
+
+extension ChartPresenter {
     
     func indicatorNames() -> [String] {
         return interactor.availableIndicators.map {
-            String($0.split(separator: "@")[0])
+            String($0.split(separator: "@", maxSplits: 1)[0])
         }
     }
     
-    func selectedIndicatorPaths() -> [String] {
-        return interactor.availableIndicators.filter { indicatorsMask[interactor.availableIndicators.firstIndex(of: $0)!] }
+    func selectedIndicatorPaths(completion: @escaping ([String]) -> Void) {
+        DispatchQueue.global(qos: .userInteractive).async { [unowned self] in
+            let mask = self.indicatorsMask
+            let result = self.interactor.availableIndicators.filter {
+                mask[self.interactor.availableIndicators.firstIndex(of: $0)!]
+            }
+            DispatchQueue.main.async {
+                completion(result)
+            }
+        }
     }
+    
+    func changeStyle(index: Int) {
+        guard let style = Int(segmentTypes[index]) else { return }
+        AnalyticsEvent.register(source: .chart, key: RWAnalyticsEventChartStyleChanged, context: String(style))
+        self.style = style
+        self.stylelIndex = index
+        viewController.openChart()
+    }
+    
+    func changeInterval(value: String, at index: Int) {
+        AnalyticsEvent.register(source: .chart, key: RWAnalyticsEventChartIntervalChanged, context: String(interval))
+        self.interval = value
+        self.intervalIndex = index
+        viewController.openChart()
+    }
+
 }
 
 //MARK: - INTERNAL

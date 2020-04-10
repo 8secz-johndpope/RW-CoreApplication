@@ -56,9 +56,14 @@ extension AssetSelectorViewController {
         searchField.layer.cornerRadius = 8.5
         searchField.placeholder = "  " + NSLocalizedString("Search", comment: "")
         searchField.delegate = self
+        searchField.textColor = .text
         searchField.autocorrectionType = .no
         view.addSubview(searchField)
         searchField.horizontalConstraint(19).topConstraint(50).heightConstraint(40)
+        
+        #if FORCE_DISABLE_DARKMODE
+        searchField.keyboardAppearance = .dark
+        #endif
         
         // Main table view.
         typeTableView.delegate = self
@@ -130,7 +135,8 @@ extension AssetSelectorViewController: UITableViewDelegate {
             cell.accessoryType = .disclosureIndicator
             cell.imageView?.image = assetIconResized(fromInternalCode: assetInternalCode)
             cell.imageView?.layer.cornerRadius = 3.5
-            cell.imageView?.clipsToBounds = true
+            cell.imageView?.layer.masksToBounds = true
+            cell.imageView?.setRasterizedShadow(intensity: 5, radius: 5)
             
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(sender:)))
             cell.addGestureRecognizer(tapGesture)

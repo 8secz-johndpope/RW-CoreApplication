@@ -1,6 +1,6 @@
 //
 //  RatesRouter.swift
-//  SEConverter
+//  RatesView
 //
 //  Created by Esie on 3/8/20.
 //  Copyright © 2020 Denis Esie. All rights reserved.
@@ -60,14 +60,13 @@ final class RatesRouter {
             let contextWindow = RWContextWindowViewController(parentViewController: viewController)
             contextWindow.present(viewController: quickVC, presentationType: .animatedTop)
             
-        #if TARGET_AR
         case .toSettings:
-            let vc = settingsParentPage
-            vc.backgroundColor = .background
-            vc.backgroundSecondaryColor = .itemBackground
-            vc.enableCloseButton = true
-            viewController.present(UINavigationController(rootViewController: vc), animated: true)
-        #endif
+            break
+//            let vc = settingsParentPage
+//            vc.backgroundColor = .background
+//            vc.backgroundSecondaryColor = .itemBackground
+//            vc.enableCloseButton = true
+//            viewController.present(UINavigationController(rootViewController: vc), animated: true)
             
         default:
             break
