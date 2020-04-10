@@ -1,5 +1,5 @@
 //
-//  ModuleIntercator.swift
+//  AssetSelectorInteractor.swift
 //  RatesView
 //
 //  Created by Dennis Esie on 11/26/19.

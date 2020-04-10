@@ -1,5 +1,5 @@
 //
-//  ModuleViewController.swift
+//  AssetSelectorViewController.swift
 //  RatesView
 //
 //  Created by Dennis Esie on 11/26/19.
@@ -15,16 +15,14 @@ final class AssetSelectorViewController: RWViewController {
     var presenter: AssetSelectorPresenter!
     
     private lazy var dataSource = makeCell()
-    private let typeTableView = UITableView(frame: .zero, style: .insetGrouped)
-    private let searchField = UITextField()
-    
-    //MARK: ViewDidLoad
+    private lazy var typeTableView = UITableView(frame: .zero, style: .insetGrouped)
+    private lazy var searchField = UITextField()
     
     override func superDidLoad() {
         setInvisibleNavbar()
         view.backgroundColor = .presentedBackground
         preferredContentSize = standartPresentationSize
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dissmisController))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dissmis))
     }
     
     //MARK: UI Update
@@ -52,6 +50,8 @@ extension AssetSelectorViewController {
     //MARK: Subviews
     
     func addTableView() {
+        
+        // Search field text view.
         searchField.backgroundColor = .presentedItemBackground
         searchField.layer.cornerRadius = 8.5
         searchField.placeholder = "  " + NSLocalizedString("Search", comment: "")
@@ -59,6 +59,8 @@ extension AssetSelectorViewController {
         searchField.autocorrectionType = .no
         view.addSubview(searchField)
         searchField.horizontalConstraint(19).topConstraint(50).heightConstraint(40)
+        
+        // Main table view.
         typeTableView.delegate = self
         typeTableView.dataSource = dataSource
         typeTableView.showsVerticalScrollIndicator = false
@@ -76,10 +78,12 @@ extension AssetSelectorViewController {
 
 extension AssetSelectorViewController: UITextFieldDelegate {
     
+    /// Resign keyboard on Done button.
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
     }
     
+    /// Delegate search filtering to the presenter.
     func textFieldDidChangeSelection(_ textField: UITextField) {
         presenter.performSearch(text: textField.text!)
     }
@@ -92,24 +96,27 @@ extension AssetSelectorViewController: UITableViewDelegate {
     
     //MARK: Header
     
+    /// Header height.
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 35
     }
     
+    /// Header view.
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = UIView()
         let section = presenter.currentList[section]
-        let headerLabel = UILabel()
-        headerLabel.text = NSLocalizedString(section.name, comment: "")
-        headerLabel.textColor = .text
-        headerLabel.font = ConditionalProvider.selectorHeaderFont
-        header.addSubview(headerLabel)
-        headerLabel.heightConstraint(40).widthConstraint(200).bottomConstraint().leadingConstraint(15)
+        let label = UILabel()
+        label.text = NSLocalizedString(section.name, comment: "")
+        label.textColor = .text
+        label.font = ConditionalProvider.selectorHeaderFont
+        header.addSubview(label)
+        label.heightConstraint(40).widthConstraint(200).bottomConstraint().leadingConstraint(15)
         return header
     }
     
     //MARK: Cell Provider
     
+    /// Table view cell provider.
     func makeCell() -> UITableViewDiffableDataSource<FinanceAsset.SourceSection, String> {
         return UITableViewDiffableDataSource(tableView: typeTableView, cellProvider: { tableView, indexPath, assetInternalCode in
             let cell = UITableViewCell(style: .subtitle, reuseIdentifier: UITableViewCell.reuseIdentifier)
@@ -125,22 +132,20 @@ extension AssetSelectorViewController: UITableViewDelegate {
             cell.imageView?.layer.cornerRadius = 3.5
             cell.imageView?.clipsToBounds = true
             
-            let cellTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(sender:)))
-            cell.addGestureRecognizer(cellTapGesture)
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(sender:)))
+            cell.addGestureRecognizer(tapGesture)
             return cell
         })
     }
 
+    /// Handles user tap on a cell.
     @objc private func handleTap(sender: UITapGestureRecognizer) {
-        guard let cell = sender.view as? UITableViewCell else { return }
-        let splitedCode = cell.detailTextLabel!.text!.split(separator: ":", maxSplits: 1)
-        let source = String(splitedCode[0])
-        let type = assetType(fromSource: source)
-        let internalCode = String(splitedCode[1])
-        presenter.addAsset(type: type, source: source, code: internalCode)
+        guard let cell = sender.view as? UITableViewCell, let text = cell.detailTextLabel?.text else { return }
+        presenter.addAsset(internalCode: text)
     }
     
-    @objc private func dissmisController() {
+    /// Dismisses this view controller.
+    @objc private func dissmis() {
         resignCurrentContextController()
     }
 }

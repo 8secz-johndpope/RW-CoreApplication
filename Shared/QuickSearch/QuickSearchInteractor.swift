@@ -1,5 +1,5 @@
 //
-//  ModuleIntercator.swift
+//  QuickSearchInteractor.swift
 //  RatesView
 //
 //  Created by Dennis Esie on 11/26/19.

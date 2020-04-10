@@ -135,10 +135,10 @@ extension RatesPresenter {
     }
     
     /// Dissmises the asset selector screen.
-    func dissmisAssetSelectorScreen(type: FinanceAsset?) {
+    func dissmisAssetSelectorScreen(selectedType: FinanceAsset?) {
         
         // If user has added an asset.
-        if let index = type?.rawValue,
+        if let index = selectedType?.rawValue,
             let targetIndex = viewController.draggedIndexPath?.row,
             let sectionAssets = sections[index-1].assets?.allObjects as? [CDWatchlistAssetAdapter] {
             

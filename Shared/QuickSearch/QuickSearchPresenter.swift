@@ -1,5 +1,5 @@
 //
-//  ModulePresenter.swift
+//  QuickSearchPresenter.swift
 //  RatesView
 //
 //  Created by Dennis Esie on 11/26/19.
@@ -81,7 +81,13 @@ extension QuickSearchPresenter {
         
         // Filter data source on the background thread.
         DispatchQueue.global(qos: .userInteractive).async {
-            self.filteredList = self.interactor.allAssetList.filter { $0.contains(searchText) }
+            self.filteredList = self.interactor.allAssetList.filter {
+                
+                // Filter asset by it's code and it's name.
+                let name = assetName(fromInternalCode: $0).uppercased()
+                return $0.contains(searchText) || name.contains(searchText)
+            }
+            
             self.viewController.updateDataSource()
         }
     }

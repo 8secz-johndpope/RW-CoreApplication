@@ -600,6 +600,7 @@
 		64ACE17F23EEA5E90035D690 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				6456898B243F463B0097B6D8 /* Portfolio */,
 				64184180243C8AC1007C1A2F /* Settings */,
 				6418417F243C8AB7007C1A2F /* Session */,
 				6468AB2F243B84D50081DD07 /* ColorPalettes */,
@@ -663,7 +664,6 @@
 		64DB5D05238C9C8A006B3CD8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				6456898B243F463B0097B6D8 /* Portfolio */,
 				64190F9923C7CCD700D4B081 /* Resources */,
 				64FD5BD22426291100715CD5 /* QuickSearch */,
 				64CDAB6024262C6A00A0C96D /* AssetSelector */,
