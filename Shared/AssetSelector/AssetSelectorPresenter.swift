@@ -77,13 +77,13 @@ extension AssetSelectorPresenter {
         isSearching = true
         searchText = text.uppercased()
         AnalyticsEvent.register(source: .watchlist, key: RWAnalyticsEventSearched, context: searchText)
-        viewController.dataSourceDidChanged(animated: true)
+        viewController.updateDataSource(animated: true)
     }
     
     func endSearching() {
         isSearching = false
         searchText = ""
-        viewController.dataSourceDidChanged(animated: true)
+        viewController.updateDataSource(animated: true)
     }
     
     func addAsset(type: FinanceAsset, source: String, code: String) {
@@ -125,7 +125,7 @@ extension AssetSelectorPresenter {
     
     private func changeType(to: Int) {
         selectedIndex = to
-        viewController.dataSourceDidChanged(animated: false)
+        viewController.updateDataSource(animated: false)
     }
     
     private func getCurrentFullList() -> [FinanceAsset.SourceSection] {

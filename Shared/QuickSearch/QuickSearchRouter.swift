@@ -8,6 +8,7 @@
 
 import UIKit
 import RWExtensions
+import RWUserInterface
 
 final class QuickSearchRouter {
     
@@ -26,6 +27,7 @@ final class QuickSearchRouter {
         switch to {
             
         case .toChart:
+            resignCurrentContextController()
             let chart = Chart.construct(option: .fromWatchlist, context: context)
             viewController.present(UINavigationController(rootViewController: chart), animated: true)
 

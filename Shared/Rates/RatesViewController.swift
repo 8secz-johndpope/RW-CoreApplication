@@ -113,7 +113,7 @@ final class RatesViewController: RWViewController {
     
     //MARK: UI Update – Master
     
-    override func dataSourceDidChanged(animated: Bool = true) {
+    override func updateDataSource(animated: Bool = true) {
         
         // Switch to the background queue to avoid performing calculation on the main thread.
         DispatchQueue.global(qos: .userInteractive).async { [presenter = self.presenter!] in
@@ -172,7 +172,7 @@ extension RatesViewController {
     //MARK: Add Collection View and Settings Button
     
     func addCollectionView() {
-        let layout = RatesApplicationProvider.createLayout()
+        let layout = ConditionalProvider.createLayout()
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isUserInteractionEnabled = false
         collectionView.dataSource = collectionViewDataSource
@@ -228,7 +228,7 @@ extension RatesViewController {
                                                                          for: indexPath) as! RWBigTitleHeaderView
             let section = self.presenter.sections[indexPath.section]
             header.textLabel.textColor = .text
-            header.textLabel.font = RatesApplicationProvider.headerFont
+            header.textLabel.font = ConditionalProvider.ratesHeaderFont
             header.textLabel.text = NSLocalizedString(section.title ?? "Section", comment: "")
             return header
         }
@@ -236,7 +236,7 @@ extension RatesViewController {
     
     func addPortfolioCollectionView() {
         #if ENABLE_PORTFOLIO
-        let layout = RatesApplicationProvider.createPortfolioLayout()
+        let layout = ConditionalProvider.createPortfolioLayout()
         portfolioCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         portfolioCollectionView.dataSource = portfolioCollectionViewDataSource
         portfolioCollectionView.delegate = self
@@ -247,7 +247,7 @@ extension RatesViewController {
         collectionView.addSubview(portfolioCollectionView)
         
         let headerLabel = UILabel()
-        headerLabel.font = RatesApplicationProvider.headerFont
+        headerLabel.font = ConditionalProvider.ratesHeaderFont
         headerLabel.text = NSLocalizedString("Portfolio", comment: "")
         headerLabel.frame = CGRect(x: .standartDoublePageInset, y: -.portfolioSectionHeight-5, width: width, height: 50)
         headerLabel.textColor = .text
@@ -338,7 +338,7 @@ extension RatesViewController: RWFloatingButtonDelegate {
                 
             // Create an empty cell.
             }, completion: { (_) in
-                self.dataSourceDidChanged()
+                self.updateDataSource()
                 
                 // Show context screen.
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
@@ -359,7 +359,7 @@ extension RatesViewController: RWFloatingButtonDelegate {
         if indexPath != draggedIndexPath {
             UIImpactFeedbackGenerator(style: .light).impactOccurred()
             draggedIndexPath = indexPath
-            dataSourceDidChanged()
+            updateDataSource()
         }
     }
     
@@ -386,7 +386,7 @@ extension RatesViewController: RWFloatingButtonDelegate {
     func didCancel(floatingButton button: RWFloatingButton) {
         AnalyticsEvent.register(source: .watchlist, key: RWAnalyticsEventAddCanceled)
         draggedIndexPath = nil
-        dataSourceDidChanged()
+        updateDataSource()
     }
     
 }
@@ -424,7 +424,7 @@ extension RatesViewController: UICollectionViewDelegate {
             })
             
             // Update collection view data source.
-            dataSourceDidChanged()
+            updateDataSource()
             
             // Switch floating button to deleting state.
             floatingButton.switchToDeleting()
@@ -441,7 +441,7 @@ extension RatesViewController: UICollectionViewDelegate {
                 floatingButton.setHovered()
                 draggedIndexPath = nil
                 isDeleting = true
-                dataSourceDidChanged()
+                updateDataSource()
             } else {
                 isDeleting = false
                 floatingButton.setUnhovered()
@@ -453,7 +453,7 @@ extension RatesViewController: UICollectionViewDelegate {
                 if selectedIndexPath != draggedIndexPath {
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     draggedIndexPath = selectedIndexPath
-                    dataSourceDidChanged()
+                    updateDataSource()
                 }
             }
  
@@ -498,7 +498,7 @@ extension RatesViewController: UICollectionViewDelegate {
                 // Check if the removing asset is the local or if its usd. Keep asset if true.
                 if deletingCurrency == localCurrency || deletingCurrency == "USD" || deletingCurrency == "BTC" {
                     UINotificationFeedbackGenerator().notificationOccurred(.error)
-                    dataSourceDidChanged()
+                    updateDataSource()
                 } else {
                     presenter.removeAsset(draggedAsset)
                 }
@@ -562,7 +562,7 @@ extension RatesViewController: UICollectionViewDelegate {
                             }, completion: { _ in
                                 AppDelegate.saveContext()
                                 self.cellSnapshot.isHidden = true
-                                self.dataSourceDidChanged(animated: false)
+                                self.updateDataSource(animated: false)
                             })
                         }
                     
@@ -570,7 +570,7 @@ extension RatesViewController: UICollectionViewDelegate {
                     } else {
                         DispatchQueue.main.async {
                             self.cellSnapshot.isHidden = true
-                            self.dataSourceDidChanged(animated: false)
+                            self.updateDataSource(animated: false)
                         }
                     }
                 }
@@ -579,7 +579,7 @@ extension RatesViewController: UICollectionViewDelegate {
             } else {
                 cellSnapshot.isHidden = true
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.02, execute: {
-                    self.dataSourceDidChanged(animated: false)
+                    self.updateDataSource(animated: false)
                 })
             }
 

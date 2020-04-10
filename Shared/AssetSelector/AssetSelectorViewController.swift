@@ -29,7 +29,7 @@ final class AssetSelectorViewController: RWViewController {
     
     //MARK: UI Update
     
-    override func dataSourceDidChanged(animated: Bool) {
+    override func updateDataSource(animated: Bool) {
         DispatchQueue.global(qos: .userInteractive).async {
             var tableSnapshot = NSDiffableDataSourceSnapshot<FinanceAsset.SourceSection, String>()
             let sections = self.presenter.currentList
@@ -65,6 +65,7 @@ extension AssetSelectorViewController {
         typeTableView.separatorStyle = .singleLine
         typeTableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.reuseIdentifier)
         typeTableView.backgroundColor = .clear
+        typeTableView.contentInset = UIEdgeInsets(top: 16)
         view.addSubview(typeTableView)
         typeTableView.horizontalConstraint().bottomConstraint().topConstraint(8.5, toBot: searchField)
     }
@@ -101,7 +102,7 @@ extension AssetSelectorViewController: UITableViewDelegate {
         let headerLabel = UILabel()
         headerLabel.text = NSLocalizedString(section.name, comment: "")
         headerLabel.textColor = .text
-        headerLabel.font = .systemFont(ofSize: 18, weight: .bold)
+        headerLabel.font = ConditionalProvider.selectorHeaderFont
         header.addSubview(headerLabel)
         headerLabel.heightConstraint(40).widthConstraint(200).bottomConstraint().leadingConstraint(15)
         return header
@@ -115,10 +116,14 @@ extension AssetSelectorViewController: UITableViewDelegate {
             cell.backgroundColor = .presentedItemBackground
             cell.textLabel?.text = assetName(fromInternalCode: assetInternalCode)
             cell.textLabel?.textColor = .text
+            cell.textLabel?.font = ConditionalProvider.selectorTitle
             cell.detailTextLabel?.text = assetInternalCode
             cell.detailTextLabel?.textColor = .textDetail
+            cell.detailTextLabel?.font = ConditionalProvider.selectorTitleSecondary
             cell.accessoryType = .disclosureIndicator
             cell.imageView?.image = assetIconResized(fromInternalCode: assetInternalCode)
+            cell.imageView?.layer.cornerRadius = 3.5
+            cell.imageView?.clipsToBounds = true
             
             let cellTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(sender:)))
             cell.addGestureRecognizer(cellTapGesture)

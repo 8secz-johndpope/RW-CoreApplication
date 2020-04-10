@@ -156,7 +156,7 @@ extension RatesPresenter {
         
         // Update view controller's collection view and session state.
         viewController.draggedIndexPath = nil
-        viewController.dataSourceDidChanged(animated: false)
+        viewController.updateDataSource(animated: false)
         RWSession.sharedInstance().reallocResources()
     }
     
@@ -233,7 +233,7 @@ extension RatesPresenter {
     /// Completely reload watchlist data.
     @objc private func updatedData() {
         interactor.initialDataSourceCheck()
-        viewController.dataSourceDidChanged(animated: false)
+        viewController.updateDataSource(animated: false)
     }
     
     /// Recieve an update notification and reload updated assets accordinly.

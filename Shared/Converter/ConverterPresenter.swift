@@ -41,7 +41,7 @@ final class ConverterPresenter: RWPresenter {
     override func viewWillAppear() {
         viewController.performApearranceAnimation(for: viewController.collectionView)
         interactor.reloadConverterCurrencies()
-        viewController.dataSourceDidChanged()
+        viewController.updateDataSource()
     }
     
     //MARK: UI Input
@@ -121,7 +121,7 @@ extension ConverterPresenter {
         DispatchQueue.main.async {
             AppDelegate.saveContext()
             self.interactor.reloadConverterCurrencies()
-            self.viewController.dataSourceDidChanged()
+            self.viewController.updateDataSource()
         }
     }
     
@@ -130,7 +130,7 @@ extension ConverterPresenter {
         asset.rowInConverter = Int16(interactor.activeList.count)
         AppDelegate.saveContext()
         interactor.reloadConverterCurrencies()
-        viewController.dataSourceDidChanged()
+        viewController.updateDataSource()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.viewController.collectionView.reloadData()
         }

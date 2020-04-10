@@ -77,7 +77,7 @@ final class ConverterViewController: RWViewController {
     
     //MARK: UI Update
     
-    override func dataSourceDidChanged(animated: Bool = true) {
+    override func updateDataSource(animated: Bool = true) {
         guard presenter.isEverythingLoaded else { return }
         DispatchQueue.global(qos: .userInteractive).async {
             let sections = self.sections
@@ -155,7 +155,7 @@ extension ConverterViewController {
                 header.completion = {
                     UIImpactFeedbackGenerator(style: .soft).impactOccurred()
                     self.showHidden.invert()
-                    self.dataSourceDidChanged()
+                    self.updateDataSource()
                 }
                 
                 // Hide if empty
@@ -211,7 +211,7 @@ extension ConverterViewController {
                 self.cellSnapshotImageView.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
             })
             
-            dataSourceDidChanged()
+            updateDataSource()
             
         case .changed:
             let location = gesture.location(in: view)
@@ -221,7 +221,7 @@ extension ConverterViewController {
                 floatingButton.setHovered()
                 draggedIndexPath = nil
                 isDeleting = true
-                dataSourceDidChanged()
+                updateDataSource()
             } else {
                 isDeleting = false
                 floatingButton.setUnhovered()
@@ -230,7 +230,7 @@ extension ConverterViewController {
                 if selectedIndexPath != draggedIndexPath {
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     draggedIndexPath = selectedIndexPath
-                    dataSourceDidChanged()
+                    updateDataSource()
                 }
             }
             
@@ -256,7 +256,7 @@ extension ConverterViewController {
             guard collectionView.indexPathForItem(at: gesture.location(in: collectionView))?.section == 0 else {
                 cellSnapshotImageView.isHidden = true
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.02, execute: {
-                    self.dataSourceDidChanged(animated: false)
+                    self.updateDataSource(animated: false)
                 })
                 return
             }
@@ -301,7 +301,7 @@ extension ConverterViewController {
                         }, completion: { _ in
                             AppDelegate.saveContext()
                             self.cellSnapshotImageView.isHidden = true
-                            self.dataSourceDidChanged(animated: false)
+                            self.updateDataSource(animated: false)
                         })
                     }
                 }
@@ -309,7 +309,7 @@ extension ConverterViewController {
             } else {
                 cellSnapshotImageView.isHidden = true
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.02, execute: {
-                    self.dataSourceDidChanged(animated: false)
+                    self.updateDataSource(animated: false)
                 })
             }
         

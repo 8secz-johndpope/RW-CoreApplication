@@ -13,8 +13,7 @@
 		6415EB2D243F4A2E00B968F7 /* PortfolioBlock+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6456897B243F1B800097B6D8 /* PortfolioBlock+Extension.swift */; };
 		6415EB2E243F4A6A00B968F7 /* PortfolioCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64568986243F30550097B6D8 /* PortfolioCellView.swift */; };
 		6415EB2F243F4A6A00B968F7 /* PortfolioCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64568986243F30550097B6D8 /* PortfolioCellView.swift */; };
-		6415EB30243F4A8300B968F7 /* RatesApplicationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64568988243F44A00097B6D8 /* RatesApplicationProvider.swift */; };
-		6415EB31243F4A8400B968F7 /* RatesApplicationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64568988243F44A00097B6D8 /* RatesApplicationProvider.swift */; };
+		6415EB30243F4A8300B968F7 /* ConditionalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64568988243F44A00097B6D8 /* ConditionalProvider.swift */; };
 		6415EB33243FDBCC00B968F7 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6415EB32243FDBCB00B968F7 /* Icons.xcassets */; };
 		6415EB34243FDBCC00B968F7 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6415EB32243FDBCB00B968F7 /* Icons.xcassets */; };
 		6415EB35243FDBCC00B968F7 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6415EB32243FDBCB00B968F7 /* Icons.xcassets */; };
@@ -78,7 +77,6 @@
 		64568982243F27BD0097B6D8 /* WatchlistSection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D123EBD38C001363C0 /* WatchlistSection+Extension.swift */; };
 		64568983243F27BD0097B6D8 /* AppDelegate+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBAC6023944A8B00B15E11 /* AppDelegate+CoreData.swift */; };
 		64568987243F30550097B6D8 /* PortfolioCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64568986243F30550097B6D8 /* PortfolioCellView.swift */; };
-		64568989243F44A00097B6D8 /* RatesApplicationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64568988243F44A00097B6D8 /* RatesApplicationProvider.swift */; };
 		645B7D4923FC1EE0007B7EC1 /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645B7D4823FC1EE0007B7EC1 /* Icon.xcassets */; };
 		645B7D5223FC205C007B7EC1 /* libCoreModules.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EEA0DC23E99BB300B6FB28 /* libCoreModules.a */; };
 		645B7D6323FC2116007B7EC1 /* WebSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435B9D423EC3D4D001363C0 /* WebSession.swift */; };
@@ -211,7 +209,7 @@
 		64539218243C8939009CAACB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6456897B243F1B800097B6D8 /* PortfolioBlock+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PortfolioBlock+Extension.swift"; sourceTree = "<group>"; };
 		64568986243F30550097B6D8 /* PortfolioCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCellView.swift; sourceTree = "<group>"; };
-		64568988243F44A00097B6D8 /* RatesApplicationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesApplicationProvider.swift; sourceTree = "<group>"; };
+		64568988243F44A00097B6D8 /* ConditionalProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalProvider.swift; sourceTree = "<group>"; };
 		64570101243220F300254B99 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		64570105243220FD00254B99 /* en-AU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-AU"; path = "en-AU.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		645701072432212200254B99 /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -399,6 +397,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6415EB36243FE49700B968F7 /* ConditionalProvider */ = {
+			isa = PBXGroup;
+			children = (
+				64568988243F44A00097B6D8 /* ConditionalProvider.swift */,
+			);
+			path = ConditionalProvider;
+			sourceTree = "<group>";
+		};
 		6418417F243C8AB7007C1A2F /* Session */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +424,7 @@
 		64184186243D28A4007C1A2F /* SmartConverter */ = {
 			isa = PBXGroup;
 			children = (
+				6415EB36243FE49700B968F7 /* ConditionalProvider */,
 				641841A1243D290D007C1A2F /* AppDelegate */,
 				641841A6243D290E007C1A2F /* SceneDelegate */,
 				641841BA243D2910007C1A2F /* ColorPalettes */,
@@ -500,14 +507,6 @@
 				6485395223A2D8B800BD4C9F /* ConverterCellView.swift */,
 			);
 			path = Converter;
-			sourceTree = "<group>";
-		};
-		6456898A243F46290097B6D8 /* CoreApplicationProviders */ = {
-			isa = PBXGroup;
-			children = (
-				64568988243F44A00097B6D8 /* RatesApplicationProvider.swift */,
-			);
-			path = CoreApplicationProviders;
 			sourceTree = "<group>";
 		};
 		6456898B243F463B0097B6D8 /* Portfolio */ = {
@@ -665,7 +664,6 @@
 			isa = PBXGroup;
 			children = (
 				6456898B243F463B0097B6D8 /* Portfolio */,
-				6456898A243F46290097B6D8 /* CoreApplicationProviders */,
 				64190F9923C7CCD700D4B081 /* Resources */,
 				64FD5BD22426291100715CD5 /* QuickSearch */,
 				64CDAB6024262C6A00A0C96D /* AssetSelector */,
@@ -1000,7 +998,7 @@
 				64184209243D2B53007C1A2F /* Converter.swift in Sources */,
 				6418420D243D2B53007C1A2F /* ConverterRouter.swift in Sources */,
 				641841F3243D2B43007C1A2F /* QuickSearch.swift in Sources */,
-				6415EB30243F4A8300B968F7 /* RatesApplicationProvider.swift in Sources */,
+				6415EB30243F4A8300B968F7 /* ConditionalProvider.swift in Sources */,
 				641841FF243D2B4B007C1A2F /* RatesPresenter.swift in Sources */,
 				6418420E243D2B53007C1A2F /* ConverterCellView.swift in Sources */,
 				641841F5243D2B43007C1A2F /* QuickSearchPresenter.swift in Sources */,
@@ -1052,7 +1050,6 @@
 				646E6AA124381C6800D037C7 /* ConverterRouter.swift in Sources */,
 				64A39951243C39A300750FAC /* RatesRouter.swift in Sources */,
 				646E6A9D24381C6800D037C7 /* Converter.swift in Sources */,
-				64568989243F44A00097B6D8 /* RatesApplicationProvider.swift in Sources */,
 				645B7E5523FC217D007B7EC1 /* WatchlistSection+Extension.swift in Sources */,
 				646D31FC243AC43D00730639 /* AppDelegate.swift in Sources */,
 				646E6A9324381C5100D037C7 /* ChartInteractor.swift in Sources */,
@@ -1101,7 +1098,6 @@
 				645B7E5923FC217E007B7EC1 /* WatchlistSection+Extension.swift in Sources */,
 				6415EB2F243F4A6A00B968F7 /* PortfolioCellView.swift in Sources */,
 				646E6A8C24381C4200D037C7 /* RatesInteractor.swift in Sources */,
-				6415EB31243F4A8400B968F7 /* RatesApplicationProvider.swift in Sources */,
 				646E6AA624381C6900D037C7 /* ConverterInteractor.swift in Sources */,
 				646E6A8D24381C4200D037C7 /* RatesRouter.swift in Sources */,
 				646E6A8A24381C4200D037C7 /* RatesViewController.swift in Sources */,

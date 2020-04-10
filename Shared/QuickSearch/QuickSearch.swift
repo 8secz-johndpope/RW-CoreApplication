@@ -32,7 +32,7 @@ enum QuickSearch {
     }
     
     enum LauchOption {
-        case initial
+        case none
     }
     
 }

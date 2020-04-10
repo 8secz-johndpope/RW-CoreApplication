@@ -10,21 +10,22 @@ import Foundation
 import RWUserInterface
 import UIKit
 
-enum RatesApplicationProvider {
+enum ConditionalProvider {
     
     //MARK: Collection View Header
     
     #if TARGET_CW
-    static let headerFont = UIFont(name: "Futura-Bold", size: 22)
+    static let ratesHeaderFont = UIFont(name: "Futura-Bold", size: 22)
     #endif
     
-    #if TARGET_SC
-    static let headerFont = UIFont(name: "Futura-Bold", size: 22)
-    #endif
+    static let selectorHeaderFont = UIFont(name: "Futura-Bold", size: 18)
+    static let selectorTitle = UIFont(name: "Futura", size: 16)
+    static let selectorTitleSecondary = UIFont(name: "Futura", size: 10)
+    
+    static let ratesHeaderFont = UIFont(name: "Futura-Bold", size: 22)
     
     //MARK: Layout – CONVERTER
     
-    #if BACIS_LAYOUT
     static func createLayout() -> UICollectionViewLayout {
         let config = UICollectionViewCompositionalLayoutConfiguration()
         config.interSectionSpacing = 0
@@ -52,8 +53,7 @@ enum RatesApplicationProvider {
         }, configuration: config)
         return layout
     }
-    #endif
-    
+
     //MARK: Layout – CRYPTOVIEW, RATESVIEW, CER
     
     #if COMPLEX_LAYOUT

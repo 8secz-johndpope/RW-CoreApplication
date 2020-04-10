@@ -56,7 +56,7 @@ final class ChartViewController: RWViewController {
         case save = 3
     }
     
-    override func dataSourceDidChanged(animated: Bool) {
+    override func updateDataSource(animated: Bool) {
         
     }
 }

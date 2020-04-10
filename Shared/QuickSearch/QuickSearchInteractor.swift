@@ -19,21 +19,33 @@ final class QuickSearchInteractor: RWInteractor {
     
     override func initialDataSourceCheck() {
         DispatchQueue.global(qos: .userInteractive).async {
-            let currencies = FinanceAsset.currenciesDataModel().map { $0.items }
-            let crypto = FinanceAsset.cryptoDataModel().map { $0.items }
             
+            #if TARGET_RW || TARGET_CER || TARGET_CERPRO
+            
+            #endif
+            
+            #if TARGET_SC
+            // Add all currencies to the quick search menu.
+            let currencies = FinanceAsset.currenciesDataModel().map { $0.items }
             currencies.forEach { (items) in
                 self.allAssetList.append(contentsOf: items)
             }
+            #endif
             
+            #if TARGET_CW || TARGET_SC
+            // Add all crypto to the quick search menu.
+            let crypto = FinanceAsset.cryptoDataModel().map { $0.items }
             crypto.forEach { (items) in
                 self.allAssetList.append(contentsOf: items)
             }
+            #endif
             
+            // Sort all assets by name.
             self.allAssetList.sort { assetName(fromInternalCode: $0) < assetName(fromInternalCode: $1) }
             
+            // Update view controller's ui on the main thread.
             DispatchQueue.main.async {
-                self.presenter.viewController.dataSourceDidChanged(animated: false)
+                self.presenter.viewController.updateDataSource(animated: false)
             }
         }
     }

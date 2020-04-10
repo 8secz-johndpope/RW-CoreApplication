@@ -36,7 +36,12 @@ final class QuickSearchPresenter: RWPresenter {
         switch input {
             
         case .open:
-            router.routeTo(.toChart, context: context)
+            if let internalCode = (context as? String) {
+                let code = internalCode.toFullcode()
+                let name = assetName(fromInternalCode: internalCode)
+                AnalyticsEvent.register(source: .quicksearch, key: RWAnalyticsEventAssetOpened, context: code[0])
+                router.routeTo(.toChart, context: [code, name])
+            }
             
         default:
             break
@@ -44,22 +49,40 @@ final class QuickSearchPresenter: RWPresenter {
     }
 }
 
-//MARK: - VIEW->PRESENTER
+//MARK: - VIEW->PRESENTER INTERFACE
 
 extension QuickSearchPresenter {
     
+    /// All existing assets.
     var assets: [String] {
         return isSearching ? filteredList : interactor.allAssetList
     }
     
+    /// Perform search.
     func performSearch(text: String?) {
-        guard let searchText = text?.uppercased() else { isSearching = false; return }
-        if searchText == "" { isSearching = false; return }
+        
+        // Check if the input text is valid.
+        guard let searchText = text?.uppercased() else {
+            isSearching = false
+            return
+        }
+        
+        // End serching if the input text is empty.
+        if searchText == "" {
+            isSearching = false
+            return
+        }
+        
+        // Begin searching otherwise.
         isSearching = true
+        
+        // Resigter analytics event.
+        AnalyticsEvent.register(source: .quicksearch, key: RWAnalyticsEventSearched, context: searchText)
+        
+        // Filter data source on the background thread.
         DispatchQueue.global(qos: .userInteractive).async {
-            AnalyticsEvent.register(source: .quicksearch, key: RWAnalyticsEventSearched, context: searchText)
             self.filteredList = self.interactor.allAssetList.filter { $0.contains(searchText) }
-            self.viewController.dataSourceDidChanged()
+            self.viewController.updateDataSource()
         }
     }
     
