@@ -8,6 +8,7 @@
 
 import Foundation
 import RWUserInterface
+import RWExtensions
 import UIKit
 
 enum ConditionalProvider {
@@ -16,12 +17,15 @@ enum ConditionalProvider {
     
     #if TARGET_CW
     static let ratesHeaderFont = UIFont(name: "Futura-Bold", size: 22)
+    static let quickSearchInset: CGFloat = (DEVICE_IS_NEW_SCREEN_TYPE ? -45.0 : -35.0) - CGFloat.portfolioSectionHeight
+    static let ratesCollectionContentInset = UIEdgeInsets(top: 45+CGFloat.portfolioSectionHeight, left: 0, bottom: 65, right: 0)
     #endif
     
+    static let quickSearchInset: CGFloat = DEVICE_IS_NEW_SCREEN_TYPE ? -45.0 : -35.0
     static let selectorHeaderFont = UIFont(name: "Futura-Bold", size: 18)
     static let selectorTitle = UIFont(name: "Futura", size: 16)
     static let selectorTitleSecondary = UIFont(name: "Futura", size: 10)
-    
+    static let ratesCollectionContentInset = UIEdgeInsets(top: 45, left: 0, bottom: 65, right: 0)
     static let ratesHeaderFont = UIFont(name: "Futura-Bold", size: 22)
     
     //MARK: Layout – CONVERTER

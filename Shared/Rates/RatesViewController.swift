@@ -84,14 +84,9 @@ final class RatesViewController: RWViewController {
             // Update quick search button size.
             let inset = CGFloat.standartPageInset
             
-            #if ENABLE_PORTFOLIO
-            let constant: CGFloat = (DEVICE_IS_NEW_SCREEN_TYPE ? -45.0 : -35.0) - CGFloat.portfolioSectionHeight
+            let constant = ConditionalProvider.quickSearchInset
             let frame = CGRect(x: inset, y: constant,width: self.width-(inset*2), height: 33.5)
-            #else
-            let constant: CGFloat = DEVICE_IS_NEW_SCREEN_TYPE ? -45.0 : -35.0
-            let frame = CGRect(x: inset, y: constant,width: self.width-(inset*2), height: 33.5)
-            #endif
-            
+    
             self.searchButton.frame = frame
             
             // Update floating button position on device orientation change.
@@ -184,14 +179,7 @@ extension RatesViewController {
         collectionView.backgroundColor = .clear
         collectionView.horizontalConstraint().bottomConstraint().topSafeConstraint()
         collectionView.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
-        
-        #if ENABLE_PORTFOLIO
-        collectionView.contentInset = UIEdgeInsets(top: 45+CGFloat.portfolioSectionHeight, left: 0,
-                                                   bottom: 65, right: 0)
-        #else
-        collectionView.contentInset = UIEdgeInsets(top: 45, left: 0, bottom: 65, right: 0)
-        #endif
-        
+        collectionView.contentInset = ConditionalProvider.ratesCollectionContentInset
         collectionView.alpha = 0
         
         // Cell snapshot image view.
