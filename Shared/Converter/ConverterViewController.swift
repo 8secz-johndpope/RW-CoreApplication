@@ -1,5 +1,5 @@
 //
-//  ModuleViewController.swift
+//  ConverterViewController.swift
 //  RatesView
 //
 //  Created by Dennis Esie on 11/26/19.
@@ -17,11 +17,10 @@ final class ConverterViewController: RWViewController {
     var presenter: ConverterPresenter!
     
     var collectionView: UICollectionView!
-    private lazy var collectionDataSource = makeCollectionCell()
+    private lazy var collectionDataSource = makeCell()
     private var collectionDataSources = [DataSource]()
-    private var loadedRates = [String : Bool]()
     private var isDeleting = false
-    private var showHidden = false
+    private var isHiddenShowed = false
     private let sections = ["Converter", "Hidden"]
     private var floatingButton: RWFloatingButton!
     
@@ -36,13 +35,28 @@ final class ConverterViewController: RWViewController {
         navigationController?.navigationBar.tintColor = .tint
         view.backgroundColor = .background
         tabBarController?.tabBar.tintColor = .tint
-        
+        setBasicBackground()
+        setCryptoBackground()
+    }
+    
+    #if FORCE_DISABLE_DARKMODE
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    #endif
+    
+    // Converter App background with two circles.
+    private func setBasicBackground() {
         #if TARGET_SC
         let circleImage = UIImage(named: "bg_circle")
+        
+        // Bottom-Right small circle.
         let smallCircle = UIImageView(image: circleImage)
         let smallCircleSize = CGSize(width: width, height: width)
         view.addSubview(smallCircle)
         smallCircle.sizeConstraints(smallCircleSize).bottomConstraint(width*0.15).trailingConstraint(width*0.75)
+        
+        // Top-Left big circle.
         let bigCircle = UIImageView(image: circleImage)
         let bigCircleSize = CGSize(width: width*1.25, height: width*1.25)
         view.addSubview(bigCircle)
@@ -50,11 +64,12 @@ final class ConverterViewController: RWViewController {
         #endif
     }
     
-    #if TARGET_SC
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+    // Converter App background with two circles.
+    private func setCryptoBackground() {
+        #if TARGET_CW
+
+        #endif
     }
-    #endif
     
     /// React to device orientation change.
     override func viewWillTransition(toSize: CGSize) {
@@ -94,7 +109,7 @@ final class ConverterViewController: RWViewController {
             }
             
             collectionSnapshot.appendItems(managedObjects, toSection: sections[0])
-            collectionSnapshot.appendItems(self.showHidden ? self.presenter.hiddenList : [], toSection: sections[1])
+            collectionSnapshot.appendItems(self.isHiddenShowed ? self.presenter.hiddenList : [], toSection: sections[1])
             
             self.collectionDataSource.apply(collectionSnapshot) {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.02) {
@@ -154,7 +169,7 @@ extension ConverterViewController {
                 // Show/Hide hidden assets.
                 header.completion = {
                     UIImpactFeedbackGenerator(style: .soft).impactOccurred()
-                    self.showHidden.invert()
+                    self.isHiddenShowed.invert()
                     self.updateDataSource()
                 }
                 
@@ -243,7 +258,6 @@ extension ConverterViewController {
             floatingButton.hide()
             
             if isDeleting {
-                AnalyticsEvent.register(source: .converter, key: RWAnalyticsEventRemovedAsset, context: draggedAsset.fullCode)
                 presenter.hideAsset(draggedAsset)
                 isDeleting = false
                 draggedIndexPath = nil
@@ -275,13 +289,13 @@ extension ConverterViewController {
                     print()
                     #endif
                     
-                    // If cell dragged DOWN
+                    // If cell was dragged DOWN
                     if toIndex > fromIndex {
                         assets[fromIndex+1...toIndex].forEach { $0.rowInConverter &-= 1 }
                         draggedAsset.rowInConverter = Int16(toIndex)
                     }
                     
-                    // If cell dragged UP
+                    // If cell was dragged UP
                     if toIndex < fromIndex {
                         assets[toIndex...fromIndex-1].forEach { $0.rowInConverter &+= 1 }
                         draggedAsset.rowInConverter = Int16(toIndex)
@@ -326,7 +340,7 @@ extension ConverterViewController: UICollectionViewDelegate {
     
     //MARK: Cell Provider
     
-    func makeCollectionCell() -> DataSource {
+    func makeCell() -> DataSource {
         return DataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, asssetEntity in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ConverterCellView.reuseIdentifier, for: indexPath) as! ConverterCellView
 

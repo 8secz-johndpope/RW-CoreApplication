@@ -1,5 +1,5 @@
 //
-//  ModulePresenter.swift
+//  ConverterPresenter.swift
 //  RatesView
 //
 //  Created by Dennis Esie on 11/26/19.
@@ -17,6 +17,7 @@ final class ConverterPresenter: RWPresenter {
     var launchOption: Converter.LauchOption?
     var selectedCurrencyIndex: Int!
     var convertedAmounts = [String : Double]()
+    var loadedRates = [String : Bool]()
     
     unowned var selectedCell: ConverterCellView!
     unowned var selectedAsset: CDWatchlistAssetAdapter!
@@ -40,7 +41,7 @@ final class ConverterPresenter: RWPresenter {
     
     override func viewWillAppear() {
         viewController.performApearranceAnimation(for: viewController.collectionView)
-        interactor.reloadConverterCurrencies()
+        interactor.reloadData()
         viewController.updateDataSource()
     }
     
@@ -110,6 +111,7 @@ extension ConverterPresenter {
     }
     
     func hideAsset(_ asset: CDWatchlistAssetAdapter) {
+        AnalyticsEvent.register(source: .converter, key: RWAnalyticsEventRemovedAsset, context: asset.fullCode)
         let index = Int(asset.rowInConverter)
         asset.sectionInConverter = 1
         
@@ -120,7 +122,7 @@ extension ConverterPresenter {
         // Save core data model
         DispatchQueue.main.async {
             AppDelegate.saveContext()
-            self.interactor.reloadConverterCurrencies()
+            self.interactor.reloadData()
             self.viewController.updateDataSource()
         }
     }
@@ -129,7 +131,7 @@ extension ConverterPresenter {
         asset.sectionInConverter = 0
         asset.rowInConverter = Int16(interactor.activeList.count)
         AppDelegate.saveContext()
-        interactor.reloadConverterCurrencies()
+        interactor.reloadData()
         viewController.updateDataSource()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.viewController.collectionView.reloadData()

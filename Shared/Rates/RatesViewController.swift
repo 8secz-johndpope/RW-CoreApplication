@@ -67,7 +67,7 @@ final class RatesViewController: RWViewController {
         #endif
     }
     
-    // Converter App background with two circles.
+    // CryptoView App background with two circles.
     private func setCryptoBackground() {
         #if TARGET_CW
         

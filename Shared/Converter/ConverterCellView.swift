@@ -44,11 +44,6 @@ final class ConverterCellView: RWInteractiveCollectionViewCell {
         shadowView.isOpaque = true
         shadowView.layer.masksToBounds = true
         shadowView.layer.cornerRadius = 8.5
-        shadowView.layer.shouldRasterize = true
-        shadowView.layer.shadowColor = UIColor.black.cgColor
-        shadowView.layer.shadowRadius = 3.5
-        shadowView.layer.shadowOpacity = 0.1
-        shadowView.layer.shadowOffset = CGSize.zero
         mainView.addSubview(shadowView)
         shadowView.verticalConstraint(3.5).horizontalConstraint(2.5)
         
@@ -80,7 +75,7 @@ final class ConverterCellView: RWInteractiveCollectionViewCell {
         amountField.keyboardAppearance = .dark
         amountField.actionDelegate = self
         mainView.addSubview(amountField)
-        amountField.verticalConstraint().trailingConstraint(-10.5).leadingConstraint(toTrail: codeLabel)
+        amountField.verticalConstraint().trailingConstraint(-12.5).leadingConstraint(toTrail: codeLabel)
     }
     
     //MARK: Update Data
