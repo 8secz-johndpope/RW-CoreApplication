@@ -142,7 +142,9 @@ final class RatesViewController: RWViewController {
                 #endif
                 
                 // Update cell backgrounds.
-                DispatchQueue.main.async { self.setCellsBackground() }
+                DispatchQueue.main.async {
+                    self.setCellsBackground()
+                }
             }
         }
     }
@@ -297,6 +299,19 @@ extension RatesViewController: RWFloatingButtonDelegate {
     func didTapped(floatingButton button: RWFloatingButton) {
         AnalyticsEvent.register(source: .watchlist, key: RWAnalyticsEventAddPressed)
         
+        let optionVC = AssetSelector.construct(option: .crypto)
+        let sourceFrame = button.button.frame
+        let size = CGSize(width: width*0.5, height: width*0.3)
+        let origin = sourceFrame.corner - Vector2D(x: size.width, y: size.height)
+        let contextWindow = RWContextWindowViewController(parentViewController: self)
+        contextWindow.customPresentationFrameStart = sourceFrame
+        contextWindow.customPresentationFrameEnd = CGRect(origin: origin, size: size)
+        contextWindow.present(viewController: optionVC, presentationType: .customFrame)
+        
+        floatingButton.hide()
+        
+        /*
+         
         // Get index of the last asset.
         let assetCount = presenter.sections[0].assets!.count
         draggedIndexPath = IndexPath(row: assetCount, section: 0)
@@ -337,7 +352,7 @@ extension RatesViewController: RWFloatingButtonDelegate {
                     self.floatingButton.button.center = self.floatingButton.currentCenter
                 }
             })
-        }
+        } */
     }
     
     /// Called when the user is dragging the floating button over a collection view cell.
@@ -437,14 +452,23 @@ extension RatesViewController: UICollectionViewDelegate {
                 // Get selected indexpath.
                 guard let selectedIndexPath = collectionView.indexPathForItem(at: gesture.location(in: collectionView)) else { break }
                 
-                // Check if selected cell has changed.
-                if selectedIndexPath != draggedIndexPath {
+                // Check if a cell was selected previously and dragged asset for it exists.
+                guard let code = reorderedAsset, let draggedAsset = presenter.allAssets[code] else {
+                    return
+                }
+                
+                // Get asset's type.
+                let fromType = draggedAsset.classType.rawValue
+                let toType = selectedIndexPath.section
+                
+                // Check if selected cell has changed AND that source and target sections are the same.
+                if fromType == toType+1, selectedIndexPath != draggedIndexPath {
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     draggedIndexPath = selectedIndexPath
                     updateDataSource()
                 }
             }
- 
+            
         case .ended:
             
             // Animate floating button to the initial state.
