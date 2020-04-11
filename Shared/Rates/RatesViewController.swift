@@ -299,9 +299,10 @@ extension RatesViewController: RWFloatingButtonDelegate {
     func didTapped(floatingButton button: RWFloatingButton) {
         AnalyticsEvent.register(source: .watchlist, key: RWAnalyticsEventAddPressed)
         
-        let optionVC = AssetSelector.construct(option: .crypto)
+        
+        let optionVC = BigContextViewController(cells: ["Currency", "Crypto"], icons: [UIImage(named: "Converter")!, UIImage(named: "Converter")!], callbacks: [])
         let sourceFrame = button.button.frame
-        let size = CGSize(width: width*0.5, height: width*0.3)
+        let size = CGSize(width: width*0.6, height: width*0.5)
         let origin = sourceFrame.corner - Vector2D(x: size.width, y: size.height)
         let contextWindow = RWContextWindowViewController(parentViewController: self)
         contextWindow.customPresentationFrameStart = sourceFrame
