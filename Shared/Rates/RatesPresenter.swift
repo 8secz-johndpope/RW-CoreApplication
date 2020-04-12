@@ -102,8 +102,7 @@ extension RatesPresenter {
                 return result
             } else {
                 let unsortedSections = interactor.dataSource.map { $0 as! CDWatchlistSectionAdapter }
-                let sortedSections = unsortedSections.sorted { $0.position < $1.position }
-                cachedSections = sortedSections.filter { !$0.isPortfolioSection }
+                cachedSections = unsortedSections.sorted { $0.position < $1.position }
                 return cachedSections!
             }
         }

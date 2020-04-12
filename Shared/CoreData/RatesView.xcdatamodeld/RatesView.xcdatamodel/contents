@@ -37,7 +37,7 @@
         <attribute name="isPortfolioSection" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="position" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" attributeType="String" defaultValueString="New Section"/>
-        <relationship name="assets" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="WatchlistAsset" inverseName="section" inverseEntity="WatchlistAsset"/>
+        <relationship name="assets" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="WatchlistAsset" inverseName="section" inverseEntity="WatchlistAsset"/>
     </entity>
     <elements>
         <element name="PortfolioBlock" positionX="-67.90625" positionY="51.0703125" width="128" height="163"/>

@@ -2,8 +2,8 @@
   "colors" : [
     {
       "color" : {
-        "platform" : "osx",
-        "reference" : "controlAccentColor"
+        "platform" : "ios",
+        "reference" : "systemPurpleColor"
       },
       "idiom" : "universal"
     },
@@ -15,8 +15,8 @@
         }
       ],
       "color" : {
-        "platform" : "osx",
-        "reference" : "controlAccentColor"
+        "platform" : "ios",
+        "reference" : "systemPurpleColor"
       },
       "idiom" : "universal"
     }

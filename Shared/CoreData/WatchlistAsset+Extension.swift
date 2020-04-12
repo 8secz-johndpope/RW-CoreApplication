@@ -146,7 +146,7 @@ extension CDWatchlistAssetAdapter {
 //                }
 //            }
             
-            return Int(positionInWatchlist) //+ prevAssets
+            //return Int(positionInWatchlist) //+ prevAssets
 //        } catch {
 //            return 0
 //        }
