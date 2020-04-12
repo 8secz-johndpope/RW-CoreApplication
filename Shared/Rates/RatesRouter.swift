@@ -26,6 +26,7 @@ final class RatesRouter {
         case addCrypto = 6
         case toSettings = 7
         case toQuickSearch = 8
+        case showContextOption = 9
         case toSeeAll = 21
     }
     
@@ -59,6 +60,31 @@ final class RatesRouter {
             let quickVC = QuickSearch.construct()
             let contextWindow = RWContextWindowViewController(parentViewController: viewController)
             contextWindow.present(viewController: quickVC, presentationType: .animatedTop)
+            
+        case .showContextOption:
+            guard let completion = context as? (Int) -> Void else { return }
+            
+            let cells = ["Currency-Source is Mops provider",
+                         "Crypto-Supported sources: Bitstamp, Coinbase, Binance, Poloniex, Kraken"]
+            
+            let icons = [UIImage(named: "currencies")!, UIImage(named: "crypto")!]
+            
+            let callbacks = [{
+                    resignCurrentContextController()
+                    completion(0)
+                }, {
+                    resignCurrentContextController()
+                    completion(1)
+                }]
+            
+            let optionVC = BigContextViewController(cells: cells, icons: icons, callbacks: callbacks)
+            let sourceFrame = viewController.floatingButton.button.frame
+            let size = CGSize(width: viewController.width*0.6, height: viewController.width*0.5)
+            let origin = sourceFrame.corner - Vector2D(x: size.width, y: size.height)
+            let contextWindow = RWContextWindowViewController(parentViewController: viewController)
+            contextWindow.customPresentationFrameStart = sourceFrame
+            contextWindow.customPresentationFrameEnd = CGRect(origin: origin, size: size)
+            contextWindow.present(viewController: optionVC, presentationType: .customFrame)
             
         case .toSettings:
             break

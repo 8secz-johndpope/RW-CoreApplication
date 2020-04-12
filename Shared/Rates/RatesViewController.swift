@@ -298,27 +298,17 @@ extension RatesViewController: RWFloatingButtonDelegate {
     /// Called when the user is tapping on floating button.
     func didTapped(floatingButton button: RWFloatingButton) {
         AnalyticsEvent.register(source: .watchlist, key: RWAnalyticsEventAddPressed)
+        presenter.router.routeTo(.showContextOption, context: addAsset(to:))
+    }
+    
+    private func addAsset(to section: Int) {
         
-        
-        let optionVC = BigContextViewController(cells: ["Currency", "Crypto"], icons: [UIImage(named: "Converter")!, UIImage(named: "Converter")!], callbacks: [])
-        let sourceFrame = button.button.frame
-        let size = CGSize(width: width*0.6, height: width*0.5)
-        let origin = sourceFrame.corner - Vector2D(x: size.width, y: size.height)
-        let contextWindow = RWContextWindowViewController(parentViewController: self)
-        contextWindow.customPresentationFrameStart = sourceFrame
-        contextWindow.customPresentationFrameEnd = CGRect(origin: origin, size: size)
-        contextWindow.present(viewController: optionVC, presentationType: .customFrame)
-        
-        floatingButton.hide()
-        
-        /*
-         
         // Get index of the last asset.
-        let assetCount = presenter.sections[0].assets!.count
-        draggedIndexPath = IndexPath(row: assetCount, section: 0)
+        let assetCount = presenter.sections[section].assets!.count
+        draggedIndexPath = IndexPath(row: assetCount, section: section)
         
         // Scroll to the middle.
-        let scrollIndexPath = IndexPath(row: assetCount-1, section: 0)
+        let scrollIndexPath = IndexPath(row: assetCount-1, section: section)
         collectionView.scrollToItem(at: scrollIndexPath, at: .centeredVertically, animated: true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
             
@@ -349,11 +339,11 @@ extension RatesViewController: RWFloatingButtonDelegate {
                     let cell = self.collectionView.cellForItem(at: self.draggedIndexPath!)!
                     let origin = cell.convert(CGPoint.zero, to: self.view)
                     let frame = CGRect(origin: origin, size: CGSize(width: cell.width, height: cell.height))
-                    self.presenter.showAssetSelectorScreen(section: 0, context: frame)
+                    self.presenter.showAssetSelectorScreen(section: section, context: frame)
                     self.floatingButton.button.center = self.floatingButton.currentCenter
                 }
             })
-        } */
+        }
     }
     
     /// Called when the user is dragging the floating button over a collection view cell.

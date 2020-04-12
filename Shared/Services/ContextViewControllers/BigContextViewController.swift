@@ -35,6 +35,7 @@ class BigContextViewController: UIViewController {
         tableView.delegate = self
         tableView.isScrollEnabled = false
         tableView.dataSource = self
+        tableView.contentInset = UIEdgeInsets(top: -10)
         view.addSubview(tableView)
         tableView.frameConstraint()
         view.backgroundColor = .presentedBackground
@@ -70,14 +71,23 @@ extension BigContextViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: reuseIdentifier)
         let index = indexPath.section
+        let name = cells[index].split(separator: "-", maxSplits: 1)
         cell.backgroundColor = .presentedBackground
-        cell.textLabel?.text = cells[index]
+        cell.textLabel?.text = String(name[0])
+        cell.textLabel?.textColor = .text
         cell.textLabel?.font = ConditionalProvider.selectorHeaderFont
         cell.detailTextLabel?.numberOfLines = 0
-        cell.detailTextLabel?.text = "Supported sources MOPS MOPS MOPS MIPS"
+        cell.detailTextLabel?.text = String(name[1])
         cell.detailTextLabel?.font = ConditionalProvider.selectorTitleSecondary
-        cell.imageView?.image = icons[index]
+        cell.detailTextLabel?.textColor = .textDetail
+        cell.imageView?.image = icons[index].withTintColor(.text)
+        cell.selectedBackgroundView = UIView(withBackgroundColor: .presentedItemBackground)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        callbacks[indexPath.section]()
     }
 
 }
