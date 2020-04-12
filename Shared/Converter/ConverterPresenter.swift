@@ -111,6 +111,8 @@ extension ConverterPresenter {
     }
     
     func hideAsset(_ asset: CDWatchlistAssetAdapter) {
+        
+        // Submit an analytics event folowing the removal of an asset.
         AnalyticsEvent.register(source: .converter, key: RWAnalyticsEventRemovedAsset, context: asset.fullCode)
         let index = Int(asset.rowInConverter)
         asset.sectionInConverter = 1

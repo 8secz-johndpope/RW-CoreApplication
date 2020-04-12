@@ -204,18 +204,27 @@ extension ConverterViewController {
         switch(gesture.state) {
             
         case .began:
+            
+            // Get selected indexpath.
             guard let selectedIndexPath = collectionView.indexPathForItem(at: gesture.location(in: collectionView)),
                 selectedIndexPath.section == 0 else {
                     reorderedAssetCode = RWLockKey
                     return
             }
             
+            // Show floating button in the hide mode.
             floatingButton.show(hideMode: true)
+            
             draggedIndexPath = selectedIndexPath
             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
             
+            // Get selected cell.
             let cell = collectionView.cellForItem(at: selectedIndexPath) as! ConverterCellView
+            
+            // Save selected cell's asset's code.
             reorderedAssetCode = (cell.representedObject as! CDWatchlistAssetAdapter).fullCode
+            
+            // Configure selected cell snapshot.
             cellSnapshotImageView.image = cell.takeScreenshotOnMainThread()
             cellSnapshotImageView.frame = CGRect(x: 0, y: 0, width: width-CGFloat.standartDoublePageInset, height: .smallCellHeigh)
             cellSnapshotImageView.isHidden = false
@@ -226,12 +235,16 @@ extension ConverterViewController {
                 self.cellSnapshotImageView.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
             })
             
+            // Update collection view data source.
             updateDataSource()
             
         case .changed:
+            
+            // Get gesture location and set cell snapshot at it.
             let location = gesture.location(in: view)
             cellSnapshotImageView.center = location
             
+            // Check if snapshot if hovering the hide floating button.
             if location.distance(to: floatingButton.removingCenter) < 40 {
                 floatingButton.setHovered()
                 draggedIndexPath = nil
@@ -241,7 +254,11 @@ extension ConverterViewController {
                 isDeleting = false
                 floatingButton.setUnhovered()
             
-            guard let selectedIndexPath = collectionView.indexPathForItem(at: gesture.location(in: collectionView)), reorderedAssetCode != RWLockKey else { break }
+                // Get selected indexpath.
+            guard let selectedIndexPath = collectionView.indexPathForItem(at: gesture.location(in: collectionView)),
+                reorderedAssetCode != RWLockKey else { break }
+                
+                // Check if selected cell has changed.
                 if selectedIndexPath != draggedIndexPath {
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     draggedIndexPath = selectedIndexPath
@@ -250,13 +267,22 @@ extension ConverterViewController {
             }
             
         case .ended:
+            
+            // Check if a cell was selected previously and dragged asset for it is not hidden.
             guard let code = reorderedAssetCode, reorderedAssetCode != RWLockKey else { return }
+            
+            // Get dragged asset.
             let draggedAsset = presenter.activeList.filter { $0.fullCode == code }[0]
+            
+            // Get initial index of the asset.
+            
+            // Switch floating button back to invisible.
             let fromIndex = Int(draggedAsset.rowInConverter)
             draggedIndexPath = nil
             reorderedAssetCode = nil
             floatingButton.hide()
             
+            // Check if dragged asset is being deleted.
             if isDeleting {
                 presenter.hideAsset(draggedAsset)
                 isDeleting = false
