@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import WebKit
 import RWExtensions
 import RWUserInterface
-import NVActivityIndicatorView
 import RWSession
 
 final class ChartViewController: RWViewController {
@@ -22,7 +20,7 @@ final class ChartViewController: RWViewController {
     private var styleSegmentedControl: UISegmentedControl!
     private var indicatorsArray: UIButton!
     private var priceView: UIView!
-    private var loadingAnimationView: NVActivityIndicatorView!
+    private var loadingAnimationView: RWActivityIndicatorView!
     private var mainContainerView: UIView!
     
     private var profileContainerView: UIView!
@@ -30,7 +28,7 @@ final class ChartViewController: RWViewController {
     private var financialsContainerView: UIView!
     
     private var webChartContainerView: UIView!
-    private var webChartView: WKWebView!
+    private var webChartView: ChartWebView!
     
     override func superDidLoad() {
         setDarkOnlyNavbar()
@@ -75,7 +73,7 @@ extension ChartViewController {
             priceView.horizontalConstraint(CGFloat.standartPageInset).topSafeConstraint().heightConstraint(50)
 
             let frame = CGRect(x: 0, y: 0, width: width, height: 50)
-            loadingAnimationView = NVActivityIndicatorView(frame: frame, type: .ballBeat, color: .presentedBackground, padding: 10)
+            loadingAnimationView = RWActivityIndicatorView(frame: frame, type: .ballBeat, color: .presentedBackground, padding: 10)
             loadingAnimationView.startAnimating()
             priceView.addSubview(loadingAnimationView)
             
@@ -208,7 +206,7 @@ extension ChartViewController {
             let isPad = traitCollection.userInterfaceIdiom == .pad
             let scale = 4 - UIScreen.main.scale
             let inset = CGFloat(isPad ? 25 : 15)
-            webChartView = WKWebView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+            webChartView = ChartWebView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
             webChartContainerView.addSubview(webChartView)
             webChartView.frameConstraint()
             webChartView.topConstraint(isPad ? -20 : -10 * scale).bottomConstraint(41 * scale).leadingConstraint(-inset * scale).trailingConstraint(inset * scale)

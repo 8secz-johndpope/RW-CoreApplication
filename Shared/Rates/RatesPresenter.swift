@@ -6,7 +6,6 @@
 //  Copyright © 2020 Denis Esie. All rights reserved.
 //
 
-import Foundation
 import RWSession
 import RWExtensions
 
@@ -133,6 +132,7 @@ extension RatesPresenter {
     
     /// Navigates to the asset selector screen.
     func showAssetSelectorScreen(section: Int, context: Any) {
+        #if TARGET_CW || TARGET_SC
         switch section {
         case 0:
             router.routeTo(.addCurrency, context: context)
@@ -141,6 +141,7 @@ extension RatesPresenter {
         default:
             break
         }
+        #endif
     }
     
     /// Dissmises the asset selector screen.

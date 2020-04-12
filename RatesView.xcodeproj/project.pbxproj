@@ -61,6 +61,15 @@
 		6418421C243D2BF3007C1A2F /* libRWSession.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6418421B243D2BF3007C1A2F /* libRWSession.a */; };
 		6418421E243D2BF8007C1A2F /* libRWUserInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6418421D243D2BF8007C1A2F /* libRWUserInterface.a */; };
 		6418421F243D2C49007C1A2F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647617552403034700DA5BA1 /* AdSupport.framework */; };
+		643039D324434B99000C1404 /* BigContextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645895662441EF2400C01491 /* BigContextViewController.swift */; };
+		643039D424434B99000C1404 /* BigContextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645895662441EF2400C01491 /* BigContextViewController.swift */; };
+		643039D724434BDA000C1404 /* ConditionalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643039D624434BDA000C1404 /* ConditionalProvider.swift */; };
+		643039DD24435456000C1404 /* NVActivityIndicatorViewBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643039DC24435456000C1404 /* NVActivityIndicatorViewBridge.swift */; };
+		643039DE24435456000C1404 /* NVActivityIndicatorViewBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643039DC24435456000C1404 /* NVActivityIndicatorViewBridge.swift */; };
+		643039DF24435456000C1404 /* NVActivityIndicatorViewBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643039DC24435456000C1404 /* NVActivityIndicatorViewBridge.swift */; };
+		643039E1244354C3000C1404 /* WKWebViewBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643039E0244354C3000C1404 /* WKWebViewBridge.swift */; };
+		643039E2244354C3000C1404 /* WKWebViewBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643039E0244354C3000C1404 /* WKWebViewBridge.swift */; };
+		643039E3244354C3000C1404 /* WKWebViewBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643039E0244354C3000C1404 /* WKWebViewBridge.swift */; };
 		64539219243C8939009CAACB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64539218243C8939009CAACB /* GoogleService-Info.plist */; };
 		6454FD60243C4C4B00179EC7 /* AssetSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648924CE23991E5A00BC19D4 /* AssetSelector.swift */; };
 		6454FD61243C4C4B00179EC7 /* AssetSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648924CB23991E5A00BC19D4 /* AssetSelectorViewController.swift */; };
@@ -197,6 +206,9 @@
 		642FE93F23DFE69000B78B4B /* libPizden.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libPizden.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		642FE95423DFE73500B78B4B /* libPizdaaaaa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libPizdaaaaa.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		642FE98623DFE79F00B78B4B /* libJopka.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libJopka.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		643039D624434BDA000C1404 /* ConditionalProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionalProvider.swift; sourceTree = "<group>"; };
+		643039DC24435456000C1404 /* NVActivityIndicatorViewBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorViewBridge.swift; sourceTree = "<group>"; };
+		643039E0244354C3000C1404 /* WKWebViewBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewBridge.swift; sourceTree = "<group>"; };
 		6435B9D123EBD38C001363C0 /* WatchlistSection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchlistSection+Extension.swift"; sourceTree = "<group>"; };
 		6435B9D423EC3D4D001363C0 /* WebSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSession.swift; sourceTree = "<group>"; };
 		643CE46A23926A770014DE29 /* WatchlistRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchlistRouter.swift; sourceTree = "<group>"; };
@@ -471,6 +483,23 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		643039D524434BC7000C1404 /* ConditionalProvider */ = {
+			isa = PBXGroup;
+			children = (
+				643039D624434BDA000C1404 /* ConditionalProvider.swift */,
+			);
+			path = ConditionalProvider;
+			sourceTree = "<group>";
+		};
+		643039DB24435423000C1404 /* RWBridging */ = {
+			isa = PBXGroup;
+			children = (
+				643039DC24435456000C1404 /* NVActivityIndicatorViewBridge.swift */,
+				643039E0244354C3000C1404 /* WKWebViewBridge.swift */,
+			);
+			path = RWBridging;
+			sourceTree = "<group>";
+		};
 		643CE46923926A770014DE29 /* Watchlist */ = {
 			isa = PBXGroup;
 			children = (
@@ -530,6 +559,7 @@
 		645B7CF623FC1E3F007B7EC1 /* CryptoView */ = {
 			isa = PBXGroup;
 			children = (
+				643039D524434BC7000C1404 /* ConditionalProvider */,
 				646D31F7243AC43C00730639 /* AppDelegate */,
 				646D31F9243AC43D00730639 /* SceneDelegate */,
 				646D31FF243AC45300730639 /* ColorPalettes */,
@@ -610,6 +640,7 @@
 		64ACE17F23EEA5E90035D690 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				643039DB24435423000C1404 /* RWBridging */,
 				645895652441EEF200C01491 /* ContextViewControllers */,
 				6456898B243F463B0097B6D8 /* Portfolio */,
 				64184180243C8AC1007C1A2F /* Settings */,
@@ -1012,6 +1043,7 @@
 				6415EB30243F4A8300B968F7 /* ConditionalProvider.swift in Sources */,
 				641841FF243D2B4B007C1A2F /* RatesPresenter.swift in Sources */,
 				6418420E243D2B53007C1A2F /* ConverterCellView.swift in Sources */,
+				643039E1244354C3000C1404 /* WKWebViewBridge.swift in Sources */,
 				641841F5243D2B43007C1A2F /* QuickSearchPresenter.swift in Sources */,
 				641841FB243D2B47007C1A2F /* AssetSelectorInteractor.swift in Sources */,
 				64184216243D2B7B007C1A2F /* AppDelegate+InitialSettings.swift in Sources */,
@@ -1025,6 +1057,7 @@
 				6418420C243D2B53007C1A2F /* ConverterInteractor.swift in Sources */,
 				64568983243F27BD0097B6D8 /* AppDelegate+CoreData.swift in Sources */,
 				6418420B243D2B53007C1A2F /* ConverterPresenter.swift in Sources */,
+				643039DD24435456000C1404 /* NVActivityIndicatorViewBridge.swift in Sources */,
 				64184218243D2B8C007C1A2F /* AnalyticsEvents.swift in Sources */,
 				641841DB243D2913007C1A2F /* AppDelegate.swift in Sources */,
 				64184200243D2B4B007C1A2F /* RatesInteractor.swift in Sources */,
@@ -1049,6 +1082,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643039DE24435456000C1404 /* NVActivityIndicatorViewBridge.swift in Sources */,
 				645B7E5023FC217A007B7EC1 /* RatesView.xcdatamodeld in Sources */,
 				646E6AA024381C6800D037C7 /* ConverterInteractor.swift in Sources */,
 				646E6AAD24381C7200D037C7 /* AssetSelectorRouter.swift in Sources */,
@@ -1060,6 +1094,8 @@
 				646E6AAC24381C7200D037C7 /* AssetSelectorInteractor.swift in Sources */,
 				646E6A9124381C5100D037C7 /* IndicatorsViewController.swift in Sources */,
 				646E6AA124381C6800D037C7 /* ConverterRouter.swift in Sources */,
+				643039D724434BDA000C1404 /* ConditionalProvider.swift in Sources */,
+				643039E2244354C3000C1404 /* WKWebViewBridge.swift in Sources */,
 				64A39951243C39A300750FAC /* RatesRouter.swift in Sources */,
 				646E6A9D24381C6800D037C7 /* Converter.swift in Sources */,
 				645B7E5523FC217D007B7EC1 /* WatchlistSection+Extension.swift in Sources */,
@@ -1082,6 +1118,7 @@
 				646E6AAF24381C7900D037C7 /* QuickSearchViewController.swift in Sources */,
 				646E6AA224381C6800D037C7 /* ConverterCellView.swift in Sources */,
 				646E6A9224381C5100D037C7 /* ChartPresenter.swift in Sources */,
+				643039D324434B99000C1404 /* BigContextViewController.swift in Sources */,
 				646E6AAE24381C7900D037C7 /* QuickSearch.swift in Sources */,
 				645B7D6323FC2116007B7EC1 /* WebSession.swift in Sources */,
 				646BDB0A241D9F1400513B69 /* AppDelegate+InitialSettings.swift in Sources */,
@@ -1127,11 +1164,14 @@
 				6454FD64243C4C4B00179EC7 /* AssetSelectorRouter.swift in Sources */,
 				645B7E5823FC217E007B7EC1 /* WatchlistAsset+Extension.swift in Sources */,
 				646E6AA724381C6900D037C7 /* ConverterRouter.swift in Sources */,
+				643039E3244354C3000C1404 /* WKWebViewBridge.swift in Sources */,
 				6454FD7C243C4C5000179EC7 /* QuickSearchInteractor.swift in Sources */,
 				646E6A8924381C4200D037C7 /* Rates.swift in Sources */,
 				646E6A9A24381C5300D037C7 /* ChartRouter.swift in Sources */,
+				643039D424434B99000C1404 /* BigContextViewController.swift in Sources */,
 				646BDB0C241D9F1400513B69 /* AppDelegate+InitialSettings.swift in Sources */,
 				646E6AA824381C6900D037C7 /* ConverterCellView.swift in Sources */,
+				643039DF24435456000C1404 /* NVActivityIndicatorViewBridge.swift in Sources */,
 				645B7D6523FC2117007B7EC1 /* WebSession.swift in Sources */,
 				646E6AA424381C6900D037C7 /* ConverterViewController.swift in Sources */,
 				6454FD60243C4C4B00179EC7 /* AssetSelector.swift in Sources */,

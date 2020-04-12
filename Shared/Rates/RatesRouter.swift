@@ -70,6 +70,11 @@ final class RatesRouter {
         case .showContextOption:
             guard let completion = context as? (Int) -> Void else { return }
             
+            #if TARGET_CW
+            completion(1)
+            #endif
+            
+            #if TARGET_SC
             let cells = ["Currency-Source is forex market",
                          "Crypto-Supported sources: Bitstamp, Coinbase, Binance, Poloniex, Kraken"]
             
@@ -91,6 +96,7 @@ final class RatesRouter {
             contextWindow.customPresentationFrameStart = sourceFrame
             contextWindow.customPresentationFrameEnd = CGRect(origin: origin, size: size)
             contextWindow.present(viewController: optionVC, presentationType: .customFrame)
+            #endif
             
         case .toSettings:
             break

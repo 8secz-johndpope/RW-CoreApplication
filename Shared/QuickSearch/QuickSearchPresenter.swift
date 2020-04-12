@@ -6,7 +6,6 @@
 //  Copyright © 2019 Denis Esie. All rights reserved.
 //
 
-import Foundation
 import RWExtensions
 
 final class QuickSearchPresenter: RWPresenter {

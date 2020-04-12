@@ -219,7 +219,14 @@ extension RatesViewController {
             let section = self.presenter.sections[indexPath.section]
             header.textLabel.textColor = .text
             header.textLabel.font = ConditionalProvider.ratesHeaderFont
-            header.textLabel.text = NSLocalizedString(section.title ?? "Section", comment: "")
+            
+            #if TARGET_CW
+            let title = section.title == "Currencies" ? "Fiat" : section.title
+            #else
+            let title = section.title
+            #endif
+            
+            header.textLabel.text = NSLocalizedString(title ?? "Section", comment: "")
             return header
         }
     }
@@ -301,10 +308,10 @@ extension RatesViewController: RWFloatingButtonDelegate {
         presenter.router.routeTo(.showContextOption, context: addAsset(to:))
     }
     
-    private func addAsset(to section: Int) {
+    func addAsset(to section: Int) {
         
         // Get index of the last asset.
-        let assetCount = presenter.sections[section].assets!.count
+        let assetCount = presenter.sections[section].assets?.count ?? 0
         draggedIndexPath = IndexPath(row: assetCount, section: section)
         
         // Scroll to the middle.

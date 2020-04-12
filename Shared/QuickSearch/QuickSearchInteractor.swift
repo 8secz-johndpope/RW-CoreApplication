@@ -24,7 +24,7 @@ final class QuickSearchInteractor: RWInteractor {
             
             #endif
             
-            #if TARGET_SC
+            #if TARGET_SC || TARGET_RW || TARGET_CER || TARGET_CERPRO
             // Add all currencies to the quick search menu.
             let currencies = FinanceAsset.currenciesDataModel().map { $0.items }
             currencies.forEach { (items) in
