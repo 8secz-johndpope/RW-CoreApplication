@@ -27,6 +27,7 @@ final class RatesRouter {
         case toSettings = 7
         case toQuickSearch = 8
         case showContextOption = 9
+        case toIntro = 10
         case toSeeAll = 21
     }
     
@@ -34,6 +35,11 @@ final class RatesRouter {
     
     func routeTo(_ to: Routes, context: Any? = nil) {
         switch to {
+            
+        case .toIntro:
+            let introVC = RWIntroViewController(buttons: ["Next", "OK"])
+            introVC.modalPresentationStyle = .custom
+            viewController.present(introVC, animated: false)
             
         case .addCurrency:
             guard let startFrame = context as? CGRect else { return }
@@ -64,7 +70,7 @@ final class RatesRouter {
         case .showContextOption:
             guard let completion = context as? (Int) -> Void else { return }
             
-            let cells = ["Currency-Source is Mops provider",
+            let cells = ["Currency-Source is forex market",
                          "Crypto-Supported sources: Bitstamp, Coinbase, Binance, Poloniex, Kraken"]
             
             let icons = [UIImage(named: "currencies")!, UIImage(named: "crypto")!]

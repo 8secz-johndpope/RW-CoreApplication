@@ -25,6 +25,8 @@ final class RatesPresenter: RWPresenter {
     var priceHistory = [String : [Double]]()
     var isRealtimeEnabled = true
     
+    private var isIntroShowed = false
+    
     //MARK: Lifecycle
     
     override func didLoad() {
@@ -56,6 +58,13 @@ final class RatesPresenter: RWPresenter {
     
     override func viewWillAppear() {
         viewController.performApearranceAnimation(for: viewController.collectionView)
+    }
+    
+    override func viewDidAppear() {
+        if !isIntroShowed {
+            isIntroShowed = true
+            router.routeTo(.toIntro)
+        }
     }
     
     //MARK: UI Input
