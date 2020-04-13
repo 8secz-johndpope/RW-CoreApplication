@@ -151,7 +151,7 @@ final class RatesViewController: RWViewController {
     
     //MARK: UI Update – Portfolio
     
-    func portfolioDataDidChanged(animated: Bool = true) {
+    func updatePortfolioData(animated: Bool = true) {
         #if ENABLE_PORTFOLIO
         let sections = presenter.portfolioSections
         var collectionSnapshot = NSDiffableDataSourceSnapshot<String, CDPortfolioSectionAdapter>()
@@ -618,13 +618,13 @@ extension RatesViewController {
     }
     
     private func createPortfolioCollectionCell() -> PortfolioDataSource {
-        return PortfolioDataSource(collectionView: portfolioCollectionView, cellProvider: { [unowned self] collectionView, indexPath, assetEntity in
+        return PortfolioDataSource(collectionView: portfolioCollectionView, cellProvider: { [unowned self] collectionView, indexPath, section in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PortfolioCellView.reuseIdentifier,
                                                           for: indexPath) as! PortfolioCellView
             cell.viewController = self
 //            cell.isEmptyCell = !(assetEntity is CDWatchlistAssetAdapter)
-//            cell.representedObject = assetEntity as? CDWatchlistAssetAdapter
-//            cell.updateState()
+            cell.representedObject = section as? CDPortfolioSectionAdapter
+            cell.updateState()
             return cell
         })
     }

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="PortfolioBlock" representedClassName="PortfolioBlock" syncable="YES" codeGenerationType="class">
-        <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
-        <attribute name="conversionRate" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="currencyCode" optional="YES" attributeType="String"/>
+        <attribute name="amount" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="asset" optional="YES" attributeType="String"/>
+        <attribute name="fee" attributeType="Decimal" defaultValueString="0"/>
+        <attribute name="price" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="tag" optional="YES" attributeType="String"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="typeCategory" optional="YES" attributeType="String"/>
-        <attribute name="typeColor" optional="YES" attributeType="String"/>
-        <attribute name="typeSubcategory" optional="YES" attributeType="String"/>
         <relationship name="inSection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PortfolioSection" inverseName="blocks" inverseEntity="PortfolioSection"/>
     </entity>
     <entity name="PortfolioSection" representedClassName="PortfolioSection" syncable="YES" codeGenerationType="class">
@@ -40,7 +39,7 @@
         <relationship name="assets" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="WatchlistAsset" inverseName="section" inverseEntity="WatchlistAsset"/>
     </entity>
     <elements>
-        <element name="PortfolioBlock" positionX="-67.90625" positionY="51.0703125" width="128" height="163"/>
+        <element name="PortfolioBlock" positionX="-67.90625" positionY="51.0703125" width="128" height="148"/>
         <element name="PortfolioSection" positionX="40.796875" positionY="507.34375" width="128" height="103"/>
         <element name="WatchlistAsset" positionX="526.578125" positionY="271.54296875" width="128" height="253"/>
         <element name="WatchlistSection" positionX="278.60546875" positionY="725.53125" width="129.96875" height="118"/>

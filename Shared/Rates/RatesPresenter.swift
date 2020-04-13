@@ -42,7 +42,7 @@ final class RatesPresenter: RWPresenter {
         viewController.addQuickSearchBar()
         viewController.addFloatingButton()
         viewController.unfreezeInput()
-        viewController.portfolioDataDidChanged()
+        viewController.updatePortfolioData()
         
         // Register analytics event with user assets.
         let assets = Array(self.allAssets.keys)
@@ -60,10 +60,10 @@ final class RatesPresenter: RWPresenter {
     }
     
     override func viewDidAppear() {
-        if !isIntroShowed {
-            isIntroShowed = true
-            router.routeTo(.toIntro)
-        }
+//        if !isIntroShowed {
+//            isIntroShowed = true
+//            router.routeTo(.toIntro)
+//        }
     }
     
     //MARK: UI Input
@@ -225,6 +225,29 @@ extension RatesPresenter {
     
     var portfolioSections: [CDPortfolioSectionAdapter] {
         return interactor.portfolioSections.sorted { $0.position < $1.position }
+    }
+    
+    func addPortfolioSection() {
+        let position = Int16(interactor.portfolioSections.count)
+        _ = CDPortfolioSectionAdapter(title: "", position: position)
+        AppDelegate.saveContext()
+        interactor.getPortfolioSections()
+        viewController.updatePortfolioData()
+        
+        let collectionView = self.viewController.portfolioCollectionView!
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            
+            let indexPath = IndexPath(row: Int(position), section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            
+            let cell = collectionView.cellForItem(at: indexPath)!// as! PortfolioCellView
+            //cell.nameTextField.becomeFirstResponder()
+        }
+        
+    }
+    
+    func addPortfolioBlock() {
+        
     }
     
 }

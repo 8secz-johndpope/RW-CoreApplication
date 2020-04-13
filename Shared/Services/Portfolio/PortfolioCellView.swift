@@ -8,7 +8,6 @@
 import UIKit
 import RWExtensions
 import RWUserInterface
-import NVActivityIndicatorView
 
 final class PortfolioCellView: RWInteractiveCollectionViewCell {
 
@@ -17,14 +16,14 @@ final class PortfolioCellView: RWInteractiveCollectionViewCell {
     private var displayLink: CADisplayLink?
     private var animationStartDate: Date?
 
+    private let tableView = UITableView()
+    private let addButton = UIButton(type: .roundedRect)
+    private let optionsButton = UIButton(type: .roundedRect)
     private let mainAssetView = UIView()
-    private let starIconView = UIImageView()
     private let iconImageView = UIImageView()
-    private let priceTextView = UILabel()
-    private let nameLabel = UILabel()
-    private let codeLabel = UILabel()
+    private let priceOverview = UILabel()
+    let nameTextField = UITextField()
     private let changeLabel = UILabel()
-    private var loadingAnimationView: NVActivityIndicatorView!
     
     private var cachedOldPrice = 0.0
     private var transitOldValue = 0.0
@@ -40,136 +39,106 @@ final class PortfolioCellView: RWInteractiveCollectionViewCell {
         interactiveView.layer.cornerRadius = .standartCornerRadius
         interactiveView.clipsToBounds = true
         
+        // Main View.
         mainAssetView.backgroundColor = .itemBackground
         mainAssetView.layer.cornerRadius = .standartCornerRadius
         mainAssetView.clipsToBounds = true
         mainView.addSubview(mainAssetView)
         mainAssetView.frameConstraint(CGFloat.standartInset)
         
+        // Section Icon
         iconImageView.setPlaceholder(withRadius: 5.5)
         iconImageView.contentMode = .scaleAspectFill
         mainAssetView.addSubview(iconImageView)
-        iconImageView.topLeftConstraint(7.5).sizeConstraints(width: 28, height: 28)
+        iconImageView.topLeftConstraint(7.5).sizeConstraints(width: 32, height: 32)
         
-        mainAssetView.addSubview(priceTextView)
-        priceTextView.textColor = .white
-        priceTextView.textAlignment = .right
-        priceTextView.font = UIFont(name: "Futura", size: 28)
-        priceTextView.horizontalConstraint(15).verticalConstraint()
+        // Section name.
+        nameTextField.textColor = .text
+        nameTextField.delegate = self
+        nameTextField.font = UIFont(name: "Futura-Bold", size: 18)
+        mainAssetView.addSubview(nameTextField)
+        nameTextField.topConstraint(to: iconImageView).heightConstraint(32)
+            .leadingConstraint(.standartDoubleInset, toTrail: iconImageView).trailingConstraint()
         
-        changeLabel.setPlaceholder()
-        changeLabel.textAlignment = .center
-        changeLabel.textColor = .white
+        // Price overview.
+        priceOverview.text = "9120.82$"
+        priceOverview.textColor = .white
+        priceOverview.textAlignment = .left
+        priceOverview.font = UIFont(name: "Futura-Bold", size: 32)
+        mainAssetView.addSubview(priceOverview)
+        priceOverview.horizontalConstraint(15).topConstraint(.standartDoubleInset+5, toBot: nameTextField).heightConstraint(30)
+        
+        // Options button.
+        optionsButton.setImage(.actions, for: .normal)
+        mainAssetView.addSubview(optionsButton)
+        optionsButton.sizeConstraints(width: 32, height: 32).topRightConstraint(7.5)
+        
+        // Add button.
+        addButton.setImage(.add, for: .normal)
+        mainAssetView.addSubview(addButton)
+        addButton.sizeConstraints(width: 32, height: 32).topConstraint(7.5).trailingConstraint(-.standartInset, toLead: optionsButton)
+        addButton.addTarget(self, action: #selector(addTapped), for: .touchDown)
+        
+        //
+        changeLabel.text = "+340.12$ (1.45%)"
+        changeLabel.backgroundColor = UIColor.systemGreen.withAlphaComponent(0.5)
+        changeLabel.textColor = .text
+        changeLabel.textAlignment = .right
         changeLabel.layer.cornerRadius = 3.5
         changeLabel.layer.masksToBounds = true
-        changeLabel.font = UIFont(name: "Futura-Bold", size: 8.5)
+        changeLabel.font = UIFont(name: "Futura-Bold", size: 13.5)
         mainAssetView.addSubview(changeLabel)
-        changeLabel.sizeConstraints(CGSize(width: 50, height: 11.5)).trailingConstraint(-14).bottomConstraint(-7.5)
+        changeLabel.verticalCenterConstraint(to: priceOverview).trailingConstraint(-7.5).widthConstraint(140)
         
-        nameLabel.setPlaceholder()
-        nameLabel.textColor = .text
-        nameLabel.numberOfLines = 0
-        nameLabel.font = UIFont(name: "Futura-Bold", size: 15)
-        mainAssetView.addSubview(nameLabel)
-        nameLabel.topConstraint(to: iconImageView).heightConstraint(15)
-            .leadingConstraint(7.5, toTrail: iconImageView).trailingConstraint()
         
-        codeLabel.textColor = .text
-        codeLabel.font = UIFont(name: "Futura", size: 8)
-        mainAssetView.addSubview(codeLabel)
-        codeLabel.topConstraint(1.5, toBot: nameLabel).leadingConstraint(8.5, toTrail: iconImageView)
-            .trailingConstraint().heightConstraint(8.5)
         
-        addSubview(starIconView)
-        starIconView.topConstraint(10).trailingConstraint(-10).sizeConstraints(CGSize(width: 15, height: 15))
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showChart))
-        mainAssetView.addGestureRecognizer(tapGesture)
-        
-        loadingAnimationView = NVActivityIndicatorView(frame: .zero, type: .ballBeat, color: UIColor.white.withAlphaComponent(0.5), padding: 25)
-        mainAssetView.addSubview(loadingAnimationView)
-        loadingAnimationView.verticalConstraint().widthConstraint(100).trailingConstraint()
+
     }
 
     //MARK: Update Data
     
     override func updateView(animated: Bool) {
-        let asset = representedObject as! CDWatchlistAssetAdapter
+        guard let section = representedObject as? CDPortfolioSectionAdapter else { return }
         
-        // Star icon for local currencies
-        if asset.currencyToUSD == Locale.current.currencyCode {
-            starIconView.image = UIImage(named: "star")
+        if section.position == 0 {
+            nameTextField.text = "Overview"
         } else {
-            starIconView.image = nil
+            nameTextField.text = section.title
         }
         
-        // Asset Icon
-        if let data = asset.iconImage {
-            iconImageView.image = UIImage(data: data)
-        } else {
-            iconImageView.image = nil
-        }
         
-        // Asset Full Name
-        if let name = asset.name {
-            nameLabel.releasePlaceholder()
-            nameLabel.text = name == "United States dollar" ? "United States dollar (to Euro)" : name
-        }
-        
-        // Asset Code
-        codeLabel.text = asset.code == "USDUSD" ? "EURUSD" : asset.code
-        codeLabel.releasePlaceholder()
-        
-        if viewController.presenter.loadMask[asset.fullCode] ?? false {
-            loadingAnimationView.stopAnimating()
-            
-            // Asset Price
-            if let price = asset.price {
-                let newPrice = Double(truncating: price).rounded(places: asset.pricePlaces)
-                cachedOldPrice = newPrice
-                
-                // Display price
-                if animated {
-                    setNewPriceAnimated(newPrice)
-                
-                // Update price
-                } else {
-                    priceTextView.text = String(newPrice)
-                }
-            }
-            
-            // Price change in percentage
-            // Invert percent
-            if asset.isCurrency {
-                if asset.pricePercent > 0 {
-                    changeLabel.text = "-\(String(asset.pricePercent))%"
-                    changeLabel.backgroundColor = UIColor.systemRed.withAlphaComponent(0.5)
-                } else {
-                    let percent = String(asset.pricePercent).replacingOccurrences(of: "-", with: "+")
-                    changeLabel.text = "\(percent)%"
-                    changeLabel.backgroundColor = UIColor.systemGreen.withAlphaComponent(0.5)
-                }
-                
-            // Display original
-            } else {
-                if asset.pricePercent > 0 {
-                    changeLabel.text = "+\(String(asset.pricePercent))%"
-                    changeLabel.backgroundColor = UIColor.systemGreen.withAlphaComponent(0.5)
-                } else {
-                    changeLabel.text = "\(String(asset.pricePercent))%"
-                    changeLabel.backgroundColor = UIColor.systemRed.withAlphaComponent(0.5)
-                }
-            }
-        } else {
-            loadingAnimationView.startAnimating()
-            priceTextView.text = ""
-            changeLabel.text = ""
-            changeLabel.backgroundColor = .clear
-        }
     }
 }
 
+//MARK: - NAME TEXT FIELD DELEGATE
+
+extension PortfolioCellView: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        guard let section = representedObject as? CDPortfolioSectionAdapter else { return true }
+        section.title = textField.text
+        AppDelegate.saveContext()
+        return true
+    }
+    
+}
+
+
+
 extension PortfolioCellView {
     
+    @objc private func addTapped() {
+        guard let section = representedObject as? CDPortfolioSectionAdapter else { return }
+        
+        if section.position == 0 {
+            viewController.presenter.addPortfolioSection()
+        } else {
+            viewController.presenter.addPortfolioBlock()
+        }
+    }
+    
+    /*
     @objc private func showChart() {
         guard let asset = representedObject as? CDWatchlistAssetAdapter else { return }
         AnalyticsEvent.register(source: .watchlist, key: RWAnalyticsEventAssetOpened, context: asset.fullCode)
@@ -203,7 +172,20 @@ extension PortfolioCellView {
         } else {
             let value = transitOldValue + (elapsedTime / transitionDuration * (transitNewValue - transitOldValue))
             transitOldValue = value
-            priceTextView.text = String(transitOldValue.rounded(places: places))
+            priceOverview.text = String(transitOldValue.rounded(places: places))
         }
+    } */
+}
+
+
+extension UIButton {
+    
+    func addCompletion() {
+        
     }
+    
+    @objc func completionHandler() {
+        
+    }
+    
 }

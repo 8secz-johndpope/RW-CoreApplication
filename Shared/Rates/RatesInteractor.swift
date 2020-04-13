@@ -24,12 +24,15 @@ final class RatesInteractor: RWInteractor {
     override func initialDataSourceCheck() {
         let context = AppDelegate.persistentContainer.viewContext
         loadFromContext(context, entity: CDWatchlistSectionAdapter.identifier)
-        
+        getPortfolioSections()
+        startUpdates()
+    }
+    
+    func getPortfolioSections() {
         #if ENABLE_PORTFOLIO
+        let context = AppDelegate.persistentContainer.viewContext
         portfolioSections = fetchEntities(in: context, entity: CDPortfolioSectionAdapter.identifier)
         #endif
-        
-        startUpdates()
     }
     
     //MARK: Data Source Is Empty

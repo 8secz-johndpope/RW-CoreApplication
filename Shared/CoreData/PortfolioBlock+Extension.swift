@@ -11,14 +11,20 @@ import RWExtensions
 import CoreData
 
 typealias CDPortfolioBlockAdapter = PortfolioBlock
+typealias CDPortfolioBlockChain = [PortfolioBlock]
 
 extension CDPortfolioBlockAdapter {
     
     static let identifier = "PortfolioBlock"
     
-    convenience init(amount: Decimal, currency: Code, category: String, subcategory: String) {
+    convenience init(amount: NSDecimalNumber, fee: NSDecimalNumber, asset: String, price: NSDecimalNumber, tag: String) {
         self.init(context: AppDelegate.persistentContainer.viewContext)
-        
+        self.amount = amount
+        self.fee = fee
+        self.asset = asset
+        self.tag = tag
+        self.price = price
+        self.timestamp = Date()
     }
     
 }
@@ -26,13 +32,13 @@ extension CDPortfolioBlockAdapter {
 extension CDPortfolioBlockAdapter {
     
     var category: String {
-        return typeCategory ?? "Default"
+        return tag ?? "Undefined"
     }
     
-    var subCategory: String {
-        return typeSubcategory ?? "Default"
+    var date: Date {
+        return timestamp ?? Date()
     }
-
+    
 }
 
 
@@ -42,7 +48,7 @@ extension CDPortfolioSectionAdapter {
     
     static let identifier = "PortfolioSection"
     
-    convenience init(title: String = "Account Name", position: Int16) {
+    convenience init(title: String, position: Int16) {
         self.init(context: AppDelegate.persistentContainer.viewContext)
         self.title = title
         self.position = position
@@ -52,9 +58,9 @@ extension CDPortfolioSectionAdapter {
 
 extension CDPortfolioSectionAdapter {
     
-    var operations: [PortfolioBlock] {
-        let allBlocks = self.blocks?.allObjects as? [PortfolioBlock] ?? []
-        return allBlocks.sorted { $0.timestamp! < $1.timestamp! }
+    var operations: CDPortfolioBlockChain {
+        let allBlocks = self.blocks?.allObjects as? CDPortfolioBlockChain ?? []
+        return allBlocks.sorted { $0.date < $1.date }
     }
 
 }
