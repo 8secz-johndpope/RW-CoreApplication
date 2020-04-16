@@ -219,7 +219,7 @@
 		643CE46E23926A770014DE29 /* WatchlistPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchlistPresenter.swift; sourceTree = "<group>"; };
 		643CE480239278780014DE29 /* WatchlistHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistHeaderView.swift; sourceTree = "<group>"; };
 		643CE484239351480014DE29 /* WatchlistCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCellView.swift; sourceTree = "<group>"; };
-		64426F9123E1EFCF0040CA8D /* UpdateLog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UpdateLog.txt; sourceTree = "<group>"; };
+		64426F9123E1EFCF0040CA8D /* CoreUpdateLog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CoreUpdateLog.txt; sourceTree = "<group>"; };
 		64539218243C8939009CAACB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6456897B243F1B800097B6D8 /* PortfolioBlock+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PortfolioBlock+Extension.swift"; sourceTree = "<group>"; };
 		64568986243F30550097B6D8 /* PortfolioCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCellView.swift; sourceTree = "<group>"; };
@@ -685,7 +685,7 @@
 		64DB5CC5238C9830006B3CD8 = {
 			isa = PBXGroup;
 			children = (
-				64426F9123E1EFCF0040CA8D /* UpdateLog.txt */,
+				64426F9123E1EFCF0040CA8D /* CoreUpdateLog.txt */,
 				64DB5D05238C9C8A006B3CD8 /* Shared */,
 				645B7CF623FC1E3F007B7EC1 /* CryptoView */,
 				645B7D3E23FC1EDF007B7EC1 /* ARConverter */,

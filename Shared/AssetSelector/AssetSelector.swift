@@ -8,7 +8,6 @@
 
 import UIKit
 import RWExtensions
-import Firebase
 
 enum AssetSelector {
     
