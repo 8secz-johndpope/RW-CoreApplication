@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "64184184243D28A4007C1A2F"
-               BuildableName = "SmartConverter 1.1.app"
+               BuildableName = "SmartConverter.app"
                BlueprintName = "SmartConverter"
                ReferencedContainer = "container:RatesView.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "64184184243D28A4007C1A2F"
-            BuildableName = "SmartConverter 1.1.app"
+            BuildableName = "SmartConverter.app"
             BlueprintName = "SmartConverter"
             ReferencedContainer = "container:RatesView.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "64184184243D28A4007C1A2F"
-            BuildableName = "SmartConverter 1.1.app"
+            BuildableName = "SmartConverter.app"
             BlueprintName = "SmartConverter"
             ReferencedContainer = "container:RatesView.xcodeproj">
          </BuildableReference>
