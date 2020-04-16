@@ -1,6 +1,8 @@
 # VERSION 3.1 (500) – 04/17/20
 
     # Released on AppStore
+    
+    NEW: Realtime updates.
 
 # VERSION 2.99 (400) – 02/02/20
 
