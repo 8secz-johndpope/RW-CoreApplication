@@ -1,0 +1,208 @@
+
+# VERSION 2.99 (400) – 02/02/20
+
+  # Released on AppStore
+
+  NEW: Realtime updates.
+  NEW: Removed sections background in Watchlist.
+  NEW: Improved Watchlist UI.
+
+  FIXED:
+
+  CORE: Realtime updates. Ping 140-180ms.
+  CORE: Added separate targets for iOS and iPadOS.
+  CORE: Web session is now paused during UI input.
+  CORE: Web session now filters unchanged assets.
+  CORE: Replaced multiple collectionviews in Watchlist with a single one using compositional layout.
+  
+
+# VERSION 2.95 (310) – 02/02/20
+
+    # Released on AppStore
+
+    NEW: Realtime updates.
+    NEW: Removed sections background in Watchlist.
+    NEW: Improved Watchlist UI.
+
+    FIXED:
+  
+    CORE: Realtime updates. Ping 140-180ms.
+    CORE: Added separate targets for iOS and iPadOS.
+    CORE: Web session is now paused during UI input.
+    CORE: Web session now filters unchanged assets.
+    CORE: Replaced multiple collectionviews in Watchlist with a single one using compositional layout.
+    
+    
+# VERSION 2.9 (300) – 01/23/20
+
+    # Released on AppStore
+    
+    NEW:
+    
+    FIXED:
+    
+    CORE: Extracted separate modules into static libraries.
+    CORE: Added separate targets for iOS/iPadOS and macOS.
+    CORE: Fully moved to CoreData. Created transitions checks.
+    CORE: Fully moved to new dataSource type.
+    CORE: Fully moved to new collection layout.
+    CORE: Rewrote applications all vcs to viper.
+    CORE: Added
+    
+    PUBLIC NOTES:
+    
+    
+    
+# VERSION 2.6 (282) – 01/23/20
+
+    # Released on AppStore
+
+    NEW:
+
+    FIXED:
+
+    CORE: Added version update history to User Defaults.
+
+
+# VERSION 2.5 (272) – 01/23/20
+
+    # Released on AppStore
+
+    NEW:
+
+    FIXED:
+    
+    CORE: Added version update history to User Defaults.
+
+
+# VERSION 2.4 (262) – 01/23/20
+
+    # Released on AppStore
+
+    NEW:
+
+    FIXED:
+
+    CORE: Added version update history to User Defaults.
+
+
+# VERSION 2.3 (252) – 01/23/20
+
+    # Released on AppStore
+
+    NEW:
+
+    FIXED:
+
+    CORE: Added version update history to User Defaults.
+
+
+# VERSION 2.2 (242) – 01/23/20
+
+    # Released on AppStore
+
+    NEW:
+
+    FIXED:
+
+    CORE: Added version update history to User Defaults.
+
+
+# VERSION 2.0 (232) – 01/23/20
+
+    # Released on AppStore
+
+    NEW:
+
+    FIXED:
+
+    CORE: Added version update history to User Defaults.
+
+
+# VERSION 1.98 (222) – 01/23/20
+
+    # Released on AppStore
+
+    NEW:
+
+    FIXED:
+
+    CORE: Added version update history to User Defaults.
+    
+    
+# VERSION 1.95 (221) – 01/23/20
+
+    # Released on AppStore
+
+    NEW:
+
+    FIXED:
+
+    CORE: Added version update history to User Defaults.
+    
+    
+# VERSION 1.85 (211) – 01/23/20
+
+    # Released on AppStore
+
+    NEW:
+
+    FIXED:
+
+    CORE: Added version update history to User Defaults.
+    
+    
+# VERSION 1.75 (210) – 01/23/20
+
+    # Released on AppStore
+
+    NEW:
+
+    FIXED:
+
+    CORE: Added version update history to User Defaults.
+    
+    
+# VERSION 1.51 (201) – 01/23/20
+
+    # Released on AppStore
+
+    NEW:
+
+    FIXED:
+
+    CORE: Added version update history to User Defaults.
+    
+    
+# VERSION 1.5 (200) – 01/23/20
+
+    # Released on AppStore
+
+    NEW:
+
+    FIXED:
+
+    CORE: Added version update history to User Defaults.
+    
+    
+# VERSION 1.0 (100) – 01/23/20
+
+    # Released on AppStore
+
+    NEW:
+
+    FIXED:
+
+    CORE: Added version update history to User Defaults.
+    
+    
+# VERSION 0.5 (001) – 01/23/20
+
+    # Released on AppStore
+
+    NEW:
+
+    FIXED:
+
+    CORE: Added version update history to User Defaults.
+    
