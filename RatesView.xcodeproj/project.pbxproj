@@ -194,7 +194,7 @@
 		6405B4BF23A11F0B0005E2E2 /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		6405B4C023A11F0B0005E2E2 /* ChartPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartPresenter.swift; sourceTree = "<group>"; };
 		6415EB32243FDBCB00B968F7 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
-		64184185243D28A4007C1A2F /* SmartConverter 1.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartConverter 1.1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64184185243D28A4007C1A2F /* SmartConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		641841A0243D290D007C1A2F /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
 		641841A2243D290D007C1A2F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		641841A7243D290E007C1A2F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -701,7 +701,7 @@
 			children = (
 				645B7CF523FC1E3F007B7EC1 /* CryptoView 1.0.app */,
 				645B7D3D23FC1EDF007B7EC1 /* ARConverter 3.0.app */,
-				64184185243D28A4007C1A2F /* SmartConverter 1.1.app */,
+				64184185243D28A4007C1A2F /* SmartConverter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -825,7 +825,7 @@
 			);
 			name = SmartConverter;
 			productName = SmartConverter;
-			productReference = 64184185243D28A4007C1A2F /* SmartConverter 1.1.app */;
+			productReference = 64184185243D28A4007C1A2F /* SmartConverter.app */;
 			productType = "com.apple.product-type.application";
 		};
 		645B7CF423FC1E3F007B7EC1 /* CryptoView */ = {
@@ -1242,7 +1242,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 522;
+				CURRENT_PROJECT_VERSION = 530;
 				DEVELOPMENT_TEAM = 6M4XU22V82;
 				INFOPLIST_FILE = SmartConverter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1252,8 +1252,8 @@
 				);
 				MARKETING_VERSION = 1.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.converter-1-1";
-				PRODUCT_NAME = "SmartConverter 1.1";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esie.converter;
+				PRODUCT_NAME = SmartConverter;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG TARGET_SC BACIS_LAYOUT FORCE_DISABLE_DARKMODE";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1267,7 +1267,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 522;
+				CURRENT_PROJECT_VERSION = 530;
 				DEVELOPMENT_TEAM = 6M4XU22V82;
 				INFOPLIST_FILE = SmartConverter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1276,8 +1276,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esie.converter-1-1";
-				PRODUCT_NAME = "SmartConverter 1.1";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esie.converter;
+				PRODUCT_NAME = SmartConverter;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "TARGET_SC BACIS_LAYOUT FORCE_DISABLE_DARKMODE";
 				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = TARGET_SC;
 				SWIFT_VERSION = 5.0;
