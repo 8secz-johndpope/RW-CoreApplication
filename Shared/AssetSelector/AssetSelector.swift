@@ -8,6 +8,7 @@
 
 import UIKit
 import RWExtensions
+import RWSession
 
 enum AssetSelector {
     
