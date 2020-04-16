@@ -136,7 +136,7 @@ extension AssetSelectorViewController: UITableViewDelegate {
             cell.imageView?.image = assetIconResized(fromInternalCode: assetInternalCode)
             cell.imageView?.layer.cornerRadius = 3.5
             cell.imageView?.layer.masksToBounds = true
-            cell.imageView?.setRasterizedShadow(intensity: 5, radius: 5)
+            //cell.imageView?.setRasterizedShadow(intensity: 5, radius: 5)
             
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(sender:)))
             cell.addGestureRecognizer(tapGesture)

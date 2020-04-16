@@ -70,6 +70,5 @@ enum ConditionalProvider {
         return layout
     }
     #endif
-    
-    
+
 }

@@ -60,10 +60,12 @@ final class RatesPresenter: RWPresenter {
     }
     
     override func viewDidAppear() {
-//        if !isIntroShowed {
-//            isIntroShowed = true
-//            router.routeTo(.toIntro)
-//        }
+        #if ENABLE_INTRO
+        if !isIntroShowed {
+            isIntroShowed = true
+            router.routeTo(.toIntro)
+        }
+        #endif
     }
     
     //MARK: UI Input
@@ -247,7 +249,7 @@ extension RatesPresenter {
     }
     
     func addPortfolioBlock() {
-        
+        router.routeTo(.showBlock)
     }
     
 }

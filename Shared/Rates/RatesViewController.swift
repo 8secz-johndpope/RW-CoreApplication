@@ -14,7 +14,7 @@ import RWSession
 final class RatesViewController: RWViewController {
     
     typealias DataSource = UICollectionViewDiffableDataSource<CDWatchlistSectionAdapter, RWCoreDataObject>
-    typealias PortfolioDataSource = UICollectionViewDiffableDataSource<String, CDPortfolioSectionAdapter>
+    typealias PortfolioDataSource = UICollectionViewDiffableDataSource<Int, RWCoreDataObject>
     
     private lazy var collectionViewDataSource = createCollectionCell()
     private lazy var portfolioCollectionViewDataSource = createPortfolioCollectionCell()
@@ -153,10 +153,11 @@ final class RatesViewController: RWViewController {
     
     func updatePortfolioData(animated: Bool = true) {
         #if ENABLE_PORTFOLIO
+        let section = 0
         let sections = presenter.portfolioSections
-        var collectionSnapshot = NSDiffableDataSourceSnapshot<String, CDPortfolioSectionAdapter>()
-        collectionSnapshot.appendSections(["Portfolio"])
-        collectionSnapshot.appendItems(sections, toSection: "Portfolio")
+        var collectionSnapshot = NSDiffableDataSourceSnapshot<Int, RWCoreDataObject>()
+        collectionSnapshot.appendSections([section])
+        collectionSnapshot.appendItems(sections, toSection: section)
         self.portfolioCollectionViewDataSource.apply(collectionSnapshot)
         #endif
     }
@@ -617,16 +618,20 @@ extension RatesViewController {
         })
     }
     
-    private func createPortfolioCollectionCell() -> PortfolioDataSource {
+    private func createPortfolioCollectionCell() -> PortfolioDataSource? {
+        #if ENABLE_PORTFOLIO
         return PortfolioDataSource(collectionView: portfolioCollectionView, cellProvider: { [unowned self] collectionView, indexPath, section in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PortfolioCellView.reuseIdentifier,
                                                           for: indexPath) as! PortfolioCellView
             cell.viewController = self
-//            cell.isEmptyCell = !(assetEntity is CDWatchlistAssetAdapter)
+            cell.isEmptyCell = !(section is CDWatchlistAssetAdapter)
             cell.representedObject = section as? CDPortfolioSectionAdapter
             cell.updateState()
             return cell
         })
+        #else
+        return nil
+        #endif
     }
     
     

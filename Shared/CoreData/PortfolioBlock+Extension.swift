@@ -11,7 +11,7 @@ import RWExtensions
 import CoreData
 
 typealias CDPortfolioBlockAdapter = PortfolioBlock
-typealias CDPortfolioBlockChain = [PortfolioBlock]
+typealias CDPortfolioBlocks = [PortfolioBlock]
 
 extension CDPortfolioBlockAdapter {
     
@@ -58,8 +58,8 @@ extension CDPortfolioSectionAdapter {
 
 extension CDPortfolioSectionAdapter {
     
-    var operations: CDPortfolioBlockChain {
-        let allBlocks = self.blocks?.allObjects as? CDPortfolioBlockChain ?? []
+    var operations: CDPortfolioBlocks {
+        let allBlocks = self.blocks?.allObjects as? CDPortfolioBlocks ?? []
         return allBlocks.sorted { $0.date < $1.date }
     }
 

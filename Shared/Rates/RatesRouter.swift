@@ -28,6 +28,7 @@ final class RatesRouter {
         case toQuickSearch = 8
         case showContextOption = 9
         case toIntro = 10
+        case showBlock = 11
         case toSeeAll = 21
     }
     
@@ -35,16 +36,31 @@ final class RatesRouter {
     
     func routeTo(_ to: Routes, context: Any? = nil) {
         switch to {
+           
+        #if ENABLE_PORTFOLIO
+        case .showBlock:
+            let showBlock = PortfolioRegisterBlockViewController()
+            let contextWindow = RWContextViewContoller(parentViewController: viewController)
+            contextWindow.present(viewController: showBlock, presentationType: .animatedTop)
+        #endif
             
+        #if ENABLE_INTRO
         case .toIntro:
             let introVC = RWIntroViewController(buttons: ["Next", "OK"])
             introVC.modalPresentationStyle = .custom
             viewController.present(introVC, animated: false)
+        #endif
             
+        #if ENABLE_STOCKS
+        case .addStocks:
+            break
+        #endif
+         
+        #if !TARGET_AR
         case .addCurrency:
             guard let startFrame = context as? CGRect else { return }
             let selectorVC = AssetSelector.construct(option: .currencies)
-            let contextWindow = RWContextWindowViewController(parentViewController: viewController)
+            let contextWindow = RWContextViewContoller(parentViewController: viewController)
             contextWindow.customPresentationFrameStart = startFrame
             contextWindow.customPresentationFrameEnd = viewController.standartPresentationFrame
             contextWindow.present(viewController: selectorVC, presentationType: .customFrame)
@@ -52,7 +68,7 @@ final class RatesRouter {
         case .addCrypto:
             guard let startFrame = context as? CGRect else { return }
             let selectorVC = AssetSelector.construct(option: .crypto)
-            let contextWindow = RWContextWindowViewController(parentViewController: viewController)
+            let contextWindow = RWContextViewContoller(parentViewController: viewController)
             contextWindow.customPresentationFrameStart = startFrame
             contextWindow.customPresentationFrameEnd = viewController.standartPresentationFrame
             contextWindow.present(viewController: selectorVC, presentationType: .customFrame)
@@ -64,9 +80,9 @@ final class RatesRouter {
         case .toQuickSearch:
             AnalyticsEvent.register(source: .quicksearch, key: RWAnalyticsEventOpened)
             let quickVC = QuickSearch.construct()
-            let contextWindow = RWContextWindowViewController(parentViewController: viewController)
+            let contextWindow = RWContextViewContoller(parentViewController: viewController)
             contextWindow.present(viewController: quickVC, presentationType: .animatedTop)
-            
+        
         case .showContextOption:
             guard let completion = context as? (Int) -> Void else { return }
             
@@ -77,18 +93,10 @@ final class RatesRouter {
             #if TARGET_SC
             let cells = ["Currency-Source is forex market",
                          "Crypto-Supported sources: Bitstamp, Coinbase, Binance, Poloniex, Kraken"]
-            
             let icons = [UIImage(named: "currencies")!, UIImage(named: "crypto")!]
-            
-            let callbacks = [{
-                    resignCurrentContextController()
-                    completion(0)
-                }, {
-                    resignCurrentContextController()
-                    completion(1)
-                }]
-            
-            let optionVC = BigContextViewController(cells: cells, icons: icons, callbacks: callbacks)
+        
+            let optionVC = BigContextViewController(cells: cells, icons: icons, callbacks: [{ resignCurrentContextController(); completion(0)},
+                 { resignCurrentContextController(); completion(1)}])
             let sourceFrame = viewController.floatingButton.button.frame
             let size = CGSize(width: viewController.width*0.6, height: viewController.width*0.5)
             let origin = sourceFrame.corner - Vector2D(x: size.width, y: size.height)
@@ -97,15 +105,17 @@ final class RatesRouter {
             contextWindow.customPresentationFrameEnd = CGRect(origin: origin, size: size)
             contextWindow.present(viewController: optionVC, presentationType: .customFrame)
             #endif
-            
+        #endif
+        
+        #if TARGET_AR
         case .toSettings:
-            break
-//            let vc = settingsParentPage
-//            vc.backgroundColor = .background
-//            vc.backgroundSecondaryColor = .itemBackground
-//            vc.enableCloseButton = true
-//            viewController.present(UINavigationController(rootViewController: vc), animated: true)
-            
+            let vc = settingsParentPage
+            vc.backgroundColor = .background
+            vc.backgroundSecondaryColor = .itemBackground
+            vc.enableCloseButton = true
+            viewController.present(UINavigationController(rootViewController: vc), animated: true)
+        #endif
+        
         default:
             break
         }
